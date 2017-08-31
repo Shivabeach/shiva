@@ -1,0 +1,47 @@
+// containers
+// Will have 2 pages. Main page and blog pages
+// Set up all components under each
+/* Main Containers */
+
+//blog comntainer
+
+.l-containers-blog
+	width: 85%
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	min-height: 100%
+
+	&--left
+		flex: 1
+
+	&--middle
+		flex: 3
+
+	&--right
+		flex: 2
+
+// main conntainer
+
+.l-containers-main
+	background-color: $aths-special
+	width: 85%
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	min-height: 100%
+
+	&--left
+		flex: 1
+		margin-right: 40px
+		background-color: $special-dark
+
+		&--shell
+			margin: 0 0.5em
+
+	&--middle
+		flex: 3
+		background-color: $special-dark
+
+		&--shell
+			margin: 0 0.5em

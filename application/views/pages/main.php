@@ -1,7 +1,7 @@
 <body>
-	<div class="l-containers-main">
+	<main class="l-containers-main">
 		<div class="l-headers-main">
-			<div class="l-headers-blog--title">
+			<div class="l-headers-main--title">
 				<h1>Welcome</h1>
 			</div>
 		</div>
@@ -20,5 +20,6 @@
 				
 			</div>
 		</div>
-	</div>
+	</main>
 </body>
+

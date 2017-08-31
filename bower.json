@@ -1,0 +1,21 @@
+{
+  "name": "shiva",
+  "homepage": "https://github.com/Shivabeach/shiva",
+  "authors": [
+    "Brad <mrwilson1@comcast.net>"
+  ],
+  "description": "Shivabeach new page",
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "reset-scss": "^2.0.2"
+  }
+}

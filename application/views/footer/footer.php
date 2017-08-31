@@ -1,0 +1,8 @@
+		<div class="l-footers-main">
+			<div class="l-footers-main--shell">
+				<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
