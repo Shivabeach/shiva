@@ -3,7 +3,11 @@
 // Set up all components under each
 /* Main Containers */
 
-//blog comntainer
+// ==========================================================================
+// All containers will have a shell
+// ==========================================================================
+
+//blog container
 
 .l-containers-blog
 	width: 85%
@@ -11,21 +15,32 @@
 	display: flex
 	flex-wrap: wrap
 	min-height: 100%
+	content-justify: space-around
 
 	&--left
 		flex: 1
+		max-width: 200px
+
+		+tablet
+			display: none
 
 	&--middle
 		flex: 3
 
+		&--shell
+			padding: 0 0.5em
+
 	&--right
 		flex: 2
+		max-width: 300px
 
-// main conntainer
+
+
+// main container
 
 .l-containers-main
-	background-color: $aths-special
-	width: 85%
+	//background-color: $aths-special
+	width: 100%
 	margin: 0 auto
 	display: flex
 	flex-wrap: wrap
@@ -34,14 +49,20 @@
 	&--left
 		flex: 1
 		margin-right: 40px
-		background-color: $special-dark
+		//background-color: $special-dark
 
 		&--shell
 			margin: 0 0.5em
 
 	&--middle
-		flex: 3
-		background-color: $special-dark
+		flex: 2
+		//background-color: $special-dark
+
 
 		&--shell
 			margin: 0 0.5em
+
+		+tablet
+			display: none
+		+mobile
+			display: none

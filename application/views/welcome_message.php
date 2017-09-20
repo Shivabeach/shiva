@@ -1,24 +1,27 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
 <body>
 
 <main class="l-containers-main">
+	<button id="backtotop">Back To top</button>
 	<div class="l-headers-main">
 		<div class="l-headers-main--title">
 			<h1><?=$heading;?></h1>
 		</div>
 	</div><!-- end of header -->
+	<?php $this->load->view("menus/top-menu.php");?>
 	<div class="l-containers-main--left">
 		<div class="l-containers-main--left--shell">
-			<article>
-			<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-			<p>If you would like to edit this page you'll find it located at:</p>
-			<code>application/views/welcome_message.php</code>
+			<article class="left-box-prime">
+				<h3>Priority Links</h3>
+				<?php foreach($prior as $list):?>
+					<ul>
+						<li>
+						<?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+						</li>
+                            <?php endforeach;?>
+					</ul>			
 			</article>
-			
-		</div> 
+
+		</div>
 	</div>	<!-- end of left side container -->
 	<div class="l-containers-main--middle">
 		<div class="l-containers-main--middle--shell">
@@ -33,25 +36,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<article>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil reprehenderit mollitia sint facere eaque quis ratione iure corrupti consectetur veniam?</p>
 			</article>
-		</div>			
+
+			<article>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi rerum earum itaque recusandae impedit nostrum veniam excepturi perferendis quidem quam magni quasi quae, quibusdam nam voluptatum eveniet dignissimos dolorum, architecto neque accusamus aspernatur esse cum eum! Assumenda saepe placeat veniam numquam expedita obcaecati reiciendis ipsam pariatur, doloremque possimus sunt omnis!</p>
+			</article>
+		</div>
 	</div>	<!-- end of middle container -->
 	<div class="m-boxes-row">
 		<div class="m-boxes-box">
 			<h2 class="m-boxes-box--title">Bosticks</h2>
 			<div class="m-boxes-box--shell">
-				<p>This is within the shell</p>
-				<p>this is the test</p>
-			</div>			
+				<ul>
+					<li><?php echo anchor('welcome', 'Home');?></li>
+					<li><?php echo anchor('blogs', 'Blog');?></li>
+				</ul>
+			</div>
 		</div>
 		<div class="m-boxes-box">
 		<h2 class="m-boxes-box--title">Reeds</h2>
 			<div class="m-boxes-box--shell">
-				<p>This is within the shell</p>
-				<p>this is the test</p>
-			</div>		
+			<div class="m-boxes-box--title">Title</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati assumenda, corrupti quod consequuntur,  </p>
+			</div>
 
 		</div>
-		
+
 		<div class="m-boxes-box">
 		<h2 class="m-boxes-box--title">VanHorn</h2>
 			<div class="m-boxes-box--shell">
@@ -59,6 +68,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<p>this is the test</p>
 			</div>
 		</div>
+	</div>
+	<div class="m-boxes-row">
 		<div class="m-boxes-box">
 		<h2 class="m-boxes-box--title">Hunts</h2>
 			<div class="m-boxes-box--shell">
@@ -67,8 +78,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<p><a href="user_guide/">User Guide</a>.</p>
 			</div>
 		</div>
-	</div><!-- end of boxes row -->
-	
+
+		<div class="m-boxes-box">
+			<h2 class="m-boxes-box--title">Bosticks</h2>
+			<div class="m-boxes-box--shell">
+				<p>This is within the shell</p>
+				<p>this is the test</p>
+			</div>
+		</div>
+		<div class="m-boxes-box">
+		<h2 class="m-boxes-box--title">Reeds</h2>
+			<div class="m-boxes-box--shell">
+				<p>This is within the shell</p>
+				<p>this is the test</p>
+			</div>
+
+		</div>
+	</div>
+	<!-- end of boxes row -->
 
 
-	
+
+

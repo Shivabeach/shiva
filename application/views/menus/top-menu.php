@@ -1,0 +1,11 @@
+<div class="l-menu-blog">
+	<div class="l-menu-blog--shell">
+		<div class="l-menu">
+			<ul class="menu-flex">
+				<li class="hova"><?php echo anchor('pages', 'Home');?></li>
+				<li class="hova"><?php echo anchor('blogs', 'Blog');?></li>
+				<li class="hova"><a href="#">Next</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

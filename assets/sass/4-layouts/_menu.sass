@@ -1,0 +1,50 @@
+.l-menu
+	flex: 1
+	height: 100px
+	background-color: $soft-peach
+	
+
+	+border(2px, solid, $soft-peach-dark, 20px)
+
+	+shadow(1px, 10px, 30px, $soft-peach-dark)
+	
+.menu-flex
+	display: flex
+	height: 100%
+	
+	+center(flex-start, center)
+
+	li.hova:hover
+		+gradient(270deg, $v-red, $v-olive)
+	li 
+		width: 200px
+		a
+			padding: 20px
+			display: flex
+			width: 100%
+			margin-left: 25%
+			font-size: 1.5vw
+
+
+		+border(1px, solid, $soft-peach, 10px)
+
+		+tablet
+			margin-left: 5px
+			width: auto
+			font-size: get-vw(28px)
+		+mobile
+			margin-left: 5px
+			width: auto
+			font-size: get-vw(28px)
+
+
+.l-menu-blog
+	min-height: 5em
+	display: flex 
+	flex: 1 0 100%
+
+	&--shell
+		display: flex
+		justify-content: space-around
+		margin: 0 1em
+		width: 100%

@@ -1,3 +1,4 @@
+/* 1-tools-base-Typography	*/
 body {
   color: $base-font-color;
   font-family: $base-font-family;
@@ -21,17 +22,22 @@ p {
   margin: 0 0 $small-spacing;
 }
 
-a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color $base-duration $base-timing;
+// a {
+//   color: $v-red;
+//   text-decoration: none;
+//   transition: color $base-duration $base-timing;
+	
+// 	&:visited{
+// 		color: $visited;
+// 	}
 
-  &:active,
-  &:focus,
-  &:hover {
-    color: shade($action-color, 25%);
-  }
-}
+//   &:active,
+//   &:focus,
+//   &:hover {
+//     color: $hover;
+//     text-shadow: 1px 1px 3px black;
+//   }
+// }
 
 hr {
   border-bottom: $base-border;

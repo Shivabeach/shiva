@@ -4,21 +4,110 @@
 	justify-content: space-around
 	flex-wrap: wrap
 	width: 100%
-	
+	clear: both
+
 .m-boxes-box
-	flex: 1
-	min-height: 200px
-	min-width: 300px
-	max-width: 340px
+	max-width: 450px
+	flex: 1 2
+	min-height: 250px
 	background-color: $soft-peach
+	margin: 10px 0
+
+	+border(2px, solid, $soft-peach-dark, 20px)
+
+	+shadow(1px, 10px, 30px, $soft-peach-dark)
+
+	+tablet
+		min-width: 50%
+
+	+mobile
+		min-width: 100%
 
 	&--title
 		text-align: center
-		padding: 5px 0
+		//padding: 5px 0
+		font-size: 2.5vw
 
 	&--shell
 		margin: 3px 5px
 
-		p
-			font-size: calc(16px + 0.25vw)
+		li
+			list-style-type: none
+			a
+				font-size: get-vw(16px)
+			.count
+				font-size: get-vw(16px)
 
+		+tablet
+			li
+				a
+					font-size: get-vw(25px)
+				.count
+					font-size: get-vw(25px)
+
+		+mobile
+			li
+				a
+					font-size: get-vw(25px)
+				.count
+					font-size: get-vw(25px)
+
+		li:last-of-type
+			margin-bottom: 1em
+
+// use m-boxes-row
+.m-blog-boxes
+	flex: 1
+	min-width: 300px
+	min-height: 300px
+	background-color: $soft-peach
+	margin-right: 20px
+	margin-bottom: 20px
+
+	&:last-of-type
+		margin-right: 0
+
+	+border(2px, solid, $soft-peach-dark, 20px)
+
+	+shadow(1px, 5px, 10px, $soft-peach-dark)
+
+	+tablet
+		width: 100%
+
+	+mobile
+		width: 100%
+
+	&--title
+		text-indent: 1em
+		font-size: 2.5vw
+
+	&--shell
+		margin: 3px
+		ul,ol
+			counter-reset: subsection
+
+		li::before
+			counter-increment: subsection
+			content: counters(subsection,".") " "
+			font-size: 1.2rem
+		li
+			font-size: 1.5vw
+
+	&--post-number
+		margin-right: 10px
+		text-align: right
+		font-size: get-vw(10px)
+
+	&--post-number::after
+		counter-increment: section
+		content: "Read Post # " counter(section) ": "
+
+img
+	background-color: green
+	float: left
+	width: 150px
+	height: 150px
+	border-radius: 50%
+
+	shape-outside: circle(250px at 50% 50%)
+	shape-margin: 15px
