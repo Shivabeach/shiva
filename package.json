@@ -1,0 +1,28 @@
+{
+  "name": "shiva",
+  "version": "1.0.0",
+  "description": "Addon to van-horn.us site",
+  "main": "index.js",
+  "dependencies": {
+    "sass-lint": "^1.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivabeach/shiva.git"
+  },
+  "keywords": [
+    "links",
+    "counter",
+    "blog"
+  ],
+  "author": "Brad VH <mrwilson1@comcast.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shivabeach/shiva/issues"
+  },
+  "homepage": "https://github.com/Shivabeach/shiva#readme"
+}

@@ -11,6 +11,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta property="og:title" content="" />
         <meta property="og:description" content="" />
+        <script src="https://use.fontawesome.com/04d9aa23c9.js"></script>
+
 
         <?php
     $meta = array(

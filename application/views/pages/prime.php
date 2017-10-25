@@ -18,11 +18,11 @@
 				<ul>
 				<?php foreach($prior as $list):?>
 
-						<li>
-						<?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
-						</li>
-                            <?php endforeach;?>
-					</ul>
+					<li>
+						<?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-exclamation', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+					</li>
+        <?php endforeach;?>
+				</ul>
 			</div>
 
 		</div>
@@ -36,16 +36,24 @@
 							$ts = now("America/Detroit");
 							echo unix_to_human($ts); ?></div>
 						</article>
+						<article>
+							<div><?php echo unix_to_human(1507245111);?></div>
+						</article>
 						<p>fix border shadow</p>
 				</div>
 			</div>
 			<div class="m-boxes-box">
-				<h2 class="m-boxes-box--title">Priority Links</h2>
+				<h2 class="m-boxes-box--title">Editors</h2>
 				<div class="m-boxes-box--shell">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad maiores quisquam sed repellat, odio incidunt iusto eum velit enim omnis in, voluptatem cupiditate optio pariatur consequatur beatae, vitae aut.</p>
-					</div>
+					<?php
+		        foreach ($links as $list):?>
+		        <li class="m-lists-musical">
+		            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code-fork', 'rel' =>'external')), nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+		        </li>
+		        <?php endforeach;?>
 				</div>
 			</div>
+		</div>
 
 	<div class="m-boxes-row">
 		<div class="m-boxes-box">
@@ -54,7 +62,7 @@
         <?php
           foreach ($music as $list):?>
             <li>
-            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-volume-up ', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
           	</li>
         <?php endforeach;?>
 			</div>
@@ -65,7 +73,7 @@
 			<?php
         foreach ($flex as $list):?>
         <li class="m-lists-musical">
-            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' =>'external')), nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code ', 'rel' =>'external')), nbs(3);?><span class="count"><?php echo $list->counter;?></span>
         </li>
         <?php endforeach;?>
 			</div>
@@ -78,7 +86,7 @@
 				<?php
           foreach ($code as $list):?>
             <li class="m-lists-musical">
-             <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span> </li>
+             <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-info-circle ', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span> </li>
           <?php endforeach;?>
 			</div>
 		</div>
@@ -90,7 +98,7 @@
 				<?php
           foreach ($car as $list):?>
             <li class="m-lists-musical">
-              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-car', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
             </li>
           <?php endforeach;?>
 			</div>
@@ -102,7 +110,7 @@
 				<?php
           foreach ($inter as $list):?>
             <li class="m-lists-musical">
-              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-heart', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
             </li>
           <?php endforeach;?>
 			</div>
@@ -113,7 +121,7 @@
 				<?php
           foreach ($news as $list):?>
             <li class="m-lists-musical">
-              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-newspaper-o ', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
             </li>
           <?php endforeach;?>
 			</div>
@@ -128,7 +136,7 @@
 				<?php
           foreach ($utility as $list):?>
             <li class="m-lists-musical">
-              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-info', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
             </li>
           <?php endforeach;?>
 			</div>
@@ -140,7 +148,7 @@
 				<?php
           foreach ($herbs as $list):?>
             <li class="m-lists-musical">
-              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-leaf', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
             </li>
           <?php endforeach;?>
 			</div>
@@ -151,7 +159,7 @@
 				<?php
           foreach ($color as $list):?>
             <li class="m-lists-musical">
-          	  <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+          	  <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-css3', 'rel' => "external")),nbs(3);?><span class="count"><?php echo $list->counter;?></span>
           	</li>
           <?php endforeach;?>
 			</div>

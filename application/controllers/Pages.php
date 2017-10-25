@@ -1,12 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Pages extends CI_Controller 
+class Pages extends CI_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model("music");
-		
+
 	}
 	public function index()
 	{
@@ -51,6 +51,10 @@ class Pages extends CI_Controller
 		{
 			$data['prior'] = $query;
 		}
+		if($query = $this->music->get_links())
+    {
+      $data['links'] = $query;
+    }
     $data['title']   = "New ShivaBeach";
 		$data['heading'] = "Links Alive";
 		$this->load->view('header/header', $data);
@@ -58,5 +62,5 @@ class Pages extends CI_Controller
 		$this->load->view('footer/footer');
 	}
 
-} 
+}
 // End of file

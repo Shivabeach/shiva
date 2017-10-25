@@ -16,7 +16,10 @@
 
 	li.hova:hover
 		+gradient(270deg, $v-red, $v-olive)
-	li 
+		a
+			color: yellow
+
+	li
 		width: 200px
 		a
 			padding: 20px
@@ -48,3 +51,19 @@
 		justify-content: space-around
 		margin: 0 1em
 		width: 100%
+
+		+tablet
+			margin: 0
+
+		+mobile
+			margin: 0
+
+.icon::before
+	display: inline-block
+	margin-right: .5em
+	font: normal normal normal 14px/1 FontAwesome
+	font-size: inherit
+	text-rendering: auto
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	transform: translate(0, 0px)

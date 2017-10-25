@@ -2,15 +2,21 @@
 /* links */
 
 a 
-	color: $v-red
+	color: $v-red-dark
 	text-decoration: none
 	transition: color $base-duration $base-timing
+	font-family: $font-stack-lucida-grande
 	
 	&:visited
 		background-color: $zest
 		color: $visited
 		text-decoration: overline
-	
-	&:focus, :hover, :active
+		font-family: $font-stack-garamond
+
+	&:hover
 		color: $hover
+
+	&:focus, :active
+		color: $gold
 		text-shadow: 1px 1px 3px black
+
