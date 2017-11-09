@@ -401,7 +401,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 |
 */
 $config['cookie_prefix']	= 'dawn';
-$config['cookie_domain']	= '';
+$config['cookie_domain']	= 'http://localhost/shiva';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= true;
 $config['cookie_httponly'] 	= true;
@@ -432,7 +432,7 @@ $config['standardize_newlines'] = FALSE;
 |          for backwards compatibility purposes!
 |
 */
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
