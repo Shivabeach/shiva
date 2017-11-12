@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="m-boxes-box">
-				<h2 class="m-boxes-box--title">Editors</h2>
+				<h2 class="m-boxes-box--title color-1">Editors</h2>
 				<div class="m-boxes-box--shell">
 					<?php
 		        foreach ($links as $list):?>
