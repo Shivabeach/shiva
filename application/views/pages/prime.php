@@ -12,7 +12,7 @@
 
 	<div class="m-boxes-row">
 		<div class="m-boxes-box">
-			<h2 class="m-boxes-box--title">Priority Links</h2>
+			<h2 class="m-boxes-box--title tooltip swing" data-title="Most used">Priority Links</h2>
 			<div class="m-boxes-box--shell">
 
 				<ul>
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="m-boxes-box">
-				<h2 class="m-boxes-box--title color-1">Editors</h2>
+				<h2 class="m-boxes-box--title color-1 tooltip swing" data-title="Useful editors">Editors</h2>
 				<div class="m-boxes-box--shell">
 					<?php
 		        foreach ($links as $list):?>

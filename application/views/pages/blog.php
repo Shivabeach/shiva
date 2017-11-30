@@ -1,10 +1,10 @@
-<body>
+<body class="example">
 <button id="backtotop">Back To Top</button>
 	<main class="l-containers-blog">
 
 		<div class="l-headers-blog">
 			<div class="l-headers-blog--title">
-				<h1><?=$title;?></h1>
+				<h1 class="ptext"><?=$title;?></h1>
 			</div>
 		</div>
 
@@ -84,17 +84,18 @@
 								<p><code>Body</code><br>
 									<code>counter-reset: section</code>
 								</p>
+								<div class="box">box</div>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
 					</div>
 					<div class="m-blog-boxes">
 						<h2 class="m-blog-boxes--title">Blog title</h2>
 							<div class="m-blog-boxes--shell">
-								<img src="http://api.randomuser.me/0.3.2/portraits/men/7.jpg" alt="" />
+								<img>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum itaque nam blanditiis eveniet enim eligendi quae adipisci?</p>
+									<p class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum itaque nam blanditiis eveniet enim eligendi quae adipisci?</p>
 
-<p>Assumenda blanditiis voluptas tempore porro quibusdam beatae deleniti quod asperiores sapiente dolorem error! Quo nam quasi soluta reprehenderit laudantium optio ipsam ducimus consequatur enim fuga quibusdam mollitia nesciunt modi.</p>
+									<p class="ptext">Assumenda blanditiis voluptas tempore porro quibusdam beatae deleniti quod asperiores sapiente dolorem error! Quo nam quasi soluta reprehenderit laudantium optio ipsam ducimus consequatur enim fuga quibusdam mollitia nesciunt modi.</p>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
 					</div>
