@@ -314,19 +314,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #993043; }
+  background-color: #233640; }
 
 .color-2 {
-  background-color: #2e6777; }
+  background-color: #f73366; }
 
 .color-3 {
-  background-color: #65953e; }
+  background-color: #a4d81c; }
 
 .color-4 {
-  background-color: #a5042b; }
+  background-color: #726bed; }
 
 .color-5 {
-  background-color: #61659e; }
+  background-color: #4d7ae9; }
 
 body {
   counter-reset: section;
@@ -500,9 +500,9 @@ h6 {
   font-size: 1.07vw; }
 
 .example {
-  background: -webkit-radial-gradient(top left circle, #748ffc 15%, #4c6ef5 5%, #364fc7);
-  background: -o-radial-gradient(top left circle, #748ffc 15%, #4c6ef5 5%, #364fc7);
-  background: radial-gradient(circle at top left, #748ffc 15%, #4c6ef5 5%, #364fc7); }
+  background: -webkit-radial-gradient(top left circle, #bac8ff 15%, #748ffc 5%, #5c7cfa, #4c6ef5, #4263eb, #364fc7);
+  background: -o-radial-gradient(top left circle, #bac8ff 15%, #748ffc 5%, #5c7cfa, #4c6ef5, #4263eb, #364fc7);
+  background: radial-gradient(circle at top left, #bac8ff 15%, #748ffc 5%, #5c7cfa, #4c6ef5, #4263eb, #364fc7); }
 
 .ptext {
   background-image: -webkit-gradient(linear, left top, right top, from(#ffa500), color-stop(#d95a77), to(#ffff00));
@@ -784,6 +784,8 @@ img {
     -webkit-flex: 1 0 100%;
     -ms-flex: 1 0 100%;
     flex: 1 0 100%;
+    color: transparent;
+    text-shadow: 1px 1px 2px white, -2px -2px 2px black;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -810,6 +812,7 @@ img {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    color: transparent;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -861,7 +864,7 @@ img {
   -ms-flex: 1;
   flex: 1;
   height: 100px;
-  background-color: #F2E6E6;
+  background-color: rgba(242, 230, 230, 0.5);
   margin-bottom: 1em;
   border-color: #7e4242;
   border-radius: 20px;
