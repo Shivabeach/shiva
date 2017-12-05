@@ -4,7 +4,7 @@
 			<ul class="menu-flex">
 				<li class="hova home"><?php echo anchor('pages', 'Home', array('class' => 'icon fa-home'));?></li>
 				<li class="hova"><?php echo anchor('blogs', 'Blog');?></li>
-				<li class="hova"><a href="#">Next</a></li>
+				<li class="hova"><?php echo anchor('grid', 'Grid');?></li>
 			</ul>
 		</div>
 	</div>
