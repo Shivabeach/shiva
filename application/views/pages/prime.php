@@ -57,7 +57,7 @@
 
 	<div class="m-boxes-row">
 		<div class="m-boxes-box">
-			<h2 class="m-boxes-box--title">Music</h2>
+			<h2 class="m-boxes-box--title tooltip fade" data-title="Music statons">Music</h2>
 			<div class="m-boxes-box--shell">
         <?php
           foreach ($music as $list):?>
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 		<div class="m-boxes-box">
-		<h2 class="m-boxes-box--title">Tutorials</h2>
+		<h2 class="m-boxes-box--title tooltip fade" data-title="Tutorials">Tutorials</h2>
 			<div class="m-boxes-box--shell">
 			<?php
         foreach ($flex as $list):?>

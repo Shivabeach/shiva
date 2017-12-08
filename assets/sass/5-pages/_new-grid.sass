@@ -1,0 +1,53 @@
+
+*
+  margin: 0
+  padding: 0
+
+html
+  font-size: 18px
+  background: tomato
+
+.grid
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-template-rows: 10vw 20vw 10vw 10vw
+  border: 1px dashed green
+  width: 80%
+  margin: 0 auto
+
+
+.header,
+.footer
+  grid-column: 1 / span 5
+  background: $v-red
+
+.sidebar
+  grid-column: 1 / span 5
+  background: cornsilk
+
+.content
+  grid-column: 1 / span 5
+  background: blue
+
+@media screen and (min-width: 700px)
+  .grid
+    display: grid
+    grid-gap: 20px
+    grid-template-columns: repeat(4 1fr)
+    grid-template-rows: 10vw 10vw 10vw
+    //grid-template-areas: "header header header" "content content content" "sidebar sidebar sidebar" "footer footer footer"
+
+  .header,
+  .footer
+    grid-column: 1 / span 5
+    background: $v-red
+
+  .sidebar
+    grid-column: span 2
+    background: cornsilk
+
+  .content
+    grid-column: 1 / span 3
+    background: blue
+
+

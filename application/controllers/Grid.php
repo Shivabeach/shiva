@@ -11,6 +11,12 @@ class Grid extends CI_Controller
 	{
     $data['title'] = "Grid page";
     $this->load->view("pages/grid", $data);
-  }
+	}
+
+	public function newgrid()
+	{
+		$data['title'] = "NEW Grid page";
+    $this->load->view("pages/new-grid", $data);
+	}
 
 }

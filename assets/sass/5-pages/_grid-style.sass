@@ -1,63 +1,84 @@
-#grid
-  display: grid
-  grid-template-columns: repeat(4, 1fr)
-  grid-template-rows: 10vw auto 10vw
-  grid-gap: 2em
-  margin: 0 auto
-  max-width: 80em
-  padding: 1em 0
+body
+  margin: 0
+  padding: 0
   font-size: 18px
 
+.container
+  display: grid
+  grid-gap: 2em
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: 10vw auto 10vw
 
-  header,
-  footer
-    grid-column: 1 / span 5
-    background: #bac8ff
+  margin: 0 auto
+  max-width: 80em
 
-
-  main
-    grid-column: 1 / span 3
-    background: #ECD0C2
-    display: grid
-    grid-template-columns: .25fr .75fr
-
-
-  article.post
-    margin: 1rem
+header,
+footer
+  grid-column: 1 / span 5
+  background: #bac8ff
 
 
+main
+  grid-column: 1 / span 3
+  background: #ECD0C2
+  display: grid
+  grid-template-columns: .25fr .75fr
+
+
+article.post
+  margin: 1rem
   p
     margin: 5px
 
 
-  div.title
-    font-size: 2.5rem
-    text-align: center
+div.title
+  font-size: 2.5rem
+  text-align: center
 
+aside
+  grid-column: span 2
+  background: #e67e22
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr 1fr 1fr
+  ul, li
+    display: block
+  // .sidebar
+  //   height: 50%
+  // .menu
+  //   height: 50%
 
-
+@media (max-width: 900px)
+  .container
+    width: 100%
+    margin: 0
+  main,
   aside
-    grid-column: span 2
-    background: #e67e22
+    grid-column: 1 / span 5
     ul, li
-      display: block
+      display: inline
+  aside
+    display: grid
+    grid-template-columns: 100px 200px auto
+    //grid-template-rows: 200px
+    height: auto
+    justify-content: space-around
+    align-content: space-around
+    .nukem p
+      margin: 0
 
 
-  @media (max-width: 700px)
 
-    main,
-    aside
-      grid-column: 1 / span 5
+header,
+footer
+  display: flex
+  align-items: center
+  justify-content: center
 
-  header,
-  aside,
-  footer
-    background: #eaeaea
-    display: flex
-    align-items: center
-    justify-content: center
+// aside
+//   display: flex
+//   flex-direction: column
 
-
-  header,
-  footer
-    height: 10vw
+header,
+footer
+  height: 10vw

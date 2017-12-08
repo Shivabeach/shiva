@@ -5,6 +5,7 @@
 				<li class="hova home"><?php echo anchor('pages', 'Home', array('class' => 'icon fa-home'));?></li>
 				<li class="hova"><?php echo anchor('blogs', 'Blog');?></li>
 				<li class="hova"><?php echo anchor('grid', 'Grid');?></li>
+				<li class="hova"><?php echo anchor('grid/newgrid', 'New Grid');?></li>
 			</ul>
 		</div>
 	</div>
