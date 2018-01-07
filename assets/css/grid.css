@@ -23,14 +23,16 @@ main {
   display: grid;
   grid-template-columns: 0.25fr 0.75fr; }
 
-article.post {
-  margin: 1rem; }
-  article.post p {
+.post {
+  margin: 1rem;
+  border: 1px solid red; }
+  .post p {
     margin: 5px; }
 
 div.title {
   font-size: 2.5rem;
-  text-align: center; }
+  text-align: center;
+  border: 1px solid red; }
 
 aside {
   grid-column: span 2;
@@ -58,10 +60,8 @@ aside {
     display: grid;
     grid-template-columns: 100px 200px auto;
     height: auto;
-    -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    -webkit-align-content: space-around;
     -ms-flex-line-pack: distribute;
     align-content: space-around; }
     aside .nukem p {
@@ -69,15 +69,12 @@ aside {
 header,
 footer {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
