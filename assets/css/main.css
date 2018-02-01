@@ -316,19 +316,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #2ce76c; }
+  background-color: #285a96; }
 
 .color-2 {
-  background-color: #37d4e6; }
+  background-color: #997c8b; }
 
 .color-3 {
-  background-color: #12ca4f; }
+  background-color: #3108cc; }
 
 .color-4 {
-  background-color: #3a164d; }
+  background-color: #4fbf9b; }
 
 .color-5 {
-  background-color: #88ee79; }
+  background-color: #33b3e0; }
 
 body {
   counter-reset: section;
@@ -847,16 +847,15 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
   .menu-flex li.hova:hover {
     background: -webkit-gradient(linear, right top, left top, from(#d95a77), to(#AEAB8A));
     background: -webkit-linear-gradient(right, #d95a77, #AEAB8A);
     background: -o-linear-gradient(right, #d95a77, #AEAB8A);
     background: linear-gradient(270deg, #d95a77, #AEAB8A); }
     .menu-flex li.hova:hover a {
-      color: yellow; }
+      color: #000000; }
   .menu-flex li {
     width: 200px;
     height: 100%;
