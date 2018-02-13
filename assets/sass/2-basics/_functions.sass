@@ -23,3 +23,12 @@ $grid-max-width: 65em
 @for $i from 1 through 5
 	.color-#{$i}
 		background-color: rgb( random(255), random(255), random(255))
+
+@function strip-units ($length)
+	$munch: $length * 0
+	@return $length/$munch
+@function px-to-rem($value)
+	$value: strip-units($value)
+	$base-font-size: strip-units($base-font-size)
+	$rem: 1rem
+	@return ($value/$base-font-size) * $rem
