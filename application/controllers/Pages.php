@@ -55,6 +55,10 @@ class Pages extends CI_Controller
     {
       $data['links'] = $query;
     }
+    if($query = $this->music->get_help())
+    {
+      $data['help'] = $query;
+    }
     $data['title']   = "New ShivaBeach";
 		$data['heading'] = "Links Alive";
 		$this->load->view('header/header', $data);

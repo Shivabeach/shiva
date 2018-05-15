@@ -31,23 +31,96 @@
 			<div class="m-boxes-box">
 				<h2 class="m-boxes-box--title">Priority Links</h2>
 				<div class="m-boxes-box--shell">
-						<article>
-							<div><?php
+					<article>
+						<div class="display-time bold-16"><?php
 							$ts = now("America/Detroit");
-							echo unix_to_human($ts); ?></div>
-						</article>
-						<article>
-							<div><?php echo unix_to_human(1507245111);?></div>
-						</article>
-						<p>fix border shadow</p>
+							echo unix_to_human($ts); ?>
+						</div>
+					</article>
+					<article>
+						<p><?php echo validation_errors(); ?></p>
+
+						<?php
+							$args = [
+								'id' => 'ajax'
+							];
+							echo form_open("forms/add_link", $args);
+							$arg = [
+								'id'					=> 'url',
+								"placeholder" => "Add Link",
+								"name"        => "url",
+								"style"       => "width: 70%",
+								"class" => "bold-2"
+							];
+							echo form_input($arg);
+							$args1 = [
+								"name"        => "name",
+								"placeholder" => "name",
+								"style"       => "width: 70%",
+								"class" => "bold-2"
+								];
+							echo form_input($args1);
+							$args2 = [
+								"name"        => "genre",
+								"placeholder" => "Genre",
+								"style"       => "width: 70%",
+								"class" => "bold-2"
+							];
+							echo form_input($args2);
+							$args4 = [
+								"name"        => "counter",
+								"placeholder" => "Counter",
+								"style"       => "width: 70%",
+								"class" => "bold-2"
+							];
+							echo form_input($args4);
+
+
+							$args3 = [
+								""        => "Pick One",
+								"music"   => "Music",
+								"car"     => "Car",
+								"code"    => "Code",
+								"flex"    => "Flex",
+								"local"   => "Local",
+								"inter"   => "Interests",
+								"links"   => "Links",
+								"news"    => "News",
+								"utility" => "Utility",
+								"herbs"   => "Herbs",
+								"css"     => "CSS",
+								"help" 		=> "Help"
+							];
+							ksort($args3);
+							echo form_dropdown("type", $args3);
+
+							echo form_submit("Submit", "Submits");
+							echo form_reset("reset", "Reset");
+							echo form_close();
+							//TODO: Add family
+						?>
+
+						<div>
+							<ul>
+								<li class="line"><a class="fs-3" href="#car">Car</a></li>
+								<li class="line"><a class="fs-3" href="#interests">Interests</a></li>
+								<li class="line"><a class="fs-3" href="#news">News</a></li>
+								<li class="line"><a class="fs-3" href="#utility">Utilitys</a></li>
+								<li class="line"><a class="fs-3" href="#herbs">Herbs</a></li>
+								<li class="line"><a class="fs-3" href="#css">CSS</a></li>
+								<li class="line"><a class="fs-3" href="#code">Code Help</a></li>
+							</ul>
+						</div>
+						<div id="display"></div>
+					</article>
 				</div>
 			</div>
 			<div class="m-boxes-box">
-				<h2 class="m-boxes-box--title color-1 tooltip swing" data-title="Useful editors">Editors</h2>
+				<h2 class="m-boxes-box--title color-1 tooltip swing" data-title="Useful editors">Editors(Links)</h2>
 				<div class="m-boxes-box--shell">
 					<?php
 		        foreach ($links as $list):?>
-		        <li class="m-lists-musical">
+		        <li>
 		            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code-fork', 'rel' =>'external')), nbs(3);?><span class="count"><?php echo $list->counter;?></span>
 		        </li>
 		        <?php endforeach;?>
@@ -57,7 +130,7 @@
 
 	<div class="m-boxes-row">
 		<div class="m-boxes-box">
-			<h2 class="m-boxes-box--title tooltip fade" data-title="Music statons">Music</h2>
+			<h2 class="m-boxes-box--title tooltip fade" data-title="Music statons">Music(Music)</h2>
 			<div class="m-boxes-box--shell">
         <?php
           foreach ($music as $list):?>
@@ -68,7 +141,7 @@
 			</div>
 		</div>
 		<div class="m-boxes-box">
-		<h2 class="m-boxes-box--title tooltip fade" data-title="Tutorials">Tutorials</h2>
+		<h2 class="m-boxes-box--title tooltip fade" data-title="Tutorials">Tutorials(Flex)</h2>
 			<div class="m-boxes-box--shell">
 			<?php
         foreach ($flex as $list):?>
@@ -81,7 +154,7 @@
 		</div>
 
 		<div class="m-boxes-box">
-		<h2 class="m-boxes-box--title">Design</h2>
+		<h2 class="m-boxes-box--title">Design(code)</h2>
 			<div class="m-boxes-box--shell">
 				<?php
           foreach ($code as $list):?>
@@ -93,7 +166,7 @@
 	</div>
 	<div class="m-boxes-row">
 		<div class="m-boxes-box">
-		<h2 class="m-boxes-box--title">Mustang</h2>
+		<h2 id="car" class="m-boxes-box--title">Mustang(Car)</h2>
 			<div class="m-boxes-box--shell">
 				<?php
           foreach ($car as $list):?>
@@ -105,7 +178,7 @@
 		</div>
 
 		<div class="m-boxes-box">
-			<h2 class="m-boxes-box--title">Interests</h2>
+			<h2 id="interests" class="m-boxes-box--title">Interests(inter)</h2>
 			<div class="m-boxes-box--shell">
 				<?php
           foreach ($inter as $list):?>
@@ -116,7 +189,7 @@
 			</div>
 		</div>
 		<div class="m-boxes-box">
-		<h2 class="m-boxes-box--title">News</h2>
+		<h2 id="news" class="m-boxes-box--title">News(news)</h2>
 			<div class="m-boxes-box--shell">
 				<?php
           foreach ($news as $list):?>
@@ -131,7 +204,7 @@
 
 	<div class="m-boxes-row">
 		<div class="m-boxes-box">
-		<h2 class="m-boxes-box--title">Utilities</h2>
+		<h2 id="utility" class="m-boxes-box--title">Utilities(utility)</h2>
 			<div class="m-boxes-box--shell">
 				<?php
           foreach ($utility as $list):?>
@@ -143,7 +216,7 @@
 		</div>
 
 		<div class="m-boxes-box">
-			<h2 class="m-boxes-box--title">Herbs</h2>
+			<h2 id="herbs" class="m-boxes-box--title">Herbs(herbs)</h2>
 			<div class="m-boxes-box--shell">
 				<?php
           foreach ($herbs as $list):?>
@@ -154,7 +227,7 @@
 			</div>
 		</div>
 		<div class="m-boxes-box">
-		<h2 class="m-boxes-box--title">CSS</h2>
+		<h2 id="css" class="m-boxes-box--title">CSS(css)</h2>
 			<div class="m-boxes-box--shell">
 				<?php
           foreach ($color as $list):?>
@@ -165,10 +238,19 @@
 			</div>
 
 		</div>
+		<div class="m-boxes-row">
+		<div class="m-boxes-box">
+				<h2 id="code" class="m-boxes-box--title color-1 tooltip swing" data-title="Useful editors">Code help</h2>
+				<div class="m-boxes-box--shell">
+					<?php
+		        foreach ($help as $list):?>
+		        <li class="m-lists-musical">
+		            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code-fork', 'rel' =>'external')), nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+		        </li>
+		        <?php endforeach;?>
+				</div>
+			</div>
+			</div>
+		</div>
 	</div>
 	<!-- end of boxes row -->
-
-
-
-
-
