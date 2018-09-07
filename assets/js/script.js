@@ -1,3 +1,5 @@
+"use strict";
+
 var btnTop = $("#backtotop");
 
 $(window).scroll(function() {
@@ -8,9 +10,11 @@ $(window).scroll(function() {
 	}
 });
 
-$(function () {
+$(function() {
 	btnTop.on("click", function() {
-		$("html,body").animate({ scrollTop: 0 })
+		$("html,body").animate({
+			scrollTop: 0
+		})
 	});
 });
 
@@ -39,27 +43,28 @@ $(function() {
 });
 
 $(function() {
-    "use strict";
-    $('form#ajax').on('submit', function(e) {
-				e.preventDefault();
-        var that = $(this),
-            url = that.attr('action'),
-            type = that.attr('method'),
-            data = {};
-        that.find('[name]').each(function(index, value) {
-            var that = $(this),
-                name = that.attr('name'),
-                value = that.val();
-            data[name] = value;
-        });
-        $.ajax({
-            url: url,
-            type: type,
-            data: data,
-            success: function(response) {
-                $('#display').html(response).delay(9000).fadeOut(1000);
-            }
-        });
-        return false;
-    });
+	"use strict";
+	$('form#ajax').on('submit', function(e) {
+		e.preventDefault();
+		var that = $(this),
+			url = that.attr('action'),
+			type = that.attr('method'),
+			data = {};
+		that.find('[name]').each(function(index, value) {
+			var that = $(this),
+				name = that.attr('name'),
+				value = that.val();
+			data[name] = value;
+		});
+		$.ajax({
+			url: url,
+			type: type,
+			data: data,
+			success: function(response) {
+				location.reload();
+				$('#display').html(response).delay(6000).fadeOut(1000);
+			}
+		});
+		return false;
+	});
 });

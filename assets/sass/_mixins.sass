@@ -1,5 +1,5 @@
 @charset 'UTF-8'
- 
+
 =center($value, $value2)
 	align-items: $value2
 	justify-content: $value
@@ -38,14 +38,14 @@
 	box-shadow: $px1 $px2 $px3 $color
 
 //example
-@function set-notification-text-color($color)
+@function set-color($color)
 	@if (lightness($color) > 50)
 		@return #000 // Lighter backgorund, return dark color
 	@else
 		@return #fff // Darker background, return light color
 
 // example
-//.notification-confirm 
+//.notification-confirm
 //  background: $notification-confirm
 //  color: set-notification-text-color($notification-confirm)
 
@@ -88,7 +88,7 @@
 =vertical-center()
 	position: absolute
 	top: 50%
-	transform: translateY(-50%)	
+	transform: translateY(-50%)
 
 =padding($a, $b)
 	padding: $a, $b
@@ -117,11 +117,7 @@
 	border-left: 100px solid red
 	border-bottom: 50px solid transparent
 
-
-
-
-
 =box($width, $height, $bg)
 	width: $width
-	height: $height
+	min-height: $height
 	background: $bg

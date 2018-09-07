@@ -32,7 +32,7 @@ class Forms extends CI_Controller {
     $this->form_validation->set_rules('url', 'url', 'required|trim');
     $this->form_validation->set_rules('name', 'Name', 'required|trim|callback_trims');
     $this->form_validation->set_rules('genre', 'Genre', 'required|trim');
-    $this->form_validation->set_rules('counter', 'Counter', 'required');
+    $this->form_validation->set_rules('counter', 'Counter', 'numeric');
     $this->form_validation->set_rules('type', 'Type', 'required|min_length[3]');
 
     if( $this->form_validation->run() == FALSE) {

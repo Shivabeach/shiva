@@ -13,7 +13,7 @@
       <meta property="og:description" content="" />
 
     <?php
-            $meta = array(
+        $meta = array(
             array(
             'name'    => 'robots',
             'content' => 'no-cache'
@@ -34,11 +34,10 @@
             'name'    => 'generator',
             'content' => 'Sublime-Text'
             )
-            );
+        );
 
-            echo meta();
-
-            ?>
+        echo meta();
+        ?>
     </head>
 <body id="grid">
     <div class="container">
@@ -46,7 +45,8 @@
             Header
         </header>
         <main>
-            <div class="title">Title One of many</div>
+        <?php $describe = "One Of many";?>
+            <div class="title"><?php echo ${describe};?></div>
                 <div class="post">
                     <p>.grid <br>
                                 display:grid <br>

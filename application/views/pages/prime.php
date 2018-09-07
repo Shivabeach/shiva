@@ -4,7 +4,7 @@
 	<button id="backtotop">Back To top</button>
 	<div class="l-headers-main">
 		<div class="l-headers-main--title">
-			<h1><?=$heading;?></h1>
+			<h1 class="ptext"><?=$heading;?></h1>
 		</div>
 	</div><!-- end of header -->
 
@@ -34,7 +34,7 @@
 					<article>
 						<div class="display-time bold-16"><?php
 							$ts = now("America/Detroit");
-							echo unix_to_human($ts); ?>
+							echo unix_to_human($ts); ?> PHP
 						</div>
 					</article>
 					<article>
@@ -89,7 +89,8 @@
 								"utility" => "Utility",
 								"herbs"   => "Herbs",
 								"css"     => "CSS",
-								"help" 		=> "Help"
+								"help" 		=> "Help",
+								"health"  => "Health"
 							];
 							ksort($args3);
 							echo form_dropdown("type", $args3);
@@ -99,19 +100,23 @@
 							echo form_close();
 							//TODO: Add family
 						?>
-
+							
 						<div>
 							<ul>
-								<li class="line"><a class="fs-3" href="#car">Car</a></li>
-								<li class="line"><a class="fs-3" href="#interests">Interests</a></li>
-								<li class="line"><a class="fs-3" href="#news">News</a></li>
-								<li class="line"><a class="fs-3" href="#utility">Utilitys</a></li>
-								<li class="line"><a class="fs-3" href="#herbs">Herbs</a></li>
-								<li class="line"><a class="fs-3" href="#css">CSS</a></li>
-								<li class="line"><a class="fs-3" href="#code">Code Help</a></li>
+								<li class="line"><a href="#car">Car</a></li>
+								<li class="line"><a href="#interests">Interests</a></li>
+								<li class="line"><a href="#news">News</a></li>
+								<li class="line"><a href="#utility">Utilitys</a></li>
+								<li class="line"><a href="#herbs">Herbs</a></li>
+								<li class="line"><a href="#css">CSS</a></li>
+								<li class="line"><a href="#code">Code Help</a></li>
+								<li class="line"><a href="#health">Health</a></li>
 							</ul>
 						</div>
 						<div id="display"></div>
+						<p id="show"></p>
+						<p class="classes"></p>
+						<p class="boxy"></p>
 					</article>
 				</div>
 			</div>
@@ -130,7 +135,7 @@
 
 	<div class="m-boxes-row">
 		<div class="m-boxes-box">
-			<h2 class="m-boxes-box--title tooltip fade" data-title="Music statons">Music(Music)</h2>
+			<h2 class="m-boxes-box--title tooltip fade" data-title="Music stations">Music(Music)</h2>
 			<div class="m-boxes-box--shell">
         <?php
           foreach ($music as $list):?>
@@ -244,6 +249,17 @@
 				<div class="m-boxes-box--shell">
 					<?php
 		        foreach ($help as $list):?>
+		        <li class="m-lists-musical">
+		            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code-fork', 'rel' =>'external')), nbs(3);?><span class="count"><?php echo $list->counter;?></span>
+		        </li>
+		        <?php endforeach;?>
+				</div>
+			</div>
+			<div class="m-boxes-box">
+				<h2 id="health" class="m-boxes-box--title color-1">Health</h2>
+				<div class="m-boxes-box--shell">
+					<?php
+		        foreach ($health as $list):?>
 		        <li class="m-lists-musical">
 		            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code-fork', 'rel' =>'external')), nbs(3);?><span class="count"><?php echo $list->counter;?></span>
 		        </li>

@@ -5,7 +5,7 @@
 	flex-wrap: wrap
 	width: 100%
 	clear: both
-
+ 
 .m-boxes-box
 	max-width: 500px
 	flex: 1 2
@@ -74,7 +74,7 @@
 // use m-boxes-row
 .m-blog-boxes
 	flex: 1
-	min-width: 300px
+	min-width: 400px
 	min-height: 300px
 	background-color: $soft-peach
 	margin-right: 20px
@@ -106,9 +106,9 @@
 		li::before
 			counter-increment: subsection
 			content: counters(subsection,".") " "
-			font-size: 1.2rem
+			font-size: 1rem
 		li
-			font-size: 1.5vw
+			font-size: 1rem
 
 	&--post-number
 		margin-right: 10px
@@ -119,15 +119,5 @@
 		counter-increment: section
 		content: "Read Post # " counter(section) ": "
 
-img
-	background-color: green
-	float: left
-	width: 150px
-	height: 150px
-	border-radius: 50%
-
-	shape-outside: circle(250px at 50% 50%)
-	shape-margin: 15px
-
 .box
-	+box(20em, 5em, $v-red)
+	+box(100%, 5em, $v-red)

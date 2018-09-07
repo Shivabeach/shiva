@@ -1,27 +1,29 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (! defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
-class Music extends CI_Model {
+class Music extends CI_Model
+{
+    public $variable;
 
-	public $variable;
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
-	public function __construct()
-	{
-		parent::__construct();
-	}
+    public function priority()
+    {
+        $numb = 8;
+        $local = "local";
+        $this->db->where('counter >', $numb);
+        $this->db->where_not_in('type', $local);
+        $this->db->order_by('counter', 'desc');
+        $this->db->limit(10);
+        $query = $this->db->get('music');
+        return $query->result();
+    }
 
-	public function priority()
-	{
-		$numb = 8;
-		$local = "local";
-		$this->db->where('counter >', $numb);
-		$this->db->where_not_in('type', $local);
-		$this->db->order_by('counter', 'desc');
-		$this->db->limit(10);
-		$query = $this->db->get('music');
-		return $query->result();
-	}
-
-	public function get_music()
+    public function get_music()
     {
         $this->db->where('type', 'music');
         $this->db->select('id, url, name, genre, counter');
@@ -48,7 +50,8 @@ class Music extends CI_Model {
         return $query->result();
     }
 
-    public function get_flex(){
+    public function get_flex()
+    {
         $this->db->where('type', 'flex');
         $this->db->select('id, url, name, genre, counter');
         $this->db->order_by('name', 'asc');
@@ -56,7 +59,8 @@ class Music extends CI_Model {
         return $query->result();
     }
 
-    public function get_interest(){
+    public function get_interest()
+    {
         $this->db->where('type', 'inter');
         $this->db->select('id, url, name, genre, counter');
         $this->db->order_by('name', 'asc');
@@ -64,7 +68,8 @@ class Music extends CI_Model {
         return $query->result();
     }
 
-    public function get_color(){
+    public function get_color()
+    {
         $this->db->where('type', 'css');
         $this->db->select('id, url, name, genre, counter');
         $this->db->order_by('name', 'asc');
@@ -72,7 +77,8 @@ class Music extends CI_Model {
         return $query->result();
     }
 
-    public function get_news(){
+    public function get_news()
+    {
         $this->db->where('type', 'news');
         $this->db->select('id, url, name, genre, counter');
         $this->db->order_by('name', 'asc');
@@ -80,7 +86,8 @@ class Music extends CI_Model {
         return $query->result();
     }
 
-    public function get_utility(){
+    public function get_utility()
+    {
         $this->db->where('type', 'utility');
         $this->db->select('id, url, name, genre, counter');
         $this->db->order_by('name', 'asc');
@@ -94,9 +101,9 @@ class Music extends CI_Model {
         $this->db->order_by('name', 'asc');
         $query = $this->db->get('music');
         return $query->result();
-      }
+    }
 
-     public function get_links()
+    public function get_links()
     {
         $this->db->where('type', 'links');
         $this->db->select('id, url, name, genre, counter');
@@ -107,6 +114,14 @@ class Music extends CI_Model {
     public function get_help()
     {
         $this->db->where('type', 'help');
+        $this->db->select('id, url, name, genre, counter');
+        $this->db->order_by('name', 'asc');
+        $query = $this->db->get('music');
+        return $query->result();
+    }
+    public function get_health()
+    {
+        $this->db->where('type', 'health');
         $this->db->select('id, url, name, genre, counter');
         $this->db->order_by('name', 'asc');
         $query = $this->db->get('music');
