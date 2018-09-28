@@ -6,9 +6,9 @@
                 <li class="hova"><?php echo anchor('blogs', 'Blog', array("rel" => "external"));?></li>
                 <li class="hova"><?php echo anchor('grid', 'Grid', array("rel" => "external"));?></li>
                 <li class="hova"><a href="http://bare/" rel="external">Bare Grid</a></li>
-                <li class="hova"><a href="http://trial/pages/gridd" rel="external">Trial Griddd</a></li>
+                <li class="hova"><a href="http://trial/pages/gridd" rel="external" onClick="countMe">Trial Griddd</a></li>
                 <li class="hova"><?php echo anchor("http://grid/", "Griddd System", array("rel" => "external"));?></li>
-                <li class="hova"><?php echo anchor("http://calendar/", "Calendar", array("rel" => "external"));?></li>
+                <li class="hova"><?php echo anchor("http://calendar/", "Calendar", array("rel" => "external", "id" => "calCount"));?></li>
 
 
             </ul>

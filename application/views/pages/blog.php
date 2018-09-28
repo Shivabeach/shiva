@@ -1,4 +1,5 @@
 <body class="example">
+	
 <button id="backtotop">Back To Top</button>
 	<main class="l-containers-blog">
 
@@ -7,14 +8,6 @@
 				<h1 class="ptext"><?=$title;?></h1>
 			</div>
 		</div>
-
-		<!-- <div class="l-containers-blog--left">
-			<div class="l-containers-blog--left--shell">
-				<p>Make a definitions page for van-horn.us</p>
-
-			</div>
-
-		</div> -->
 		<!-- Menu -->
 		<?php $this->load->view("menus/top-menu.php");?>
 		<div class="l-containers-blog--middle">
@@ -25,7 +18,9 @@
 							<h2 class="m-blog-boxes--title">Blog title</h2>
 							<div class="m-blog-boxes--shell">
 								<p>Make a definitions page for van-horn.us</p>
-								<p class="boxy"></p>
+								<div><button id="counted" onclick="countMe()">Click</button></div>
+								<p id="showCount"></p>
+								
 							</div>
 
 						</div>
@@ -45,13 +40,13 @@
 							<div class="m-blog-boxes--post-number"></div>
 					</div>
 					<div class="m-blog-boxes">
-						<h2 class="m-blog-boxes--title">Javascript</h2>
+						<h2 class="m-blog-boxes--title">Javascript Items</h2>
 							<div class="m-blog-boxes--shell">
 								<ol>
-									<li>console.log()</li>
-									<li>typeof()</li>
-									<li>for peace</li>
-									<li>for peace</li>
+									<li class="numBoxes"></li>
+									<li id="numOfLi"></li>
+									<li id="demo"></li>
+									<li id="boxer" class="removes" ></li>
 									<li>for peace</li>
 								</ol>
 							</div>
@@ -73,9 +68,18 @@
 											<li>lists</li>
 										</ol>
 									</li>
+									<li>
+										<?php
+										$option = [
+											"cost" => 10
+										];
+									echo 'BCrypt hash: ' . password_hash('DSkE5n1rLHbey9uJMadBNst8UkNMFj', PASSWORD_BCRYPT, $option);
+								?>
+									</li>
 								</ol>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
+							
 					</div>
 				</div>
 				<div class="m-boxes-row">
@@ -92,7 +96,16 @@
 										<li>var className = document.getElementById("title").className = "blue" <br>
 										How to add a classname by selecting the ID
 										</li>
+										<li>function myFunction() {<br>
+   									 var x = document.getElementById("myDIV").classList.length;<br>
+    								document.getElementById("demo").innerHTML = x;<br>
+										} Number of classes in div</li>
+										<li>document.getElementById("myDIV").classList.add("mystyle", "anotherClass", "thirdClass"); </li>
+										<li>document.getElementById("myDIV").classList.remove("mystyle"); </li>
+										
+
 									</ol>
+
 
 								</div>
 							</div>
@@ -146,7 +159,13 @@
 					<div class="m-blog-boxes">
 						<h2 class="m-blog-boxes--title">Conversions</h2>
 							<div class="m-blog-boxes--shell">
-								<div class="box">Reserved</div>
+								<div class="box">
+									<p>
+									  <label>Celsius</label>
+									  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+									</p>
+									<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+								</div>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
 					</div>
@@ -168,5 +187,6 @@
 				</div>
 			</div>
 		</div>
+		
 		<!-- footer starts here -->
 
