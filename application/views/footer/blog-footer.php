@@ -30,24 +30,9 @@
 		</div>
 	</main>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="<?php echo base_url('assets/js/trial.js');?>"></script>
-	<script src="<?php echo base_url('assets/js/script.js');?>"></script>
-	<script>
-		function temperatureConverter(valNum) {
-			valNum = parseFloat(valNum);
-			document.getElementById("outputFahrenheit").innerHTML = (valNum * 1.8) + 32;
-		}
-		var cnt = 0;
-
-		function countMe() {
-			cnt=parseInt(cnt)+parseInt(1);
-			var divData = document.getElementById("showCount");
-			divData.innerHTML = "Clicks: (" + cnt + ")";
-			if (cnt >3) {
-				document.getElementById("counted").disabled = true;
-			}
-		}
- 
-	</script>
+	<script src="<?php echo base_url('assets/js/trial.min.js');?>"></script>
+	
+	
+	
 </body>
 </html>

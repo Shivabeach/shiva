@@ -21,6 +21,7 @@
 								<div><button id="counted" onclick="countMe()">Click</button></div>
 								<p id="showCount"></p>
 								
+								
 							</div>
 
 						</div>
@@ -49,6 +50,8 @@
 									<li id="boxer" class="removes" ></li>
 									<li>for peace</li>
 								</ol>
+								<!-- change text is a function in trial.js -->
+								<h1 onclick="changeText(this)">Click on this text!</h1>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
 					</div>
@@ -57,17 +60,6 @@
 							<div class="m-blog-boxes--shell">
 								<ol>
 									<li>List solid
-										<ol>
-											<li>lists</li>
-											<li>lists</li>
-										</ol>
-									</li>
-									<li>More solid
-										<ol>
-											<li>lists</li>
-											<li>lists</li>
-										</ol>
-									</li>
 									<li>
 										<?php
 										$option = [
@@ -77,6 +69,7 @@
 								?>
 									</li>
 								</ol>
+
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
 							
@@ -121,8 +114,22 @@
 										<li>var selector = document.getElementsByTagName('h1, p, aside');<br>
 										selector[1].innerHTML("Tag selected");
 										</li>
-										<li></li>
 									</ol>
+									<dl>
+										<dt>Convert string to number
+											<dd>var one = parseFloat(variable.value)</dd>
+											<dd>Where variable is the value coming from a form. All input data are strings</dd>
+										</dt>
+										<dt>Var
+											<dd>can be reached outside and inside functions</dd>
+										</dt>
+										<dt>Let
+											<dd>Basically the same as var. Block scope</dd>
+										</dt>
+										<dt>const
+											<dd>Cannot be reassigned</dd>
+										</dt>
+									</dl>
 								</div>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
@@ -152,7 +159,21 @@
 					<div class="m-blog-boxes">
 						<h2 class="m-blog-boxes--title">Javascript</h2>
 							<div class="m-blog-boxes--shell">
-								<div class="box">Reserved</div>
+								<div class="box">
+									<h4>Javascript Events</h4>
+									<ol>
+										<li>Click</li>
+										<li>mouseenter</li>
+										<li>mouseleave</li>
+										<li>mousedown</li>
+										<li>mouseup</li>
+										<li>mousemove</li>
+										<li>keydown</li>
+										<li>keyup</li>
+										<li>blur</li>
+										<li>focus</li>
+									</ol>
+								</div>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
 					</div>
@@ -172,7 +193,23 @@
 					<div class="m-blog-boxes">
 						<h2 class="m-blog-boxes--title">Conversions</h2>
 							<div class="m-blog-boxes--shell">
-								<div class="box">Reserved</div>
+								<div class="box">
+									<h3>arrays</h3>
+									<ol>
+										<li>From an array named words - let longwords = words.<b>filter</b>(word => word.length >6);</li>
+										<li>.map var numbers = [1,4,9] <br>
+											var roots = numbers.map(math.sqrt);<br>
+											roots becomes [1,2,3], numbers is still [1,4,9]
+										</li>
+										<li>items.forEach(function(item) {<br>
+										copy.push(item)}); const items = [] const copy = [] </li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ol>
+								</div>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
 					</div>

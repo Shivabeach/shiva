@@ -316,19 +316,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #2df2c9; }
+  background-color: #bed5c7; }
 
 .color-2 {
-  background-color: #83bca7; }
+  background-color: #05a409; }
 
 .color-3 {
-  background-color: #fbc250; }
+  background-color: #e44e78; }
 
 .color-4 {
-  background-color: #dce377; }
+  background-color: #0b6ba5; }
 
 .color-5 {
-  background-color: #9ab8c9; }
+  background-color: #854948; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -681,6 +681,13 @@ input::-moz-placeholder {
   text-indent: 2em;
   font-variant: small-caps; }
 
+input:focus {
+  background: yellow;
+  font-style: italic; }
+
+dd {
+  margin-left: 2em; }
+
 /* modules */
 .m-boxes-row {
   display: -webkit-box;
@@ -802,6 +809,9 @@ input::-moz-placeholder {
   width: 100%;
   min-height: 5em;
   background: #d95a77; }
+
+.bo3 {
+  color: #ECD0C2; }
 
 #backtotop {
   cursor: pointer;

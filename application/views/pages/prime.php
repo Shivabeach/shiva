@@ -54,10 +54,11 @@
 							];
 							echo form_input($arg);
 							$args1 = [
+								"id"          => "name",
+								"placeholder" => "Name",
 								"name"        => "name",
-								"placeholder" => "name",
 								"style"       => "width: 70%",
-								"class" => "bold-2"
+								"class"       => "bold-2"
 								];
 							echo form_input($args1);
 							$args2 = [
