@@ -161,6 +161,7 @@
 							<div class="m-blog-boxes--shell">
 								<div class="box">
 									<h4>Javascript Events</h4>
+									<h5>These are used on functions as well as inline click functions</h5>
 									<ol>
 										<li>Click</li>
 										<li>mouseenter</li>
@@ -216,7 +217,17 @@
 					<div class="m-blog-boxes">
 						<h2 class="m-blog-boxes--title">Conversions</h2>
 							<div class="m-blog-boxes--shell">
-								<div class="box">Reserved</div>
+								<div class="box">Reserved
+									<ul id="checkList">
+										<li class="update">Link 1</li>
+										<li class="update">Link 2</li>
+										<li class="update">Link 3</li>
+										<li class="update">Link 4</li>
+										<li class="update">Link 5</li>
+									</ul>
+									<h4>Last link picked</h4>
+									<h5 id="lastLink"></h5>
+								</div>
 							</div>
 							<div class="m-blog-boxes--post-number"></div>
 					</div>

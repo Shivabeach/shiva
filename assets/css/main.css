@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lora");
 /* Eric Meyers Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -316,19 +317,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #bed5c7; }
+  background-color: #792bb5; }
 
 .color-2 {
-  background-color: #05a409; }
+  background-color: #d28aa8; }
 
 .color-3 {
-  background-color: #e44e78; }
+  background-color: #1612b2; }
 
 .color-4 {
-  background-color: #0b6ba5; }
+  background-color: #a31890; }
 
 .color-5 {
-  background-color: #854948; }
+  background-color: #3f0e4d; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -585,7 +586,7 @@ a {
     font-family: "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; }
   a:hover {
     color: #130393;
-    background-color: rgba(126, 66, 66, 0.5); }
+    background-color: #803e27; }
   a:focus, a :active {
     color: #ffd700;
     text-shadow: 1px 1px 3px black; }
@@ -609,13 +610,16 @@ h1 {
   counter-reset: subsection; }
 
 h2 {
-  font-size: 2.6vw; }
+  font-size: 2.6vw;
+  font-family: "Lora", serif; }
 
 h3 {
-  font-size: 2vw; }
+  font-size: 2vw;
+  font-family: "Lora", serif; }
 
 h4 {
-  font-size: 1.6vw; }
+  font-size: 1.6vw;
+  font-family: "Lora", serif; }
 
 h5 {
   font-size: 1.3vw; }

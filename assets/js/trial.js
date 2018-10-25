@@ -83,6 +83,25 @@
 		id.innerHTML = "Ooops!";
 	}
 
-	localStorage.setItem("name", "Brad");
+	// this is an attempt to check the last link clicked. Works, but forgot the page refreshes
+	// var checkList = document.getElementById("checkList");
+	var items = document.querySelectorAll("a.update");
+	if (items != null) {
+		var lastLink = document.getElementById("lastLink");
+
+		for (var i = 0; i < items.length; i++) {
+			items[i].addEventListener("click", activate);
+		}
+	}
+
+	function activate() {
+		let list = this.innerHTML;
+		lastLink.innerHTML = "";
+		lastLink.innerHTML = list;
+	}
+
+
+
+
 
 	//@prepros-append script.js

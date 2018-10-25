@@ -28,7 +28,7 @@ $(function() {
 				"id": id
 			},
 			success: function(msg) {
-				location.reload();
+				//location.reload();
 			}
 		});
 		return false;
