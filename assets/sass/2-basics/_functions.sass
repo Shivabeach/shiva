@@ -11,7 +11,7 @@ $grid-max-width: 65em
 @for $i from 1 through $grid-columns
 	.col-#{$i}
 		width: 100% / $grid-columns * $i
-		min-height: 200px
+		min-height: 150px
 		padding: 15px 10px
 
 //function to convert px to vw
@@ -46,3 +46,13 @@ $grid-max-width: 65em
 @for $i from 1 through 20
 	.bold-#{$i}
 		font-weight: weight($i)
+
+@for $i from 1 through 20
+	.mb#{$i}
+		margin-bottom: ($i) * 1px
+
+@for $i from 1 through 5
+	.br-#{$i}
+		border: $i * 1px
+		border-color: $orange3
+		border-style: solid

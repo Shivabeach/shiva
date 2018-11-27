@@ -1,5 +1,4 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 class Blogs extends CI_Controller {
 
 	public function __construct()
@@ -17,6 +16,7 @@ class Blogs extends CI_Controller {
 	}
 
 }
+
 
 /* End of file Pages.php */
 /* Location: ./application/controllers/Pages.php */

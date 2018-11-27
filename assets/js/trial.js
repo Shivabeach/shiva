@@ -1,107 +1,154 @@
-	"use strict";
+"use strict";
+// learn javascript timing section
+var myVar = setInterval(myTimer, 1000);
 
-	//get number of li 
-	(function() {
-		var element1 = document.getElementById("show");
-		var numberOfLinks = document.getElementsByTagName("li");
-		if (element1 != null) {
-			element1.innerHTML = 'Number of Links ' + numberOfLinks.length;
+function myTimer() {
+	var d = new Date();
+	document.getElementById("demo12").innerHTML = d.toLocaleTimeString();
+}
+//get number of li
+(function() {
+	var element1 = document.getElementById("show");
+	var numberOfLinks = document.getElementsByTagName("li");
+	if (element1 !== null) {
+		element1.innerHTML = "Number of Links " + numberOfLinks.length;
+	}
+})();
+
+(function() {
+	var element = document.querySelector("p.classes");
+	var numberOfClasses = document.querySelectorAll("li.line");
+	if (element != null) {
+		element.innerHTML = "Number of support Links " + numberOfClasses.length;
+	}
+})();
+
+var box = document.querySelector("p.boxy");
+var numberOfBoxes = document.querySelectorAll(".m-boxes-box");
+if (box != null) {
+	box.innerHTML = "Number of Boxes " + numberOfBoxes.length;
+}
+
+function ital(x) {
+	x.style.background = "green";
+}
+
+// for blog pages
+(function() {
+	var box2 = document.querySelector("li.numBoxes"); //gets class added
+	var numberOfBoxes = document.querySelectorAll(".m-blog-boxes");
+	if (box2 != null) {
+		box2.innerHTML = "Number of Boxes " + "<b>" + numberOfBoxes.length + "</b>";
+		box2.classList.add("bo3");
+	}
+})();
+// blog page
+(function() {
+	var element2 = document.getElementById("numOfLi");
+	var numberOfLis = document.getElementsByTagName("li");
+	if (element2 != null) {
+		element2.innerHTML =
+			"Number of list items " + "<u>" + numberOfLis.length + "</u>";
+	}
+})();
+// blog page
+var pos = document.getElementById("demo");
+if (pos != null) {
+	pos.innerHTML = "Page location is " + window.location.href;
+}
+// blog page
+var elements = document.getElementsByClassName("box");
+for (var i = 0; i < elements.length; i++) {
+	elements[i].className += " box2";
+}
+
+function temperatureConverter(valNum) {
+	valNum = parseFloat(valNum) || 0;
+	document.getElementById("outputFahrenheit").innerHTML = valNum * 1.8 + 32;
+}
+
+var cnt = 0;
+var count1 = document.getElementById("counted");
+
+function countMe() {
+	cnt = parseInt(cnt) + parseInt(1);
+	let divData = document.getElementById("showCount");
+	divData.innerHTML = "Clicks: (" + cnt + ")";
+	if (cnt > 3) {
+		count1.innerHTML = "Fail";
+		count1.disabled = true;
+	}
+}
+// comes from the call on the blog page
+function changeText(id) {
+	id.innerHTML = "Ooops!";
+}
+
+function showCoords(event) {
+	var mouse1 = document.getElementById("mousey");
+	var x = event.offsetX;
+	var y = event.offsetY;
+	mouse1.innerHTML = "X = " + x + " x " + "Y = " + y;
+}
+
+function clearCoor() {
+	document.getElementById("mousey").innerHTML = "";
+}
+// this is an attempt to check the last link clicked. Works
+// var checkList = document.getElementById("checkList");
+var items = document.querySelectorAll("a.update");
+if (items != null) {
+	var lastLink = document.getElementById("lastLink");
+	for (var i = 0; i < items.length; i++) {
+		items[i].addEventListener("click", activate);
+	}
+}
+// writes the last link into lastlink ID and sets localstorage
+function activate() {
+	let list = this.innerHTML;
+	lastLink.innerHTML = list;
+	localStorage.removeItem("storage");
+	localStorage.setItem("storage", list);
+}
+// this gets local storage if the lastlink ID is empty
+(function() {
+	var lastLink = document.getElementById("lastLink");
+	if (lastLink != null) {
+		if (lastLink.value == null) {
+			//var remind = localStorage.getItem("storage");
+			document.getElementById("lastLink").innerHTML = localStorage.getItem("storage");
 		}
-	})();
+	}
+})();
 
-	(function() {
-		var element = document.querySelector('p.classes');
-		var numberOfClasses = document.querySelectorAll("li.line");
-		if (element != null) {
-			element.innerHTML = 'Number of support Links ' + numberOfClasses.length;
-		};
-	})();
+function tinctureRatio(herb) {
+	herb = parseFloat(herb) || 0;
+	document.getElementById("tincture").innerHTML = "Your tincture needs <b>" + herb * 4 + "</b> ounces of liquid";
+};
 
-
-	var box = document.querySelector("p.boxy");
-	var numberOfBoxes = document.querySelectorAll(".m-boxes-box");
-	if (box != null) {
-		box.innerHTML = 'Number of Boxes ' + numberOfBoxes.length;
+function loadDoc() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("demo").innerHTML = this.responseText;
+		}
 	};
+	xhttp.open("GET", "ajax_info.txt", true);
+	xhttp.send();
+}
 
-	function ital(x) {
-		x.style.background = "green";
-	};
-
-	// for blog pages
-	(function() {
-		var box2 = document.querySelector("li.numBoxes"); //gets class added
-		var numberOfBoxes = document.querySelectorAll(".m-blog-boxes");
-		if (box2 != null) {
-			box2.innerHTML = 'Number of Boxes ' + "<b>" + numberOfBoxes.length + "</b>";
-			box2.classList.add("bo3");
+function showHint(str) {
+	if (str.length == 0) {
+		document.getElementById("txtHint").innerHTML = "";
+		return;
+	} else {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById("txtHint").innerHTML = this.responseText;
+			}
 		};
-	})();
-
-	(function() {
-		var element2 = document.getElementById("numOfLi");
-		var numberOfLis = document.getElementsByTagName("li");
-		if (element2 != null) {
-			element2.innerHTML = 'Number of list items ' + "<u>" + numberOfLis.length + "</u>";
-		}
-	})();
-
-	var pos = document.getElementById("demo");
-	if (pos != null) {
-		pos.innerHTML = "Page location is " + window.location.href;
+		xmlhttp.open("GET", "http://shiva/assets/ajax/lookup.php?q=" + str, true);
+		xmlhttp.send();
 	}
-
-	// var y = document.getElementsByClassName("box");
-	// var i;
-	// for (i = 0; i < y.length; i++) {
-	// 	y[i].className = +"box2";
-	// }
-
-	var elements = document.getElementsByClassName("box");
-	for (var i = 0; i < elements.length; i++) {
-		elements[i].className += " box2";
-	}
-
-	function temperatureConverter(valNum) {
-		valNum = parseFloat(valNum) || 0;
-		document.getElementById("outputFahrenheit").innerHTML = (valNum * 1.8) + 32;
-	}
-	var cnt = 0;
-	var count1 = document.getElementById("counted");
-
-	function countMe() {
-		cnt = parseInt(cnt) + parseInt(1);
-		let divData = document.getElementById("showCount");
-		divData.innerHTML = "Clicks: (" + cnt + ")";
-		if (cnt > 3) {
-			count1.innerHTML = "Fail";
-			count1.disabled = true;
-		}
-	}
-
-	function changeText(id) {
-		id.innerHTML = "Ooops!";
-	}
-
-	// this is an attempt to check the last link clicked. Works, but forgot the page refreshes
-	// var checkList = document.getElementById("checkList");
-	var items = document.querySelectorAll("a.update");
-	if (items != null) {
-		var lastLink = document.getElementById("lastLink");
-
-		for (var i = 0; i < items.length; i++) {
-			items[i].addEventListener("click", activate);
-		}
-	}
-
-	function activate() {
-		let list = this.innerHTML;
-		lastLink.innerHTML = "";
-		lastLink.innerHTML = list;
-	}
-
-
-
-
-
-	//@prepros-append script.js
+}
