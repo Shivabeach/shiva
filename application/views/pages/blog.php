@@ -10,7 +10,7 @@
         </div>
         <!-- Menu -->
         <?php $this->load->view("menus/top-menu.php");?>
-        <div class="l-containers-blog--middle" onmousemove="showCoords(event)" onmouseout="clearCoor()">
+        <div class="l-containers-blog--middle">
             <div class="l-containers-blog--middle--shell">
                 <div class="m-boxes-row">
                     <div class="m-blog-boxes">
@@ -65,6 +65,8 @@
                         </div>
                         <div class="m-blog-boxes--post-number"></div>
                     </div>
+                </div>
+                <div class="m-boxes-row">
                     <div class="m-blog-boxes">
                         <h2 class="m-blog-boxes--title">Blog title</h2>
                         <div class="m-blog-boxes--shell">
@@ -79,14 +81,22 @@
 										?>
                                 </li>
                             </ol>
+                        </div>
+                        <div class="m-blog-boxes--post-number"></div>
+                    </div>
+
+                    <div class="m-blog-boxes">
+                        <h2 class="m-blog-boxes--title">Tincture Ratio</h2>
+                        <div class="m-blog-boxes--shell">
+
                             <h3>Liquid mix for a 1:4 ratio</h3>
-
-                            <input type="number" class="tincture" id="herb" placeholder="Ounces of Herb" oninput="tinctureRatio(this.value)" onchange="tinctureRatio(this.value)">
-                            <!-- <input type="number" class="tincture" id="ratio" placeholder="Desired Ratio 1 to" oninput="tinctureRatio(this.value)"> -->
-                            <!-- <input type="submit" id="submit1">-->
-                            <input type="reset">
-
-                            <div id="tincture"></div>
+                            <form>
+                                <input type="number" class="tincture" id="herb1" placeholder="Ounces of Herb">
+                                <input type="number" class="tincture" id="ratio1" placeholder="Desired Ratio 1 to ?">
+                                <input type="submit" id="submit2">
+                                <input type="reset">
+                            </form>
+                            <div id="tinctures"> </div>
                         </div>
                         <div class="m-blog-boxes--post-number"></div>
                     </div>

@@ -44,7 +44,7 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?id=4614214&units=impe
 			deg = "SW";
 			break;
 		case deg >= 247 && deg <= 269:
-			var deg = "WSW";
+			deg = "WSW";
 			break;
 		case deg >= 270 && deg <= 291:
 			deg = "W";
@@ -68,8 +68,6 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?id=4614214&units=impe
 	$(".windspeed").append(windspeed);
 	$(".deg").append(deg);
 });
-
-
 
 var btnTop = $("#backtotop");
 

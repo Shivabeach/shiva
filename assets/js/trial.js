@@ -84,12 +84,12 @@ function changeText(id) {
 	id.innerHTML = "Ooops!";
 }
 
-function showCoords(event) {
-	var mouse1 = document.getElementById("mousey");
-	var x = event.offsetX;
-	var y = event.offsetY;
-	mouse1.innerHTML = "X = " + x + " x " + "Y = " + y;
-}
+//function showCoords(event) {
+//    var mouse1 = document.getElementById("mousey");
+//    var x = event.offsetX;
+//    var y = event.offsetY;
+//    mouse1.innerHTML = "X = " + x + " x " + "Y = " + y;
+//}
 
 function clearCoor() {
 	document.getElementById("mousey").innerHTML = "";
@@ -121,34 +121,45 @@ function activate() {
 	}
 })();
 
-function tinctureRatio(herb) {
-	herb = parseFloat(herb) || 0;
-	document.getElementById("tincture").innerHTML = "Your tincture needs <b>" + herb * 4 + "</b> ounces of liquid";
-};
-
 function loadDoc() {
 	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
+	xhttp.open("GET", "ajax_info.txt", true);
+	xhttp.onload = function() {
+		if (this.status == 200) {
 			document.getElementById("demo").innerHTML = this.responseText;
 		}
 	};
-	xhttp.open("GET", "ajax_info.txt", true);
 	xhttp.send();
 }
-
+//showing hints with ajax
+//php file is lookup.php in the assets/ajax directory
 function showHint(str) {
 	if (str.length == 0) {
 		document.getElementById("txtHint").innerHTML = "";
 		return;
 	} else {
 		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
+		xmlhttp.open("GET", "http://shiva/assets/ajax/lookup.php?q=" + str, true);
+		xmlhttp.onload = function() {
+			if (this.status == 200) {
 				document.getElementById("txtHint").innerHTML = this.responseText;
 			}
 		};
-		xmlhttp.open("GET", "http://shiva/assets/ajax/lookup.php?q=" + str, true);
 		xmlhttp.send();
 	}
 }
+
+
+document.getElementById("submit2").addEventListener("click", event => {
+	var ratios = document.getElementById("ratio1").value;
+	var herbs = document.getElementById("herb1").value;
+	if (ratios == "" || ratios == 0 || herbs == "" || herbs == 0) {
+		event.preventDefault();
+		alert("Value must be greater than nothing");
+		return false;
+	} else {
+		event.preventDefault();
+		var quickResult = herbs * ratios;
+		document.getElementById("tinctures").innerHTML = "For a 1 to " + ratios + " ratio you will need <b> " + quickResult + "</b> ounces of liquid";
+	}
+});
