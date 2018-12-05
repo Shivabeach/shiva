@@ -317,19 +317,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #18858a; }
+  background-color: #064381; }
 
 .color-2 {
-  background-color: #6cc7de; }
+  background-color: #afc2af; }
 
 .color-3 {
-  background-color: #8d2e6e; }
+  background-color: #984078; }
 
 .color-4 {
-  background-color: #a23663; }
+  background-color: #836f7a; }
 
 .color-5 {
-  background-color: #5c0b94; }
+  background-color: #97baec; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -778,6 +778,9 @@ input:focus {
 
 dd {
   margin-left: 2em; }
+
+li:not(.hova) {
+  padding: 6px 0; }
 
 /* modules */
 .skeleton {

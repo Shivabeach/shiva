@@ -1,4 +1,4 @@
-<body class="example">
+<body class="example" id="blog">
     <button id="backtotop">Back To Top</button>
     <main class="l-containers-blog">
         <div class="l-headers-blog">
@@ -73,12 +73,12 @@
                             <ol>
                                 <li>List solid
                                 <li>
-                                    <?php
-										$option = [
-											"cost" => 15
-										];
-										echo 'BCrypt hash: ' . password_hash('DSkE5n1rLHbey9uJMadBNst8UkNMFj', PASSWORD_BCRYPT, $option);
-										?>
+                                  <?php
+                                    $option = [
+                                      "cost" => 5
+                                      ];
+                                    echo 'BCrypt hash: ' . password_hash('DSkE5n1rLHbey9uJMadBNst8UkNMFj', PASSWORD_BCRYPT, $option);
+                                    ?>
                                 </li>
                             </ol>
                         </div>
@@ -89,7 +89,7 @@
                         <h2 class="m-blog-boxes--title">Tincture Ratio</h2>
                         <div class="m-blog-boxes--shell">
 
-                            <h3>Liquid mix for a 1:4 ratio</h3>
+                            <h4 id="ratioType" class="bold-16">Calculate Ratio</h4>
                             <form>
                                 <input type="number" class="tincture" id="herb1" placeholder="Ounces of Herb">
                                 <input type="number" class="tincture" id="ratio1" placeholder="Desired Ratio 1 to ?">

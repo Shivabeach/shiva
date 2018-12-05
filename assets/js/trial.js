@@ -149,17 +149,17 @@ function showHint(str) {
 	}
 }
 
-
-document.getElementById("submit2").addEventListener("click", event => {
+//tincture ratio
+document.getElementById("submit2").addEventListener("click", (event) => {
 	var ratios = document.getElementById("ratio1").value;
 	var herbs = document.getElementById("herb1").value;
-	if (ratios == "" || ratios == 0 || herbs == "" || herbs == 0) {
+	if (ratios == "" || ratios <= 0 || herbs == "" || herbs <= 0) {
 		event.preventDefault();
 		alert("Value must be greater than nothing");
 		return false;
 	} else {
 		event.preventDefault();
 		var quickResult = herbs * ratios;
-		document.getElementById("tinctures").innerHTML = "For a 1 to " + ratios + " ratio you will need <b> " + quickResult + "</b> ounces of liquid";
+		document.getElementById("ratioType").innerText = "Liquid mix for a 1:" + ratios + " ratio is " + quickResult + " ounces of liquid";
 	}
 });
