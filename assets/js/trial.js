@@ -1,4 +1,7 @@
 "use strict";
+let blog = document.getElementById("blog");
+let prime = document.getElementById("prime");
+let grid = document.getElementById("grid");
 // learn javascript timing section
 var myVar = setInterval(myTimer, 1000);
 
@@ -116,7 +119,9 @@ function activate() {
 	if (lastLink != null) {
 		if (lastLink.value == null) {
 			//var remind = localStorage.getItem("storage");
-			document.getElementById("lastLink").innerHTML = localStorage.getItem("storage");
+			document.getElementById("lastLink").innerHTML = localStorage.getItem(
+				"storage"
+			);
 		}
 	}
 })();
@@ -149,17 +154,40 @@ function showHint(str) {
 	}
 }
 
-//tincture ratio
-document.getElementById("submit2").addEventListener("click", (event) => {
-	var ratios = document.getElementById("ratio1").value;
-	var herbs = document.getElementById("herb1").value;
-	if (ratios == "" || ratios <= 0 || herbs == "" || herbs <= 0) {
-		event.preventDefault();
-		alert("Value must be greater than nothing");
-		return false;
-	} else {
-		event.preventDefault();
-		var quickResult = herbs * ratios;
-		document.getElementById("ratioType").innerText = "Liquid mix for a 1:" + ratios + " ratio is " + quickResult + " ounces of liquid";
+(function() {
+	var type = document.getElementById("ratioType");
+	if (type != null) {
+		type.innerText = "Calculate Ratio";
 	}
-});
+	document.getElementById("submit2").addEventListener("click", event => {
+		var ratios = document.getElementById("ratio1").value;
+		var herbs = document.getElementById("herb1").value;
+		if (ratios == "" || ratios <= 0 || herbs == "" || herbs <= 0) {
+			event.preventDefault();
+			alert("Herb amount or ratio must be greater than nothing");
+			return false;
+		} else {
+			event.preventDefault();
+			var quickResult = herbs * ratios;
+			type.classList.add("addOutput");
+			document.getElementById("ratioType").innerText =
+				"Liquid mix for a 1:" +
+				ratios +
+				" ratio is " +
+				quickResult +
+				" ounces of liquid";
+		}
+	});
+	var renam = document.getElementById("reset");
+	if (renam != null) {
+		renam.addEventListener("click", event => {
+			type.classList.remove("addOutput");
+			document.getElementById("ratioType").innerText = "Calculate Ratio";
+		});
+	}
+})();
+// conversion for meters to feet on blog page
+function meterConverter(valNum) {
+	valNum = parseFloat(valNum) || 0;
+	document.getElementById("formOutput").innerHTML = Math.ceil(valNum * 3.2808) + " Feet";
+}

@@ -7,8 +7,8 @@
 </div>
 </main>
 
-<script defer src="<?php echo base_url('assets/js/script.min.js');?>"></script>
-<script defer src="<?php echo base_url('assets/js/trial.min.js');?>"></script>
+<script defer src="<?php echo base_url('assets/js/script.js');?>"></script>
+<script defer src="<?php echo base_url('assets/js/trial.js');?>"></script>
 
 </body>
 

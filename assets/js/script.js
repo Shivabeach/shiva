@@ -1,4 +1,20 @@
 "use strict";
+$(function() {
+	$("a.update").on("click", function() {
+		var id = $(this).attr('id');
+		$.ajax({
+			url: "http://localhost/shiva/forms/increment",
+			type: "POST",
+			data: {
+				"id": id
+			},
+			success: function(msg) {
+				//location.reload();
+			}
+		});
+		return false;
+	});
+});
 //api for weather 8fcc4d70707f287fc3826dc758fef64d http://api.openweathermap.org/data/2.5/forecast?id=4614214&APPID={APIKEY}
 //https://api.openweathermap.org/data/2.5/forecast?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d
 //openweathermap.org/img/w/
@@ -87,22 +103,6 @@ $(function() {
 	});
 });
 
-$(function() {
-	$("a.update").on("click", function() {
-		var id = $(this).attr('id');
-		$.ajax({
-			url: "http://localhost/shiva/forms/increment",
-			type: "POST",
-			data: {
-				"id": id
-			},
-			success: function(msg) {
-				//location.reload();
-			}
-		});
-		return false;
-	});
-});
 
 $(function() {
 	$('A[rel="external"]').click(function() {
@@ -135,5 +135,53 @@ $(function() {
 			}
 		});
 		return false;
+	});
+});
+
+$(function() {
+	var availableTags = [
+		"Adam Koury",
+		"ajax",
+		"Ambient",
+		"Archeology",
+		"Car",
+		"Chill",
+		"Code",
+		"Colors",
+		"CSS",
+		"Design",
+		"Detailing",
+		"DNA",
+		"DNS",
+		"Editor",
+		"Flex",
+		"Fonts",
+		"Git",
+		"Grid",
+		"Health",
+		"Herbs",
+		"Herbs",
+		"Icons",
+		"Javascript",
+		"Jquery",
+		"JSON",
+		"Lounge",
+		"Mods",
+		"Music",
+		"News",
+		"Packages",
+		"PHP",
+		"Radio",
+		"SASS",
+		"Security",
+		"Seeds",
+		"Social",
+		"Space",
+		"Tutorials",
+		"Weather",
+		"Wes Bos",
+	];
+	$("#tags").autocomplete({
+		source: availableTags
 	});
 });

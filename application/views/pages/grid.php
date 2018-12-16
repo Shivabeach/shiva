@@ -42,7 +42,7 @@
 <body id="grid">
     <div class="container">
         <header>
-            Header
+            <h1 id="head">Header Grid</h1>
         </header>
         <main>
         <?php $describe = "One Of many";?>
@@ -158,6 +158,7 @@
         </main>
         <aside>
             <div class="sidebar">Sidebar</div>
+            <div id="dare"></div>
             <div class="menu">
                 <ul>
                     <li><?php echo anchor('pages', 'Home');?></li>
@@ -174,6 +175,7 @@
         <footer>
             Footer
         </footer>
+        <script defer src="<?php echo base_url('assets/js/grid.js');?>"></script>
     </div>
 </body>
 </html>

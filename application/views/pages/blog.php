@@ -30,7 +30,7 @@
                                     </ul>
                                 </div>
                                 <div class="round1">
-                                    Lorem ipsum dolor sit amet
+                                    Lorem ipsum
                                 </div>
                             </div>
                         </div>
@@ -89,12 +89,12 @@
                         <h2 class="m-blog-boxes--title">Tincture Ratio</h2>
                         <div class="m-blog-boxes--shell">
 
-                            <h4 id="ratioType" class="bold-16">Calculate Ratio</h4>
+                            <h4 id="ratioType" class="bold-16"></h4>
                             <form>
-                                <input type="number" class="tincture" id="herb1" placeholder="Ounces of Herb">
-                                <input type="number" class="tincture" id="ratio1" placeholder="Desired Ratio 1 to ?">
+                                <input type="number" class="input-med" id="herb1" placeholder="Ounces of Herb">
+                                <input type="number" class="input-med" id="ratio1" placeholder="Desired Ratio 1 to ?">
                                 <input type="submit" id="submit2">
-                                <input type="reset">
+                                <input type="reset" id="reset">
                             </form>
                             <div id="tinctures"> </div>
                         </div>
@@ -236,11 +236,25 @@
                         <div class="m-blog-boxes--post-number"></div>
                     </div>
                     <div class="m-blog-boxes">
+                        <h2 class="m-blog-boxes--title">Meters to Feet</h2>
+                        <div class="m-blog-boxes--shell">
+                            <div class="box">
+                            <form action="" id="meters">
+                            <input class="input-med trans" id="inputMeters" type="number" placeholder="Meters" oninput="meterConverter(this.value)" onchange="meterConverter(this.value)">
+                            </form>
+                            <div class="form-Output" id="formOutput"></div>
+                            </div>
+
+                        </div>
+                        <div class="m-blog-boxes--post-number"></div>
+                    </div>
+                    <div class="m-blog-boxes">
                         <h2 class="m-blog-boxes--title">Conversions</h2>
                         <div class="m-blog-boxes--shell">
                             <div class="box">Reserved
                                 <p>open for weight</p>
                             </div>
+
                         </div>
                         <div class="m-blog-boxes--post-number"></div>
                     </div>

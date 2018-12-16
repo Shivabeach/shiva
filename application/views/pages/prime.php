@@ -1,4 +1,4 @@
-<body>
+<body id="prime">
 	<main class="l-containers-main">
 		<button id="backtotop">Back To top</button>
 		<div class="l-headers-main">
@@ -282,8 +282,8 @@
 							<h2 id="health" class="m-boxes-box--title color-1">Search</h2>
 							<div class="m-boxes-box--shell">
 								<p><b>Start typing a name in the input field below:</b></p>
-								<form>
-									First name: <input type="text" onkeyup="showHint(this.value)">
+								<form class="ui-widget">
+									<input id="tags">
 								</form>
 								<p>Suggestions: <span id="txtHint"></span></p>
 							</div>

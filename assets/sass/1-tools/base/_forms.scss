@@ -59,9 +59,9 @@ textarea {
     }
   }
 
-  &::placeholder {
-    color: tint($base-font-color, 40%);
-  }
+  // &::placeholder {
+  //   color: tint($base-font-color, 40%);
+  // }
 }
 
 textarea {

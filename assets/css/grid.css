@@ -37,10 +37,7 @@ div.title {
 
 aside {
   grid-column: span 2;
-  background: #e67e22;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr; }
+  background: #e67e22; }
   aside ul, aside li {
     display: block; }
 
