@@ -112,6 +112,7 @@
                                     <li>document.getElementsByTagName('h1, p, aside');</li>
                                     <li>document.images.length Number of images on page</li>
                                     <li>document.querySelectorAll("p.intro");</li>
+                                    <li>document.querySelector("p.intro");selects the first instance</li>
                                     <li>var className = document.getElementById("title").className = "blue" <br>
                                         How to add a classname by selecting the ID
                                     </li>
@@ -207,7 +208,22 @@
                                     <label>Celsius</label>
                                     <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
                                 </p>
-                                <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+                                <p>Fahrenheit: <span class="form-Output" id="outputFahrenheit"></span></p>
+                            </div>
+                            <div class="box">
+                                <p>
+                                    <label>Meters 2 Feet</label>
+                                    <input class="input-med trans" id="inputMeters" type="number" placeholder="Meters" oninput="meterConverter(this.value)" onchange="meterConverter(this.value)">
+                                </p>
+                                <p>Response: <span class="form-Output" id="formOutput"></span></p>
+                            </div>
+                            <div class="box">
+                                <p>
+                                    <label>Grams 2 Ounces</label>
+                                    <input class="input-med trans" id="inputgrams" type="number" placeholder="Grams" oninput="gramsConverter(this.value)" onchange="gramsConverter(this.value)">
+                                </p>
+                                <p>Response: <span class="form-Output" id="ounceOutput"></span></p>
+                                <p>Response: <span class="form-Output" id="lbOutput"></span></p>
                             </div>
                         </div>
                         <div class="m-blog-boxes--post-number"></div>
@@ -239,10 +255,7 @@
                         <h2 class="m-blog-boxes--title">Meters to Feet</h2>
                         <div class="m-blog-boxes--shell">
                             <div class="box">
-                            <form action="" id="meters">
-                            <input class="input-med trans" id="inputMeters" type="number" placeholder="Meters" oninput="meterConverter(this.value)" onchange="meterConverter(this.value)">
-                            </form>
-                            <div class="form-Output" id="formOutput"></div>
+                            <p>open</p>
                             </div>
 
                         </div>

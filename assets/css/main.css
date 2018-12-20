@@ -309,19 +309,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #97f32b; }
+  background-color: #2337dc; }
 
 .color-2 {
-  background-color: #c03a0c; }
+  background-color: #e814c9; }
 
 .color-3 {
-  background-color: #494c8a; }
+  background-color: #53de78; }
 
 .color-4 {
-  background-color: #f958c3; }
+  background-color: #679fcc; }
 
 .color-5 {
-  background-color: #931642; }
+  background-color: #55b25a; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -528,6 +528,21 @@ hr {
   border: 5px;
   border-color: #ffc078;
   border-style: solid; }
+
+.input-small {
+  width: 10%; }
+
+.input-med {
+  width: 30%; }
+
+.input-med-lg {
+  width: 50%; }
+
+.input-large {
+  width: 75%; }
+
+.input-full {
+  width: 100%; }
 
 body {
   counter-reset: section;
@@ -927,7 +942,7 @@ li:not(.hova) {
 
 .box {
   width: 100%;
-  min-height: 5em;
+  min-height: 3em;
   background: #F0DABD; }
 
 .box2 {
@@ -985,6 +1000,16 @@ li:not(.hova) {
   font-size: 1.5rem;
   text-align: center; }
 
+.flexible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
 .line {
   display: inline;
   margin-right: 10px; }
@@ -999,7 +1024,7 @@ li:not(.hova) {
   background: #F0DAF5; }
 
 .form-Output {
-  background-color: #b2f2bb; }
+  background-color: #CBE3A8; }
 
 .icon1 {
   float: left;

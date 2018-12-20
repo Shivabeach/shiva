@@ -37,7 +37,7 @@ $grid-max-width: 65em
 	@return #{$num / 2}vw
 
 @for $i from 1 through 20
-	.fs-#{$i} 
+	.fs-#{$i}
 		font-size: size($i)
 
 /* Font weight mixin */
@@ -56,3 +56,9 @@ $grid-max-width: 65em
 		border: $i * 1px
 		border-color: $orange3
 		border-style: solid
+
+//! map for input size
+$map1: (small: 10%, med: 30%, med-lg: 50%, large: 75%, full: 100%)
+@each $size, $wide in $map1
+	.input-#{$size}
+		width: $wide

@@ -1,4 +1,5 @@
 "use strict";
+
 let blog = document.getElementById("blog");
 let prime = document.getElementById("prime");
 let grid = document.getElementById("grid");
@@ -6,11 +7,13 @@ let grid = document.getElementById("grid");
 var myVar = setInterval(myTimer, 1000);
 
 function myTimer() {
+	"use strict";
 	var d = new Date();
 	document.getElementById("demo12").innerHTML = d.toLocaleTimeString();
 }
-//get number of li
+//* get number of li
 (function() {
+	"use strict";
 	var element1 = document.getElementById("show");
 	var numberOfLinks = document.getElementsByTagName("li");
 	if (element1 !== null) {
@@ -19,6 +22,7 @@ function myTimer() {
 })();
 
 (function() {
+	"use strict";
 	var element = document.querySelector("p.classes");
 	var numberOfClasses = document.querySelectorAll("li.line");
 	if (element != null) {
@@ -36,8 +40,9 @@ function ital(x) {
 	x.style.background = "green";
 }
 
-// for blog pages
+//! for blog pages
 (function() {
+	"use strict";
 	var box2 = document.querySelector("li.numBoxes"); //gets class added
 	var numberOfBoxes = document.querySelectorAll(".m-blog-boxes");
 	if (box2 != null) {
@@ -45,8 +50,9 @@ function ital(x) {
 		box2.classList.add("bo3");
 	}
 })();
-// blog page
+//* blog page
 (function() {
+	"use strict";
 	var element2 = document.getElementById("numOfLi");
 	var numberOfLis = document.getElementsByTagName("li");
 	if (element2 != null) {
@@ -54,26 +60,28 @@ function ital(x) {
 			"Number of list items " + "<u>" + numberOfLis.length + "</u>";
 	}
 })();
-// blog page
+//* blog page
 var pos = document.getElementById("demo");
 if (pos != null) {
 	pos.innerHTML = "Page location is " + window.location.href;
 }
-// blog page
+//* blog page
 var elements = document.getElementsByClassName("box");
 for (var i = 0; i < elements.length; i++) {
 	elements[i].className += " box2";
 }
 
 function temperatureConverter(valNum) {
+	"use strict";
 	valNum = parseFloat(valNum) || 0;
-	document.getElementById("outputFahrenheit").innerHTML = valNum * 1.8 + 32;
+	document.getElementById("outputFahrenheit").innerHTML = valNum * 1.8 + 32 + " Degrees";
 }
 
 var cnt = 0;
 var count1 = document.getElementById("counted");
 
 function countMe() {
+	"use strict";
 	cnt = parseInt(cnt) + parseInt(1);
 	let divData = document.getElementById("showCount");
 	divData.innerHTML = "Clicks: (" + cnt + ")";
@@ -82,8 +90,9 @@ function countMe() {
 		count1.disabled = true;
 	}
 }
-// comes from the call on the blog page
+//! comes from the call on the blog page. Should delete
 function changeText(id) {
+	"use strict";
 	id.innerHTML = "Ooops!";
 }
 
@@ -95,6 +104,7 @@ function changeText(id) {
 //}
 
 function clearCoor() {
+	"use strict";
 	document.getElementById("mousey").innerHTML = "";
 }
 // this is an attempt to check the last link clicked. Works
@@ -106,8 +116,9 @@ if (items != null) {
 		items[i].addEventListener("click", activate);
 	}
 }
-// writes the last link into lastlink ID and sets localstorage
+//! writes the last link into lastlink ID and sets localstorage
 function activate() {
+	"use strict";
 	let list = this.innerHTML;
 	lastLink.innerHTML = list;
 	localStorage.removeItem("storage");
@@ -115,6 +126,7 @@ function activate() {
 }
 // this gets local storage if the lastlink ID is empty
 (function() {
+	"use strict";
 	var lastLink = document.getElementById("lastLink");
 	if (lastLink != null) {
 		if (lastLink.value == null) {
@@ -127,6 +139,7 @@ function activate() {
 })();
 
 function loadDoc() {
+	"use strict";
 	var xhttp = new XMLHttpRequest();
 	xhttp.open("GET", "ajax_info.txt", true);
 	xhttp.onload = function() {
@@ -136,9 +149,10 @@ function loadDoc() {
 	};
 	xhttp.send();
 }
-//showing hints with ajax
-//php file is lookup.php in the assets/ajax directory
+//* showing hints with ajax
+//! php file is lookup.php in the assets/ajax directory
 function showHint(str) {
+	"use strict";
 	if (str.length == 0) {
 		document.getElementById("txtHint").innerHTML = "";
 		return;
@@ -155,6 +169,7 @@ function showHint(str) {
 }
 
 (function() {
+	"use strict";
 	var type = document.getElementById("ratioType");
 	if (type != null) {
 		type.innerText = "Calculate Ratio";
@@ -178,7 +193,7 @@ function showHint(str) {
 				" ounces of liquid";
 		}
 	});
-	var renam = document.getElementById("reset");
+	const renam = document.getElementById("reset");
 	if (renam != null) {
 		renam.addEventListener("click", event => {
 			type.classList.remove("addOutput");
@@ -186,8 +201,18 @@ function showHint(str) {
 		});
 	}
 })();
-// conversion for meters to feet on blog page
+//! conversion for meters to feet on blog page
 function meterConverter(valNum) {
+	"use strict";
 	valNum = parseFloat(valNum) || 0;
-	document.getElementById("formOutput").innerHTML = Math.ceil(valNum * 3.2808) + " Feet";
+	document.getElementById("formOutput").innerHTML = valNum * 3.2808 + " Feet";
+}
+
+//! conversion for Grams to ounces on blog page
+function gramsConverter(valNum) {
+	"use strict";
+	valNum = parseFloat(valNum) || 0;
+	const gram = Math.ceil(valNum * 0.035274);
+	document.getElementById("ounceOutput").innerHTML = gram + " Ounces";
+	document.getElementById("lbOutput").innerHTML = gram / 16 + " pounds"
 }

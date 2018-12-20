@@ -42,7 +42,7 @@
 <body id="grid">
     <div class="container">
         <header>
-            <h1 id="head">Header Grid</h1>
+            <h1 class="fs-8" id="head">Header Grid <?php echo ${van};?></h1>
         </header>
         <main>
         <?php $describe = "One Of many";?>
@@ -170,6 +170,11 @@
             </div>
             <div class="nukem">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia quibusdam sint laudantium odit eius, sed necessitatibus blanditiis nulla saepe earum.</p>
+            </div>
+            <div id="testingCreate">
+                <ul id="ul1">
+
+                </ul>
             </div>
         </aside>
         <footer>

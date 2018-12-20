@@ -122,16 +122,26 @@
 															//TODO: Add family
 							?>
 							<div>
-								<ul>
-									<li class="line"><a href="#car">Car</a></li>
-									<li class="line"><a href="#interests">Interests</a></li>
-									<li class="line"><a href="#news">News</a></li>
-									<li class="line"><a href="#utility">Utilitys</a></li>
-									<li class="line"><a href="#herbs">Herbs</a></li>
-									<li class="line"><a href="#css">CSS</a></li>
-									<li class="line"><a href="#code">Code Help</a></li>
-									<li class="line"><a href="#health">Health</a></li>
-								</ul>
+							<ul class="flexible">
+								<?php
+									$menu = [
+										"Car"       => "#car",
+										"Interests" => "#interests",
+										"News"      => "#news",
+										"Utilities" => "#utility",
+										"Herbs"     => "#herbs",
+										"CSS"       => "#css",
+										"Code"      => "#code",
+										"Health"    => "#health"
+									];
+									ksort($menu);
+									foreach($menu as $key => $value)
+									{
+										echo "<li class='line'><a href='$value'>$key</a></li>";
+									}
+
+								?>
+							</ul>
 							</div>
 							<div id="display"></div>
 							<p id="show"></p>
