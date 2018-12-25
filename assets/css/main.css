@@ -249,12 +249,12 @@ hr {
   padding: 1em; }
 
 .col-1 {
-  width: 8.3333333333%;
+  width: 8.33333%;
   min-height: 150px;
   padding: 15px 10px; }
 
 .col-2 {
-  width: 16.6666666667%;
+  width: 16.66667%;
   min-height: 150px;
   padding: 15px 10px; }
 
@@ -264,12 +264,12 @@ hr {
   padding: 15px 10px; }
 
 .col-4 {
-  width: 33.3333333333%;
+  width: 33.33333%;
   min-height: 150px;
   padding: 15px 10px; }
 
 .col-5 {
-  width: 41.6666666667%;
+  width: 41.66667%;
   min-height: 150px;
   padding: 15px 10px; }
 
@@ -279,12 +279,12 @@ hr {
   padding: 15px 10px; }
 
 .col-7 {
-  width: 58.3333333333%;
+  width: 58.33333%;
   min-height: 150px;
   padding: 15px 10px; }
 
 .col-8 {
-  width: 66.6666666667%;
+  width: 66.66667%;
   min-height: 150px;
   padding: 15px 10px; }
 
@@ -294,12 +294,12 @@ hr {
   padding: 15px 10px; }
 
 .col-10 {
-  width: 83.3333333333%;
+  width: 83.33333%;
   min-height: 150px;
   padding: 15px 10px; }
 
 .col-11 {
-  width: 91.6666666667%;
+  width: 91.66667%;
   min-height: 150px;
   padding: 15px 10px; }
 
@@ -309,19 +309,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #2337dc; }
+  background-color: #3a7f47; }
 
 .color-2 {
-  background-color: #e814c9; }
+  background-color: #fc70ea; }
 
 .color-3 {
-  background-color: #53de78; }
+  background-color: #f3b437; }
 
 .color-4 {
-  background-color: #679fcc; }
+  background-color: #8b0cb8; }
 
 .color-5 {
-  background-color: #55b25a; }
+  background-color: #71b2ff; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -703,15 +703,15 @@ h1 {
 
 h2 {
   font-size: 2.6vw;
-  font-family: "Lora", serif; }
+  font-family: 'Lora', serif; }
 
 h3 {
   font-size: 2vw;
-  font-family: "Lora", serif; }
+  font-family: 'Lora', serif; }
 
 h4 {
   font-size: 1.6vw;
-  font-family: "Lora", serif; }
+  font-family: 'Lora', serif; }
 
 h5 {
   font-size: 1.3vw; }
@@ -824,7 +824,7 @@ li:not(.hova) {
   -ms-flex-pack: center;
   justify-content: center; }
   .skeleton p {
-    margin-bottom: 0.25em; }
+    margin-bottom: .25em; }
 
 .m-boxes-row {
   display: -webkit-box;
@@ -880,7 +880,7 @@ li:not(.hova) {
         border: 1px solid #841B2D;
         height: 50px;
         border-radius: 50%;
-        padding: 0.15em 0.5em;
+        padding: 0.15em 0.50em;
         width: 50px; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .m-boxes-box--shell li a {
@@ -928,7 +928,7 @@ li:not(.hova) {
       counter-reset: subsection; }
     .m-blog-boxes--shell li::before {
       counter-increment: subsection;
-      content: counters(subsection,".") " ";
+      content: counters(subsection, ".") " ";
       font-size: 1rem; }
     .m-blog-boxes--shell li {
       font-size: 1rem; }
@@ -946,7 +946,7 @@ li:not(.hova) {
   background: #F0DABD; }
 
 .box2 {
-  padding: 0 0.5em; }
+  padding: 0 .5em; }
 
 .bo3 {
   color: #ECD0C2; }
@@ -1288,7 +1288,7 @@ li:not(.hova) {
 
 .icon::before {
   display: inline-block;
-  margin-right: 0.5em;
+  margin-right: .5em;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -1298,6 +1298,80 @@ li:not(.hova) {
   -ms-transform: translate(0, 0px);
   transform: translate(0, 0px); }
 
+legend {
+  color: #841B2D;
+  padding: 0 1em; }
 
+fieldset {
+  border: 2px solid #0048BA;
+  padding: 2em; }
+
+.budget-form {
+  border: 0.15rem solid #317b22;
+  padding: 1rem;
+  border-radius: 0.25rem; }
+
+.expense-form {
+  border: 0.15rem solid #b80c09;
+  padding: 1rem;
+  border-radius: 0.25rem; }
+
+.budget-submit {
+  background: transparent;
+  border: 0.1rem solid #317b22;
+  color: #317b22; }
+
+.expense-submit {
+  background: transparent;
+  border: 0.1rem solid #b80c09;
+  color: #b80c09; }
+
+.expense-amount,
+.expense-title {
+  color: #b80c09; }
+
+.edit-icon {
+  color: #05668d;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none; }
+
+.delete-icon {
+  color: #b80c09;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none; }
+
+.showItem {
+  display: block; }
+
+.info-title {
+  font-size: 1.5rem; }
+
+.budget {
+  font-size: 1.6rem;
+  color: #317b22; }
+
+.expense {
+  font-size: 1.6rem;
+  color: #b80c09; }
+
+.balance {
+  font-size: 1.6rem; }
+
+.budget-icon,
+.expense-icon,
+.balance-icon {
+  font-size: 2.5rem;
+  color: #05668d; }
+
+.showRed {
+  color: #b80c09; }
+
+.showGreen {
+  color: #317b22; }
+
+.showBlack {
+  color: #333333; }
 
 /*# sourceMappingURL=main.css.map */

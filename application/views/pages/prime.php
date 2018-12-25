@@ -53,9 +53,10 @@
 					<h2 class="m-boxes-box--title">Priority Links</h2>
 					<div class="m-boxes-box--shell">
 						<article>
+							<?php echo anchor("pages/expense", "Expense page", array("rel" => "external"));?>
 							<div class="display-time bold-16">
 								<?php
-																					$ts = now("America/Detroit");
+									$ts = now("America/Detroit");
 								echo unix_to_human($ts); ?> PHP
 							</div>
 						</article>
@@ -64,62 +65,62 @@
 								<?php echo validation_errors(); ?>
 							</p>
 							<?php
-															$args = [
-																'id' => 'ajax'
-															];
-															echo form_open("forms/add_link", $args);
-															$arg = [
-																'id'					=> 'url',
-																"placeholder" => "Add Link",
-																"name"        => "url",
-																"style"       => "width: 70%",
-																"class" 			=> "bold-2"
-															];
-															echo form_input($arg);
-															$args1 = [
-																"id"          => "name",
-																"placeholder" => "Name",
-																"name"        => "name",
-																"style"       => "width: 70%",
-																"class"       => "bold-2"
-																];
-															echo form_input($args1);
-															$args2 = [
-																"name"        => "genre",
-																"placeholder" => "Genre",
-																"style"       => "width: 70%",
-																"class" 			=> "bold-2"
-															];
-															echo form_input($args2);
-															$args4 = [
-																"name"        => "counter",
-																"placeholder" => "Counter",
-																"style"       => "width: 70%",
-																"class" 			=> "bold-2"
-															];
-															echo form_input($args4);
-															$args3 = [
-																""        => "Pick One",
-																"music"   => "Music",
-																"car"     => "Car",
-																"code"    => "Code",
-																"flex"    => "Flex",
-																"local"   => "Local",
-																"inter"   => "Interests",
-																"links"   => "Links",
-																"news"    => "News",
-																"utility" => "Utility",
-																"herbs"   => "Herbs",
-																"css"     => "CSS",
-																"help" 		=> "Help",
-																"health"  => "Health"
-															];
-															ksort($args3);
-															echo form_dropdown("type", $args3);
-															echo form_submit("Submit", "Submits");
-															echo form_reset("reset", "Reset");
-															echo form_close();
-															//TODO: Add family
+								$args = [
+									'id' => 'ajax'
+								];
+								echo form_open("forms/add_link", $args);
+								$arg = [
+									'id'					=> 'url',
+									"placeholder" => "Add Link",
+									"name"        => "url",
+									"style"       => "width: 70%",
+									"class" 			=> "bold-2"
+								];
+								echo form_input($arg);
+								$args1 = [
+									"id"          => "name",
+									"placeholder" => "Name",
+									"name"        => "name",
+									"style"       => "width: 70%",
+									"class"       => "bold-2"
+									];
+								echo form_input($args1);
+								$args2 = [
+									"name"        => "genre",
+									"placeholder" => "Genre",
+									"style"       => "width: 70%",
+									"class" 			=> "bold-2"
+								];
+								echo form_input($args2);
+								$args4 = [
+									"name"        => "counter",
+									"placeholder" => "Counter",
+									"style"       => "width: 70%",
+									"class" 			=> "bold-2"
+								];
+								echo form_input($args4);
+								$args3 = [
+									""        => "Pick One",
+									"music"   => "Music",
+									"car"     => "Car",
+									"code"    => "Code",
+									"flex"    => "Flex",
+									"local"   => "Local",
+									"inter"   => "Interests",
+									"links"   => "Links",
+									"news"    => "News",
+									"utility" => "Utility",
+									"herbs"   => "Herbs",
+									"css"     => "CSS",
+									"help" 		=> "Help",
+									"health"  => "Health"
+								];
+								ksort($args3);
+								echo form_dropdown("type", $args3);
+								echo form_submit("Submit", "Submits");
+								echo form_reset("reset", "Reset");
+								echo form_close();
+								//TODO: Add family
 							?>
 							<div>
 							<ul class="flexible">

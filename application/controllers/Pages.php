@@ -57,5 +57,14 @@ class Pages extends CI_Controller
         $this->load->view('pages/prime', $data);
         $this->load->view('footer/footer');
     }
+
+    public function expense()
+    {
+        $data['heading'] = "Expense Calculator";
+        $data['title'] = "Expenses";
+        $this->load->view('header/header', $data);
+        $this->load->view('pages/expense', $data);
+        $this->load->view('footer/footer');
+    }
 }
 // End of file

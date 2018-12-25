@@ -173,26 +173,26 @@ function showHint(str) {
 	var type = document.getElementById("ratioType");
 	if (type != null) {
 		type.innerText = "Calculate Ratio";
-	}
-	document.getElementById("submit2").addEventListener("click", event => {
-		var ratios = document.getElementById("ratio1").value;
-		var herbs = document.getElementById("herb1").value;
-		if (ratios == "" || ratios <= 0 || herbs == "" || herbs <= 0) {
-			event.preventDefault();
-			alert("Herb amount or ratio must be greater than nothing");
-			return false;
-		} else {
-			event.preventDefault();
-			var quickResult = herbs * ratios;
-			type.classList.add("addOutput");
-			document.getElementById("ratioType").innerText =
-				"Liquid mix for a 1:" +
-				ratios +
-				" ratio is " +
-				quickResult +
-				" ounces of liquid";
-		}
-	});
+		document.getElementById("submit2").addEventListener("click", event => {
+			var ratios = document.getElementById("ratio1").value;
+			var herbs = document.getElementById("herb1").value;
+			if (ratios == "" || ratios <= 0 || herbs == "" || herbs <= 0) {
+				event.preventDefault();
+				alert("Herb amount or ratio must be greater than nothing");
+				return false;
+			} else {
+				event.preventDefault();
+				var quickResult = herbs * ratios;
+				type.classList.add("addOutput");
+				document.getElementById("ratioType").innerText =
+					"Liquid mix for a 1:" +
+					ratios +
+					" ratio is " +
+					quickResult +
+					" ounces of liquid";
+			}
+		})
+	};
 	const renam = document.getElementById("reset");
 	if (renam != null) {
 		renam.addEventListener("click", event => {
