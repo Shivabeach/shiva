@@ -1,7 +1,8 @@
+<?php $this->load->view("menus/top-menu.php");?>
 <div class="container mt-4">
   <div id="demo12"></div>
     <h1 class="display-4 text-center">
-      <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List</h1>
+      <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Spending</span>List</h1>
       <form id="book-form">
         <div class="form-group">
           <label for="title">Title</label>

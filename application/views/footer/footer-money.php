@@ -8,8 +8,8 @@
 </main>
 
 <script defer src="<?php echo base_url('assets/js/script.js');?>"></script>
-<script defer src="<?php echo base_url('assets/js/trial.js');?>"></script> 
-
+<script defer src="<?php echo base_url('assets/js/trial.js');?>"></script>
+<script defer src="<?php echo base_url('assets/js/money.js');?>"></script>
 
 </body>
 

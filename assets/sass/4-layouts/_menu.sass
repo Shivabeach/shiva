@@ -1,74 +1,80 @@
 .l-menu
-	flex: 1
-	height: 100px
-	background-color: $soft-peach1
-	margin-bottom: 1em
+  flex: 1
+  height: 100px
+  background-color: transparent
+  margin-bottom: 1em
 
-	+border(2px, solid, $soft-peach-dark, 20px)
+  //+border(2px, solid, $soft-peach-dark, 20px)
 
-	+shadow(1px, 10px, 30px, $soft-peach-dark)
+  //+shadow(1px, 10px, 30px, $soft-peach-dark)
 
 .menu-flex
-	display: flex
-	height: 100%
+  display: flex
+  height: 100%
 
-	+center(space-around, center)
+  +center(space-around, center)
 
-	li.hova:hover
-		a
-			color: #000000
-			+gradient(270deg, $zero, $v-olive)
+  li.hova:hover
+    a
+      color: #000000
 
-	li
-		min-width: 150px
-		height: 100%
-		a
-			color: $zest
-			text-shadow: 1px 1px 2px black
-			padding: 0 10px
-			display: flex
-			width: 100%
-			height: 100%
-			//margin: 5px auto
-			font-size: 1.5vw
-			font-variant: small-caps
-			+center(center, center)
+      +gradient(270deg, $zero, $v-olive)
 
-		+border(1px, solid, $soft-peach, 10px)
+  li
+    min-width: 150px
+    height: 100%
 
-		+tablet
-			margin-left: 5px
-			width: auto
-			font-size: get-vw(28px)
-		+mobile
-			margin-left: 5px
-			width: auto
-			font-size: get-vw(28px)
+    a
+      color: $zest
+      text-shadow: 1px 1px 2px black
+      padding: 0 10px
+      display: flex
+      width: 100%
+      height: 100%
 
+      //margin: 5px auto
+      font-size: 1.5vw
+      font-variant: small-caps
+
+      +center(center, center)
+
+    +border(1px, solid, $soft-peach, 10px)
+
+    +tablet
+      margin-left: 5px
+      width: auto
+      font-size: get-vw(28px)
+
+
+    +mobile
+      margin-left: 5px
+      width: auto
+      font-size: get-vw(28px)
 
 .l-menu-blog
-	min-height: 5em
-	display: flex
-	flex: 1 0 100%
+  min-height: 5em
+  display: flex
+  flex: 1 0 100%
 
-	&--shell
-		display: flex
-		justify-content: space-around
-		margin: 0 1em
-		width: 100%
+  &--shell
+    display: flex
+    justify-content: space-around
+    margin: 0 1em
+    width: 100%
 
-		+tablet
-			margin: 0
+    +tablet
+      margin: 0
 
-		+mobile
-			margin: 0
+
+    +mobile
+      margin: 0
 
 .icon::before
-	display: inline-block
-	margin-right: .5em
-	font: normal normal normal 14px/1 FontAwesome
-	font-size: inherit
-	text-rendering: auto
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
-	transform: translate(0, 0px)
+  display: inline-block
+  margin-right: 0.5em
+  font: normal normal normal 14px / 1 FontAwesome
+  font-size: inherit
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  transform: translate(0, 0px)

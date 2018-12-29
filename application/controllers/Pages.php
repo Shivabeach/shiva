@@ -60,11 +60,11 @@ class Pages extends CI_Controller
 
     public function expense()
     {
-        $data['heading'] = "Expense Calculator";
-        $data['title'] = "Expenses";
-        $this->load->view('header/header', $data);
+        $data['heading'] = "Books";
+        $data['title'] = "Books";
+        $this->load->view('header/header1', $data);
         $this->load->view('pages/expense', $data);
-        $this->load->view('footer/footer');
+        $this->load->view('footer/footer1');
     }
 }
 // End of file

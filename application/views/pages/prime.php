@@ -53,7 +53,11 @@
 					<h2 class="m-boxes-box--title">Priority Links</h2>
 					<div class="m-boxes-box--shell">
 						<article>
-							<?php echo anchor("pages/expense", "Expense page", array("rel" => "external"));?>
+							<?php echo anchor("pages/expense", "Expense page", array("rel" => "external"));
+								echo anchor("blogs/money", "Money", array("rel" => "external"));
+
+							?>
+
 							<div class="display-time bold-16">
 								<?php
 									$ts = now("America/Detroit");

@@ -15,6 +15,15 @@ class Blogs extends CI_Controller {
 		$this->load->view('footer/blog-footer');
 	}
 
+	public function money()
+	{
+		$data['title']   = "Expenses";
+		$data['heading'] = "Expense trial";
+		$this->load->view('header/header', $data);
+		$this->load->view('pages/money', $data);
+		$this->load->view('footer/footer-money');
+	}
+
 }
 
 

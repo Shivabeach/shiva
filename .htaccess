@@ -18,45 +18,8 @@ RewriteRule "(^|/)\." - [F]
 AddType application/x-httpd-php .htm
 AddType application/x-httpd-php .html
 #
-<IfModule mod_headers.c>
-     Header set X-Frame-Options "DENY"
-     <FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|tt[cf]|vcf|vtt|webapp|web[mp]|woff|xml|xpi)$">
-         Header unset X-Frame-Options
-     </FilesMatch>
- </IfModule>
- <IfModule mod_autoindex.c>
-    Options -Indexes
-</IfModule>
-#
-Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-#
-<FilesMatch "(^#.*#|\.(bak|config|dist|fla|in[ci]|log|psd|sh|sql|sw[op])|~)$">
-#
-    # Apache < 2.3
-    <IfModule !mod_authz_core.c>
-        Order allow,deny
-        Deny from all
-        Satisfy All
-    </IfModule>
 
-    # Apache ≥ 2.3
-    <IfModule mod_authz_core.c>
-        Require all denied
-    </IfModule>
-
-</FilesMatch>
 #
-<IfModule mod_headers.c>
-    Header set X-Content-Type-Options "nosniff"
-</IfModule>
-
-<IfModule mod_headers.c>
-     #                           (1)    (2)
-     Header set X-XSS-Protection "1; mode=block"
-     <FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|tt[cf]|vcf|vtt|webapp|web[mp]|woff|xml|xpi)$">
-         Header unset X-XSS-Protection
-     </FilesMatch>
- </IfModule>
 
  # ------------------------------------------------------------------------------
 # | Compression                                                                |
@@ -100,9 +63,7 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
 </IfModule>
 
-<IfModule mod_headers.c>
-    Header set Cache-Control "no-transform"
-</IfModule>
+
 # ------------------------------------------------------------------------------
 # | Expires headers                                                            |
 # ------------------------------------------------------------------------------

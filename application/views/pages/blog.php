@@ -157,6 +157,7 @@
               </div>
               <div class="m-blog-boxes--post-number"></div>
             </div>
+            
             <!-- box 2 -->
             <div class="m-blog-boxes">
               <h2 class="m-blog-boxes--title">Javascript</h2>

@@ -185,11 +185,8 @@ function showHint(str) {
 				var quickResult = herbs * ratios;
 				type.classList.add("addOutput");
 				document.getElementById("ratioType").innerText =
-					"Liquid mix for a 1:" +
-					ratios +
-					" ratio is " +
-					quickResult +
-					" ounces of liquid";
+					"Liquid mix for a 1:" + ratios + " ratio is " +
+					quickResult + " ounces of liquid";
 			}
 		})
 	};
@@ -212,7 +209,7 @@ function meterConverter(valNum) {
 function gramsConverter(valNum) {
 	"use strict";
 	valNum = parseFloat(valNum) || 0;
-	const gram = Math.ceil(valNum * 0.035274);
+	const gram = valNum * 0.035274;
 	document.getElementById("ounceOutput").innerHTML = gram + " Ounces";
 	document.getElementById("lbOutput").innerHTML = gram / 16 + " pounds"
 }
