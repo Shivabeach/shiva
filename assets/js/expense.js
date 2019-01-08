@@ -9,7 +9,6 @@ class Book {
 
 // UI Class: Handle UI Tasks
 class UI {
-
 	static displayBooks() {
 		const books = Store.getBooks();
 

@@ -23,6 +23,7 @@
                 <fieldset>
                   <legend>Enter Budget</legend>
                     <?php  
+                    
                     $bud = [
                       "id" => "budget",
                       "placeholder" => "Enter Budget",
@@ -32,11 +33,11 @@
 
                     $budsub = [
                     "value" => "Enter Budget",
-                    "id" => "budsub"
+                    "id" => "submit"
                     ];
+
+                    echo "<button type='submit' id='submit' value='Submit'>submit</button";
                     
-                    echo form_submit($budsub);
-                    echo form_close();
                     ?>
                 </fieldset>
   
@@ -44,33 +45,38 @@
                   <legend>Expense Input</legend>
                 
                 <?php  
-                  $form1 = [
+                  $forms = [
                     "id" => "expenseForm"
                   ];
-                  echo form_open($form1);
+                  echo form_open("",$forms);
 
                   $expense = [
-                    "id" => "expense",
+                    "id"          => "expense",
                     "placeholder" => "Enter Expense value",
-                    "class" => "input-full",
-                    "type" => "number"
+                    "class"       => "input-full",
+                    "type"        => "number"
                   ];
                   echo form_input($expense);
 
                   $reason = [
-                    "id" => "reason",
+                    "id"          => "reason",
                     "placeholder" => "Expense reason",
-                    "class" => "input-full"
+                    "class"       => "input-full"
                   ];
                   echo form_input($reason);
 
+                  $data = [
+                    "id"          => "day",
+                    "class"       => "input-full",
+                    "placeholder" => "date"
+                  ];
+                  echo form_input($data);
+
                   $sub = [
                     "value" => "Enter Values",
-                    "id" => "sub"
+                    "id"    => "sub"
                   ];
                   echo form_submit($sub);
-
-
                   echo form_close();
                 ?>
                 </fieldset>
@@ -83,8 +89,16 @@
             <div class="m-blog-boxes--post-number"></div>
           </div>
           <div class="m-blog-boxes">
-            <h2 class="m-blog-boxes--title">Blog title</h2>
+            <h2 class="m-blog-boxes--title">Budget Total title</h2>
             <div class="m-blog-boxes--shell">
+              <h3>Budget</h3>
+              <h3 id="budgetDisplay"></h3>
+              <!-- not done -->
+              <h3>Expenses</h3>
+              <h3 class="totalExpenses"></h3>
+              <!-- not done -->
+              <h3>Amount Left</h3>
+              <h3 class="finalExpenses"></h3>
 
 
 
@@ -94,13 +108,27 @@
 
 
 
-              Context
+             
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>
           <div class="m-blog-boxes">
-            <h2 class="m-blog-boxes--title">Javascript Items</h2>
+            <h2 class="m-blog-boxes--title">Expense Items</h2>
             <div class="m-blog-boxes--shell">
+            
+            <table>
+              <thead>
+                <tr>              
+                  <th>Expense</th>
+                  <th>Reason</th>
+                  <th>Date</th>
+                  <th>Delete</th>
+                </tr>  
+              </thead>
+              <tbody class="disp">
+                
+              </tbody>
+            </table>
 
 
 
@@ -108,9 +136,7 @@
 
 
 
-
-
-              COntest
+             
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>
