@@ -22,11 +22,11 @@
 
                 <fieldset>
                   <legend>Enter Budget</legend>
-                    <?php  
+                    <?php
                     $args = [
-                      "id" => "budgetForm"
+                      "id" => "budget-form"
                     ];
-                    echo form_open("", $args);
+                    echo form_open("",$args);
                     $bud = [
                       "id" => "budget",
                       "placeholder" => "Enter Budget",
@@ -34,63 +34,28 @@
                     ];
                     echo form_input($bud);
 
-                    $budsub = [
-                    "value" => "Enter Budget",
-                    "id" => "submit"
-                    ];
+                    echo "<button type='submit' id='submit' value='Submit'>submit</button>";
 
-                    echo "<button type='submit' id='submit' value='Submit'>submit</button";
-                    
                     ?>
                 </fieldset>
-  
+
                 <fieldset>
                   <legend>Expense Input</legend>
-                
-                <?php  
-                  $forms = [
-                    "id" => "expenseForm"
-                  ];
-                  echo form_open("",$forms);
 
-                  $expense = [
-                    "id"          => "expense",
-                    "placeholder" => "Enter Expense value",
-                    "class"       => "input-full",
-                    "type"        => "number"
-                  ];
-                  echo form_input($expense);
+                <form id="expense-form" method="post">
+                  <input type="number" id="expense" placeholder="expense" />
+                  <input type="text" id="reason" placeholder="reason" />
+                  <button id="sub">Submit</button>
+                </form>
 
-                  $reason = [
-                    "id"          => "reason",
-                    "placeholder" => "Expense reason",
-                    "class"       => "input-full"
-                  ];
-                  echo form_input($reason);
-
-                  $data = [
-                    "id"          => "day",
-                    "class"       => "input-full",
-                    "placeholder" => "date"
-                  ];
-                  echo form_input($data);
-
-                  $sub = [
-                    "value" => "Enter Values",
-                    "id"    => "sub"
-                  ];
-                  echo form_submit($sub);
-                  echo form_close();
-                ?>
                 </fieldset>
-
-
-
                 Box 1
               </div>
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>
+
+
           <div class="m-blog-boxes">
             <h2 class="m-blog-boxes--title">Budget Total title</h2>
             <div class="m-blog-boxes--shell">
@@ -102,36 +67,19 @@
               <!-- not done -->
               <h3>Amount Left</h3>
               <h3 class="finalExpenses"></h3>
-
-
-
-
-
-
-
-
-
-             
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>
+
+
+
           <div class="m-blog-boxes">
             <h2 class="m-blog-boxes--title">Expense Items</h2>
             <div class="m-blog-boxes--shell">
-            
-            <table>
-              <thead>
-                <tr>              
-                  <th>Expense</th>
-                  <th>Reason</th>
-                  <th>Date</th>
-                  <th>Delete</th>
-                </tr>  
-              </thead>
-              <tbody class="disp">
-                
-              </tbody>
-            </table>
+            <div class="cart-row"> <!-- Cart item container -->
+                <span class="cart-item cart-header cart-column">ITEM</span> <!-- cart-item -->
+                <span class="cart-price cart-header cart-column">PRICE</span> <!--Cart Price-->
+            </div>
 
 
 
@@ -139,7 +87,7 @@
 
 
 
-             
+
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>

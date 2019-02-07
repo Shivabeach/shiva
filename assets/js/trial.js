@@ -151,22 +151,22 @@ function loadDoc() {
 }
 //* showing hints with ajax
 //! php file is lookup.php in the assets/ajax directory
-function showHint(str) {
-	"use strict";
-	if (str.length == 0) {
-		document.getElementById("txtHint").innerHTML = "";
-		return;
-	} else {
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET", "http://shiva/assets/ajax/lookup.php?q=" + str, true);
-		xmlhttp.onload = function() {
-			if (this.status == 200) {
-				document.getElementById("txtHint").innerHTML = this.responseText;
-			}
-		};
-		xmlhttp.send();
-	}
-}
+// function showHint(str) {
+// 	"use strict";
+// 	if (str.length == 0) {
+// 		document.getElementById("txtHint").innerHTML = "";
+// 		return;
+// 	} else {
+// 		var xmlhttp = new XMLHttpRequest();
+// 		xmlhttp.open("GET", "http://shiva/assets/ajax/lookup.php?q=" + str, true);
+// 		xmlhttp.onload = function() {
+// 			if (this.status == 200) {
+// 				document.getElementById("txtHint").innerHTML = this.responseText;
+// 			}
+// 		};
+// 		xmlhttp.send();
+// 	}
+// }
 
 (function() {
 	"use strict";

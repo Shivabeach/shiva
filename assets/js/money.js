@@ -1,47 +1,85 @@
-let date = new Date();
-var dayOfMonth = date.getDate();
-var month = date.getMonth() + 1;
-var year = date.getFullYear();
-const day = month + "/" + dayOfMonth + "/" + year;
-let dateIn = day;
+class Items {
+  constructor() {
+    this.reason;
+    this.expense;
+  }
 
-function Express(expense, reason, dateIn) {
-	this.expense = expense;
-	this.reason = reason;
-	this.dateIn = dateIn;
 }
 
-// this gets the local storage expense number on refresh or page open
-(function() {
-	document.querySelector(".displayBudget").innerHTML = "$" + localStorage.getItem("exp");
-})();
+class UI {
+  constructor() {
+      this.budgetForm = document.getElementById("budget-form");
+      this.budget = document.getElementById("budget");
+      this.expenseForm = document.getElementById("expense-form");
+      this.expense = document.getElementById("expense");
+      this.reason = document.getElementById("reason");
+      this.budgetDisplay = document.getElementById("budgetDisplay");
+      this.totalExpenses = document.getElementById("totalExpenses");
+      this.finalExpenses = document.getElementById("finalExpenses");
+      this.expenseList = document.getElementById("expense-list");
+      this.itemList = [];
+      this.itemId = 0;
+    } //end of constructor  
+    //submit budget method
+  submitBudgetForm() {
+    let bud = document.getElementById("budget").value;
+    const budget = parseFloat(bud);
+    localStorage.setItem("budget", budget);
+    document.querySelector("#budgetDisplay").innerHTML = "$" + budget;
+  }
 
-//add expense by form. Goes to storage and is displayed in box 2
-document.getElementById("submit").addEventListener('click', (e) => {
-	e.preventDefault();
-	var bud = document.getElementById("budget").value;
-	var budget = parseInt(bud);
-	document.querySelector('.displayBudget').innerHTML = "$" + budget.toFixed(2);
-	localStorage.removeItem("exp");
-	localStorage.setItem("exp", budget);
+  submitExpenseForm() {
+    let expenses = document.getElementById("expense").value;
+    let reason = document.getElementById("reason").value;
+    const expense = parseFloat(expenses);
+
+    const itemList = new Items(reason, expense);
+    localStorage.setItem('itemList', JSON.stringify(itemList));
+
+
+  }
+} //end of class
+
+function eventListeners() {
+  const budgetForm = document.getElementById("budget-form");
+  const expenseForm = document.getElementById("sub");
+  const expenseList = document.getElementById("expense-list");
+
+
+
+  budgetForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    ui.submitBudgetForm();
+
+  })
+
+  expenseForm.addEventListener('click', (e) => {
+    e.preventDefault();
+    ui.submitExpenseForm();
+  })
+
+  expenseList.addEventListener('click', function() {
+
+
+  })
+}
+
+//loaders
+document.addEventListener('DOMContentLoaded', function() {
+  eventListeners();
+})
+document.addEventListener('DOMContentLoaded', function() {
+  let budget;
+  if (localStorage.getItem('budget') === "") {
+    budget = [];
+  } else {
+    budget = JSON.parse(localStorage.getItem('budget'));
+    document.getElementById("budgetDisplay").innerHTML = "$" + budget
+  }
 })
 
-document.getElementById("sub").addEventListener('click', function(e) {
-		e.preventDefault();
-		const expense = document.querySelector("#expense").value;
-		const reason = document.querySelector("#reason").value;
-		const dateIn = day;
-		const express = new Express(expense, reason, dateIn);
-		let expresss; //fix
-		localStorage.getItem('expend');
-		expresss.push(express); //fix
-		localStorage.setItem("expend", JSON.stringify(express));
-	})
-	// make functions as in expense.js
-function subtract(expense) {
 
-}
 
-//add new expense to total
-//subtract total from budget
-//store and display new total
+
+
+//end of class

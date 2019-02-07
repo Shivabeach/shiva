@@ -309,19 +309,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #8cc876; }
+  background-color: #7ce163; }
 
 .color-2 {
-  background-color: #cf7139; }
+  background-color: #9ac223; }
 
 .color-3 {
-  background-color: #3e66dc; }
+  background-color: #3c67e6; }
 
 .color-4 {
-  background-color: #e05f35; }
+  background-color: #fc90ee; }
 
 .color-5 {
-  background-color: #dea15a; }
+  background-color: #de1e6d; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -729,6 +729,7 @@ h6 {
   background-image: -webkit-linear-gradient(left, #ECD0C2, #e67e22);
   background-image: -o-linear-gradient(left, #ECD0C2, #e67e22);
   background-image: linear-gradient(to right, #ECD0C2, #e67e22);
+  -webkit-background-clip: text;
   background-clip: text; }
 
 select {
@@ -802,14 +803,15 @@ input:focus {
   background: transparent;
   border: none; }
 
+.moss {
+  color: #F0DABD;
+  text-shadow: 2px 1px 1px black; }
+
 dd {
   margin-left: 2em; }
 
 li:not(.hova) {
   padding: 6px 0; }
-
-tr, td {
-  color: #ECD0C2; }
 
 .display-4 {
   color: #868e96; }
@@ -823,6 +825,20 @@ fieldset {
   fieldset legend {
     padding: 1em;
     color: rgba(126, 66, 66, 0.5); }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.wrap {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.indigo2 {
+  background: #91a7ff; }
 
 /* modules */
 .skeleton {
@@ -1055,6 +1071,7 @@ fieldset {
   border-radius: 50%;
   height: 250px;
   width: 250px;
+  display: -ms-grid;
   display: grid;
   place-items: center; }
 
@@ -1063,6 +1080,7 @@ fieldset {
   border-radius: 50%;
   height: 250px;
   width: 250px;
+  display: -ms-grid;
   display: grid;
   place-items: center;
   padding: 5px;
@@ -1272,6 +1290,9 @@ fieldset {
         font-size: 2.8vw; } }
 
 .l-menu-blog {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   min-height: 5em;
   display: -webkit-box;
   display: -ms-flexbox;

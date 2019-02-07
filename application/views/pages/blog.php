@@ -81,6 +81,7 @@
                     echo 'BCrypt hash: ' . password_hash('DSkE5n1rLHbey9uJMadBNst8UkNMFj', PASSWORD_BCRYPT, $option);
                     ?>
                   </li>
+                  <li>[1,2,3,4,5,6].reduce(function(accumulator, currentValue, currentIndex, array) { return accumulator + currentValue; },0);</li>
                 </ol>
               </div>
               <div class="m-blog-boxes--post-number"></div>

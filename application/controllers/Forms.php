@@ -60,6 +60,25 @@ class Forms extends CI_Controller {
   	}
   }
 
+  public function daily($time=null, $date=null,$weight=null)
+  {
+    $data = [
+      "time"   => trim($this->input->post('time')),
+      "date"   => trim($this->input->post('date')),
+      "weight" => trim($this->input->post('weight'))
+    ];
+    $this->form_validation->set_rules('time', 'time', 'required|trim');
+    $this->form_validation->set_rules('date', 'date', 'required|trim');
+    $this->form_validation->set_rules('weight', 'Weight', 'required|trim|greater_than[200]|numeric');
+    // eatery
+    if( $this->form_validation->run() == FALSE) {
+      echo validation_errors();
+    }else {
+      $this->db->insert("eatery", $data);
+      echo "Yer too fat";
+    }
+    
+  }
 
 }
 

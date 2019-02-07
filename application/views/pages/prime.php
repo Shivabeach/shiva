@@ -1,13 +1,13 @@
 <body id="prime">
 	<main class="l-containers-main">
 		<button id="backtotop">Back To top</button>
-		<div class="l-headers-main">
-			<div class="l-headers-main--title">
+		<!-- <div class="l-headers-main">
+			<!-- <div class="l-headers-main--title">
 				<h1 class="ptext">
-				<?=$heading;?>
+				//<?=$heading;?>
 				</h1>
-			</div>
-			</div><!-- end of header -->
+			</div> -->
+			</div>end of header -->
 			<?php $this->load->view("menus/top-menu.php");?>
 			<div class="m-boxes-row">
 				<div class="col-3 br-2">
@@ -53,9 +53,10 @@
 					<h2 class="m-boxes-box--title">Priority Links</h2>
 					<div class="m-boxes-box--shell">
 						<article>
-							<?php echo anchor("pages/expense", "Expense page", array("rel" => "external"));
-								echo anchor("blogs/money", "Money", array("rel" => "external"));
-
+							<?php
+							echo anchor("pages/expense", "Expense page", array("rel" => "external"));
+							echo anchor("blogs/money", "Money", array("rel" => "external"));
+							echo anchor("blogs/expense", "expense", array("rel" => "external"));
 							?>
 
 							<div class="display-time bold-16">
@@ -126,7 +127,7 @@
 								echo form_close();
 								//TODO: Add family
 							?>
-							<div>
+							<article>
 							<ul class="flexible">
 								<?php
 									$menu = [
@@ -137,7 +138,8 @@
 										"Herbs"     => "#herbs",
 										"CSS"       => "#css",
 										"Code"      => "#code",
-										"Health"    => "#health"
+										"Health"    => "#health",
+										"Weight"		=> "#weight"
 									];
 									ksort($menu);
 									foreach($menu as $key => $value)
@@ -147,7 +149,7 @@
 
 								?>
 							</ul>
-							</div>
+							</article>
 							<div id="display"></div>
 							<p id="show"></p>
 							<p class="classes"></p>
@@ -296,11 +298,46 @@
 						<div class="m-boxes-box">
 							<h2 id="health" class="m-boxes-box--title color-1">Search</h2>
 							<div class="m-boxes-box--shell">
-								<p><b>Start typing a name in the input field below:</b></p>
-								<form class="ui-widget">
-									<input id="tags">
-								</form>
-								<p>Suggestions: <span id="txtHint"></span></p>
+								<h2 id="weight">Weight</h2>
+							<!-- weight form here	 -->
+							<?php
+							$array = [
+								"id" => "ajax"
+							];
+							echo form_open("forms/daily", $array);
+							$data = [
+								"name"        => "time",
+								"id"          => "time",
+								"placeholder" => "Time",
+								"class"       => "input-lg",
+								"type"        => "time"
+							];
+							echo form_input($data);
+							$data1 = [
+								"name"        => "date",
+								"id"          => "date",
+								"placeholder" => "Date",
+								"class"       => "input-lg",
+								"type"        => "date"
+							];
+							echo form_input($data1);
+							$data2 = [
+								"name"        => "weight",
+								"id"          => "weight",
+								"placeholder" => "Weight",
+								"class"       => "input-lg",
+								"type"        => "number"
+							];
+							echo form_input($data2);
+							$data3 = [
+								"type"  => "submit",
+								"id"    => "submit",
+								"value" => "Heavy"
+							];
+							echo form_submit($data3);
+							echo form_close();
+							?>
+							<div id="display"></div>
 							</div>
 						</div>
 						<div class="m-boxes-box">
