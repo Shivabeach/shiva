@@ -1,4 +1,4 @@
-<body class="example" id="blog">
+<body class="example" id="tea">
   <button id="backtotop">Back To Top</button>
   <main class="l-containers-blog">
     <div class="l-headers-blog">
@@ -15,27 +15,13 @@
         <div class="m-boxes-row">
           <div class="m-blog-boxes">
             <div class="m-blog-boxes--shell">
-              <h2 class="m-blog-boxes--title">Expense Input</h2>
-              <?php echo anchor("pages/expense", "Expense page", array("rel" => "external"));?>
+              <h2 class="m-blog-boxes--title">Tea Input</h2>
+
               <h4 id="demo12"></h4>
               <div class="m-blog-boxes--shell">
 
                 <fieldset>
-                  <legend>Enter Budget</legend>
-                    <?php
-                    $args = [
-                      "id" => "budget-form"
-                    ];
-                    echo form_open("",$args);
-                    $bud = [
-                      "id" => "budget",
-                      "placeholder" => "Enter Budget",
-                      "class" => "input-full",
-                      "type" => number,
-                      "min" => 500,
-                      "max" => 10000
-                    ];
-                    echo form_input($bud);
+                  <legend>Enter Tea Info</legend>
 
                     echo "<button type='submit' id='submit' value='Submit'>submit</button>";
 
@@ -77,7 +63,7 @@
 
 
           <div class="m-blog-boxes">
-            <h2 class="m-blog-boxes--title">Expense Items</h2>
+            <h2 class="m-blog-boxes--title">Tea Record</h2>
             <div class="m-blog-boxes--shell">
             <div class="cart-row"> <!-- Cart item container -->
                 <span class="cart-item cart-header cart-column">ITEM</span> <!-- cart-item -->

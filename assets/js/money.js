@@ -19,22 +19,23 @@ class UI {
       this.expenseList = document.getElementById("expense-list");
       this.itemList = [];
       this.itemId = 0;
-    } //end of constructor  
+    } //end of constructor
     //submit budget method
-  submitBudgetForm() {
+  static submitBudgetForm() {
+    let budget1;
     let bud = document.getElementById("budget").value;
     const budget = parseFloat(bud);
-    localStorage.setItem("budget", budget);
+    localStorage.setItem("budget1", budget);
     document.querySelector("#budgetDisplay").innerHTML = "$" + budget;
   }
 
-  submitExpenseForm() {
+  static submitExpenseForm() {
+    let itemlist = [];
     let expenses = document.getElementById("expense").value;
     let reason = document.getElementById("reason").value;
     const expense = parseFloat(expenses);
-
-    const itemList = new Items(reason, expense);
-    localStorage.setItem('itemList', JSON.stringify(itemList));
+    const itemLists = new Items(reason, expense);
+    localStorage.setItem('itemList', JSON.stringify(itemLists));
 
 
   }
@@ -44,24 +45,24 @@ function eventListeners() {
   const budgetForm = document.getElementById("budget-form");
   const expenseForm = document.getElementById("sub");
   const expenseList = document.getElementById("expense-list");
-
+  const submit = document.getElementById("submit");
 
 
   budgetForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    ui.submitBudgetForm();
+    UI.submitBudgetForm();
 
   })
 
   expenseForm.addEventListener('click', (e) => {
     e.preventDefault();
-    ui.submitExpenseForm();
+    UI.submitExpenseForm();
   })
 
-  expenseList.addEventListener('click', function() {
+  //expenseList.addEventListener('click', function() {
 
 
-  })
+  // })
 }
 
 //loaders
@@ -69,11 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
   eventListeners();
 })
 document.addEventListener('DOMContentLoaded', function() {
-  let budget;
-  if (localStorage.getItem('budget') === "") {
+  let budget1;
+  if (localStorage.getItem('budget1') === "") {
     budget = [];
   } else {
-    budget = JSON.parse(localStorage.getItem('budget'));
+    budget = JSON.parse(localStorage.getItem('budget1'));
     document.getElementById("budgetDisplay").innerHTML = "$" + budget
   }
 })

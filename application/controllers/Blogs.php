@@ -31,7 +31,17 @@ class Blogs extends CI_Controller {
 		$this->load->view('header/header', $data);
 		$this->load->view('pages/expense2', $data);
 		$this->load->view('footer/footer-expense');
-	}
+  }
+
+  public function teabag ()
+  {
+    $data['title']   = "Tea Page";
+		$data['heading'] = "Tea Page";
+		$this->load->view('header/header', $data);
+		$this->load->view('pages/tea', $data);
+		$this->load->view('footer/footer-expense');
+  }
+
 
 }
 

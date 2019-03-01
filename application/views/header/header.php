@@ -18,9 +18,10 @@
     <!-- <script src="https://use.fontawesome.com/04d9aa23c9.js"></script> -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
     <?php
-            
+
     $meta = array(
         array(
                 'name'    => 'robots',

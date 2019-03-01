@@ -60,8 +60,8 @@ class Pages extends CI_Controller
 
     public function expense()
     {
-        $data['heading'] = "Books";
-        $data['title'] = "Books";
+        $data['heading'] = "Tea";
+        $data['title'] = "Tea Record";
         $this->load->view('header/header1', $data);
         $this->load->view('pages/expense', $data);
         $this->load->view('footer/footer1');

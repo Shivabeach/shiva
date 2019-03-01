@@ -1,5 +1,5 @@
 <body class="example" id="blog">
-  <button id="backtotop">Back To Top</button>
+<a class="l-menu-totop">Back To top</a>
   <main class="l-containers-blog">
     <div class="l-headers-blog">
       <div class="l-headers-blog--title">
@@ -158,7 +158,7 @@
               </div>
               <div class="m-blog-boxes--post-number"></div>
             </div>
-            
+
             <!-- box 2 -->
             <div class="m-blog-boxes">
               <h2 class="m-blog-boxes--title">Javascript</h2>

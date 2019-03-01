@@ -85,7 +85,7 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?id=4614214&units=impe
   $(".deg").append(deg);
 });
 
-var btnTop = $("#backtotop");
+var btnTop = $(".l-menu-totop");
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 250) {

@@ -21,7 +21,7 @@ class UI {
     const list = document.querySelector("#book-list");
 
     let row = document.createElement("tr");
-    //row.classList.add("cart-row");
+    row.classList.add("cart-row");
 
     row.innerHTML = `
       <td>${book.title}</td>
@@ -47,7 +47,7 @@ class UI {
   //    const container = document.querySelector(".container");
   //    const form = document.querySelector("#book-form");
   //    container.insertBefore(div, form);
-  //
+
   //    // Vanish in 3 seconds
   //    setTimeout(() => document.querySelector(".alert").remove(), 3000);
   //  }
@@ -127,7 +127,7 @@ document.querySelector("#book-form").addEventListener("submit", e => {
     Store.addBook(book);
 
     // Show success message
-    //    UI.showAlert("Tea Added", "success");
+    UI.showAlert("Tea Added", "success");
 
     // Clear fields
     UI.clearFields();

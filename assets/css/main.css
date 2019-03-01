@@ -309,19 +309,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #83aec0; }
+  background-color: #a443a1; }
 
 .color-2 {
-  background-color: #a12297; }
+  background-color: #a16a8e; }
 
 .color-3 {
-  background-color: #2c78b8; }
+  background-color: #b1dd70; }
 
 .color-4 {
-  background-color: #f25d25; }
+  background-color: #434b8e; }
 
 .color-5 {
-  background-color: #721e3f; }
+  background-color: #50b70e; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -997,14 +997,6 @@ fieldset {
   background: -o-linear-gradient(#E0E7CD, #D3C9A6, #B3E2DA, #a7e0da);
   background: linear-gradient(#E0E7CD, #D3C9A6, #B3E2DA, #a7e0da); }
 
-#backtotop {
-  cursor: pointer;
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  display: none;
-  z-index: 3; }
-
 .left-box-prime {
   width: 98%;
   margin: 10px auto;
@@ -1049,6 +1041,9 @@ fieldset {
   margin-right: 10px; }
   .line a:hover {
     background-color: rgba(126, 66, 66, 0.5); }
+
+.even:nth-child(even) {
+  background: #B7A096; }
 
 .addOutput {
   background: #F0DAF5; }
@@ -1296,7 +1291,8 @@ fieldset {
   display: flex;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 100%;
-  flex: 1 0 100%; }
+  flex: 1 0 100%;
+  margin-top: 20px; }
   .l-menu-blog--shell {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1323,5 +1319,22 @@ fieldset {
   -webkit-transform: translate(0, 0px);
   -ms-transform: translate(0, 0px);
   transform: translate(0, 0px); }
+
+.tri {
+  padding-right: 2em; }
+
+.l-menu-totop {
+  height: 3em;
+  width: 6em;
+  padding: 5px 20px;
+  text-align: center;
+  color: white;
+  background: blue;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+  z-index: 3; }
 
 /*# sourceMappingURL=main.css.map */
