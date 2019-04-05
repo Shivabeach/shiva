@@ -3,7 +3,8 @@ class Blogs extends CI_Controller {
 
 	public function __construct()
 	{
-		parent::__construct();
+    parent::__construct();
+    $this->load->model("music");
 	}
 
 	public function index()
@@ -36,12 +37,23 @@ class Blogs extends CI_Controller {
   public function teabag ()
   {
     $data['title']   = "Tea Page";
-		$data['heading'] = "Tea Page";
+    $data['heading'] = "Tea Page";
+    if($query = $this->music->teasee()){
+      $data['bought'] = $query;
+    }
+    if($query = $this->music->wishlist()){
+      $data['wish'] = $query;
+    }
+    if($query = $this->music->lastresort()){
+      $data['sayno'] = $query;
+    }
+    if($query = $this->music->results()){
+      $data['comment'] = $query;
+    }
 		$this->load->view('header/header', $data);
 		$this->load->view('pages/tea', $data);
-		$this->load->view('footer/footer-expense');
+		$this->load->view('footer/teafooter');
   }
-
 
 }
 

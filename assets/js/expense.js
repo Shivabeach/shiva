@@ -88,8 +88,6 @@ class Store {
     });
     localStorage.setItem("books", JSON.stringify(books));
   }
-
-
 }
 
 //function total() {

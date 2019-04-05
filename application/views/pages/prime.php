@@ -55,9 +55,11 @@
         <div class="m-boxes-box--shell">
           <article>
             <?php
-							echo anchor("pages/expense", "Expense page", array("rel" => "external", "class" => "tri"));
+							echo anchor("pages/expense", "Expenses", array("rel" => "external", "class" => "tri"));
 							echo anchor("blogs/money", "Money", array("rel" => "external", "class" => "tri"));
-							echo anchor("blogs/expense", "expense", array("rel" => "external", "class" => "tri"));
+              echo anchor("blogs/expense", "Expense", array("rel" => "external", "class" => "tri"));
+              echo anchor("blogs/teabag", "TeaBag", array("rel" => "external", "class" => "tri"));
+              echo anchor('http://version31/', 'Version 31', array("rel" => "external", "class" => "tri"));
 							?>
 
             <div class="display-time bold-16">

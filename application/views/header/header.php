@@ -8,7 +8,7 @@
     </title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css');?>" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/main.min.css');?>" media="screen">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/redmond/jquery-ui.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -77,8 +77,38 @@ class Forms extends CI_Controller {
       $this->db->insert("eatery", $data);
       echo "Yer too fat";
     }
-    
   }
+  public function teathug ()
+    {
+      $data = [
+        "teaName"      => trim($this->input->post("teaName")),
+        "teaType"      => trim($this->input->post("teaType")),
+        "buyAgain"     => trim($this->input->post("buyAgain")),
+        "lastPurchase" => trim($this->input->post("lastPurchase")),
+        "cost"         => trim($this->input->post("cost")),
+        "amount"       => trim($this->input->post("amount")),
+        "orderedQty"   => trim($this->input->post("orderedQty")),
+        "comment"      => trim($this->input->post("comment")),
+        "total"        => $this->input->post("cost") * $this->input->post("amount")
+      ];
+
+      $this->form_validation->set_rules('teaName', 'teaname', 'required|min_length[6]');
+      $this->form_validation->set_rules('teaType', 'teaType', 'required|min_length[4]');
+      $this->form_validation->set_rules('buyAgain', 'buyAgain', 'required|min_length[2]');
+      $this->form_validation->set_rules('lastPurchase', 'lastPurchase', 'required');
+      $this->form_validation->set_rules('cost', 'cost', 'required|numeric');
+      $this->form_validation->set_rules('amount', 'amount', 'required');
+      $this->form_validation->set_rules('orderedQty', 'orderedQty', 'required');
+      $this->form_validation->set_rules('comment', 'comment', 'min_length[10]');
+
+      if( $this->form_validation->run() == FALSE) {
+        echo validation_errors();
+      }else {
+        $this->db->insert("tea", $data);
+        echo "in";
+      }
+    }
+
 
 }
 
