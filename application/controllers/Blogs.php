@@ -11,6 +11,8 @@ class Blogs extends CI_Controller {
 	{
 		$data['title']   = "ShivaBeach Blog";
 		$data['heading'] = "Shiva's Blog";
+		$n = 2600;
+    $this->output->cache($n);
 		$this->load->view('header/header', $data);
 		$this->load->view('pages/blog', $data);
 		$this->load->view('footer/blog-footer');
@@ -49,7 +51,9 @@ class Blogs extends CI_Controller {
     }
     if($query = $this->music->results()){
       $data['comment'] = $query;
-    }
+		}
+		$n = 60;
+		$this->output->cache($n);
 		$this->load->view('header/header', $data);
 		$this->load->view('pages/tea', $data);
 		$this->load->view('footer/teafooter');
