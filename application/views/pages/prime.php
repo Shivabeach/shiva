@@ -161,7 +161,7 @@
         </div>
       </div>
       <div class="m-boxes-box">
-        <h2 class="m-boxes-box--title color-1 tooltip swing" data-title="Useful editors">Editors(Links)</h2>
+        <h2 class="m-boxes-box--title color-1 tooltip swing" data-title="Useful editors" contenteditable="true">Editors(Links)</h2>
         <div class="m-boxes-box--shell">
           <?php
 						foreach ($links as $list):?>

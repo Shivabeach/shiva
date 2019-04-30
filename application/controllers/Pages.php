@@ -53,8 +53,9 @@ class Pages extends CI_Controller
         }
         $data['title']   = "New ShivaBeach";
         $data['heading'] = "Links Alive";
-        $n = 2600;
+        $n = 60;
         $this->output->cache($n);
+        //$this->output->delete_cache();
         $this->load->view('header/header', $data);
         $this->load->view('pages/prime', $data);
         $this->load->view('footer/footer');
