@@ -10,25 +10,25 @@
     </div> -->
     <?php $this->load->view("menus/top-menu.php");?>
     <div class="m-boxes-row">
-      <div class="col-3 br-2">
+      <div class="col-3 br-2 out">
         <div class="skeleton fs-3 bold-9">
           <p class="weather">Conditions - </p>
           <p class="temp">Temperature - </p>
           <p class="humid">Humidity - </p>
         </div>
       </div>
-      <div class="col-3 br-2">
+      <div class="col-3 br-2 out">
         <div class="skeleton">
           <img class="icon1">
         </div>
       </div>
-      <div class="col-3 br-2">
+      <div class="col-3 br-2 out">
         <div class="skeleton fs-3 bold-9">
           <p class="windspeed">Wind Speed - </p>
           <p class="deg">Wind direction - </p>
         </div>
       </div>
-      <div class="col-3 br-2">
+      <div class="col-3 br-2 out">
         <div class="skeleton fs-3 bold-10">
           <p id="demo12"></p>
           <p id="lastLink"></p>
@@ -59,9 +59,9 @@
 							echo anchor("blogs/money", "Money", array("rel" => "external", "class" => "tri"));
               echo anchor("blogs/expense", "Expense", array("rel" => "external", "class" => "tri"));
               echo anchor("blogs/teabag", "TeaBag", array("rel" => "external", "class" => "tri"));
-              echo anchor('http://version31/', 'Version 31', array("rel" => "external", "class" => "tri"));
+              echo anchor('http://create/', 'Create', array("rel" => "external", "class" => "tri"));
+              echo anchor('http://tea/', 'Tea', array("rel" => "external", "class" => "tri"));
 							?>
-
             <div class="display-time bold-16">
               <?php
 									$ts = now("America/Detroit");

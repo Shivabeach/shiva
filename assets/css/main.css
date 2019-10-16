@@ -217,7 +217,6 @@ td {
 /* 1-tools-base-Typography	*/
 body {
   color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
   font-size: calc(18px + 0.05vw);
   line-height: 1.5; }
 
@@ -225,9 +224,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+h5 {
   line-height: 1.4;
   margin: 0 0 0.75em; }
 
@@ -309,19 +306,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #ddfa60; }
+  background-color: #04e80f; }
 
 .color-2 {
-  background-color: #1da02e; }
+  background-color: #d49db5; }
 
 .color-3 {
-  background-color: #732fb6; }
+  background-color: #24e9aa; }
 
 .color-4 {
-  background-color: #b5c2fb; }
+  background-color: #eb1061; }
 
 .color-5 {
-  background-color: #ec1e22; }
+  background-color: #ae0766; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -367,21 +364,6 @@ hr {
 
 .fs-15 {
   font-size: 7.5vw; }
-
-.fs-16 {
-  font-size: 8vw; }
-
-.fs-17 {
-  font-size: 8.5vw; }
-
-.fs-18 {
-  font-size: 9vw; }
-
-.fs-19 {
-  font-size: 9.5vw; }
-
-.fs-20 {
-  font-size: 10vw; }
 
 /* Font weight mixin */
 .bold-1 {
@@ -429,21 +411,6 @@ hr {
 .bold-15 {
   font-weight: 750; }
 
-.bold-16 {
-  font-weight: 800; }
-
-.bold-17 {
-  font-weight: 850; }
-
-.bold-18 {
-  font-weight: 900; }
-
-.bold-19 {
-  font-weight: 950; }
-
-.bold-20 {
-  font-weight: 1000; }
-
 .mb1 {
   margin-bottom: 1px; }
 
@@ -474,59 +441,29 @@ hr {
 .mb10 {
   margin-bottom: 10px; }
 
-.mb11 {
-  margin-bottom: 11px; }
-
-.mb12 {
-  margin-bottom: 12px; }
-
-.mb13 {
-  margin-bottom: 13px; }
-
-.mb14 {
-  margin-bottom: 14px; }
-
-.mb15 {
-  margin-bottom: 15px; }
-
-.mb16 {
-  margin-bottom: 16px; }
-
-.mb17 {
-  margin-bottom: 17px; }
-
-.mb18 {
-  margin-bottom: 18px; }
-
-.mb19 {
-  margin-bottom: 19px; }
-
-.mb20 {
-  margin-bottom: 20px; }
-
 .br-1 {
   border: 1px;
-  border-color: #ffc078;
+  border-color: #b0bec5;
   border-style: solid; }
 
 .br-2 {
   border: 2px;
-  border-color: #ffc078;
+  border-color: #b0bec5;
   border-style: solid; }
 
 .br-3 {
   border: 3px;
-  border-color: #ffc078;
+  border-color: #b0bec5;
   border-style: solid; }
 
 .br-4 {
   border: 4px;
-  border-color: #ffc078;
+  border-color: #b0bec5;
   border-style: solid; }
 
 .br-5 {
   border: 5px;
-  border-color: #ffc078;
+  border-color: #b0bec5;
   border-style: solid; }
 
 .input-small {
@@ -678,7 +615,8 @@ a {
     font-family: "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; }
   a:hover {
     color: #130393;
-    background-color: #803e27; }
+    background-color: #ffd8a8;
+    border-bottom: 2px solid #40c057; }
   a:focus, a :active {
     color: #ffd700;
     text-shadow: 1px 1px 3px black; }
@@ -899,7 +837,7 @@ fieldset {
     font-size: 2.5vw;
     font-weight: 600;
     text-shadow: 2px 2px 6px #d95a77;
-    background-color: #adb5bd;
+    background-color: #bee1ff;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -1053,6 +991,10 @@ fieldset {
   .m-blog-box--post-number::after {
     counter-increment: section;
     content: "Read Post # " counter(section) ": "; }
+
+.out {
+  outline: 5px solid #e67e22;
+  outline-offset: -15px; }
 
 .left-box-prime {
   width: 98%;
@@ -1318,6 +1260,7 @@ fieldset {
   justify-content: space-around; }
   .menu-flex li.hova:hover a {
     color: #000000;
+    outline: 0px solid rgba(0, 0, 0, 0);
     background: -webkit-gradient(linear, right top, left top, from(#0048BA), to(#AEAB8A));
     background: -webkit-linear-gradient(right, #0048BA, #AEAB8A);
     background: -o-linear-gradient(right, #0048BA, #AEAB8A);
@@ -1394,7 +1337,7 @@ fieldset {
   transform: translate(0, 0px); }
 
 .tri {
-  padding-right: 2em; }
+  padding: .5em 1em .5em 0; }
 
 .l-menu-totop {
   height: 3em;
@@ -1409,5 +1352,3 @@ fieldset {
   left: 20px;
   display: none;
   z-index: 3; }
-
-/*# sourceMappingURL=main.css.map */

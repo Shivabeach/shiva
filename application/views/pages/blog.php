@@ -48,6 +48,10 @@
                 <code>counter-reset: section</code>
               </p>
               <div id="mousey"></div>
+              <p>
+              <form action="myform">
+                <input type="text" id="tags">
+              </form></p>
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>

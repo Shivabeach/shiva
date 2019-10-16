@@ -17,9 +17,9 @@ class Search extends CI_Model {
 		$this->db->where("genre", $genre);
 		$query = $this->db->get("music");
 		if ( $query->num_rows() > 1)
-    {
-      return $query->result();
-    }
+    	{
+      		return $query->result();
+    	}
 	}
 
 }

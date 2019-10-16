@@ -12,5 +12,4 @@
 <script defer src="<?php echo base_url('assets/js/money.js');?>"></script>
 
 </body>
-
 </html>

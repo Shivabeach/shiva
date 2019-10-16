@@ -11,69 +11,49 @@
   min-height: 250px
   background-color: $soft-peach
   margin: 1em 0
-
   //+gradient(270deg, $almond, $soft-peach)
-
   +border(2px, solid, $soft-peach-dark, 20px)
-
   +shadow(1px, 10px, 30px, $soft-peach-dark)
-
   +tablet
     min-width: 50%
-
-
   +mobile
     min-width: 100%
-
-
   &--title
     text-align: center
-
     //padding: 5px 0
     font-size: 2.5vw
     font-weight: 600
     text-shadow: 2px 2px 6px $v-red
-    background-color: $gray5
+    background-color: $number2
 
     +border-right-radius(20px)
     +border-left-radius(20px)
     +shadow(2px, 2px, 2px, $antique-ruby)
-
   &--shell
     margin: 3px 1em
-
     li
       list-style-type: none
       font-size: get-vw(14px)
-
       a
         font-size: get-vw(14px)
-
       .count
         border: 1px solid $antique-ruby
         height: 50px
         border-radius: 50%
         padding: 0.15em 0.5em
         width: 50px
-
     +tablet
       li
         a
           font-size: get-vw(25px)
-
         .count
           font-size: get-vw(25px)
-
-
     +mobile
       li
         a
           font-size: get-vw(25px)
-
         .count
           font-size: get-vw(25px)
-
-
     li:last-of-type
       margin-bottom: 1em
 
@@ -85,39 +65,26 @@
   background-color: $soft-peach
   margin-right: 20px
   margin-bottom: 20px
-
-
   &:last-of-type
     margin-right: 0
-
   +border(2px, solid, $soft-peach-dark, 20px)
-
   +shadow(1px, 5px, 10px, $soft-peach-dark)
-
   +tablet
     width: 100%
-
-
   +mobile
     width: 100%
-
-
   &--title
     text-indent: 1em
     font-size: 2.5vw
     font-weight: 600
-
   &--shell
     margin: 1em
-
     li
       font-size: 1rem
-
   &--post-number
     margin-right: 10px
     text-align: right
     font-size: get-vw(10px)
-
   &--post-number::after
     counter-increment: section
     content: "Read Post # " counter(section) ": "
@@ -157,35 +124,29 @@
 
   &:last-of-type
     margin-right: 0
-
   +border(2px, solid, $soft-peach-dark, 20px)
-
   +shadow(1px, 5px, 10px, $soft-peach-dark)
   +tablet
     width: 100%
-
-
   +mobile
     width: 100%
-
-
   &--title
     text-indent: 1em
     font-size: 2.5vw
     font-weight: 600
-
   &--shell
     margin: 1em .5em
     flex: 1
-
     li
       font-size: 1rem
-
   &--post-number
     margin-right: 10px
     text-align: right
     font-size: get-vw(10px)
-
   &--post-number::after
     counter-increment: section
     content: "Read Post # " counter(section) ": "
+
+.out
+  outline: 5px solid $zest
+  outline-offset: -15px

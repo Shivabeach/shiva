@@ -29,8 +29,8 @@
 			</div>
 		</div>
 	</main>
-	<script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script defer src="<?php echo base_url('assets/js/script.js');?>"></script>
+
+
 	<script defer src="<?php echo base_url('assets/js/trial.min.js');?>"></script>
 
 

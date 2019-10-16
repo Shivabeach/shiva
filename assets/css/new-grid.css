@@ -8,8 +8,11 @@ html {
   background: tomato; }
 
 .grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 10vw 20vw 10vw 10vw;
   grid-template-rows: 10vw 20vw 10vw 10vw;
   border: 1px dashed #008000;
   width: 80%;
@@ -17,35 +20,47 @@ html {
 
 .header,
 .footer {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-column: 1 / span 5;
   background: #d95a77; }
 
 .sidebar {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-column: 1 / span 5;
   background: cornsilk; }
 
 .content {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-column: 1 / span 5;
   background: blue; }
 
 @media screen and (min-width: 700px) {
   .grid {
+    display: -ms-grid;
     display: grid;
     grid-gap: 20px;
+    -ms-grid-columns: ()[4 1fr];
     grid-template-columns: repeat(4 1fr);
+    -ms-grid-rows: 10vw 10vw 10vw;
     grid-template-rows: 10vw 10vw 10vw; }
   .header,
   .footer {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
     grid-column: 1 / span 5;
     background: #d95a77; }
   .sidebar {
+    -ms-grid-column-span: 2;
     grid-column: span 2;
     background: cornsilk; }
   .content {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-column: 1 / span 3;
     background: blue; } }
 
 ul {
   list-style-type: none; }
-
-/*# sourceMappingURL=new-grid.css.map */
