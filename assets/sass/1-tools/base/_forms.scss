@@ -26,6 +26,7 @@ textarea {
   display: block;
   font-family: $base-font-family;
   font-size: 16px;
+  background: $md-grey-300;
 }
 
 #{$all-text-inputs} {

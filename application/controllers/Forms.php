@@ -5,6 +5,7 @@ class Forms extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+    $this->load->model('search');
 	}
 
 	public function increment()
@@ -109,6 +110,20 @@ class Forms extends CI_Controller {
       }
     }
 
+    public function search()
+    {
+
+      if($query = $this->search->find_genre())
+      {
+        $data['searched'] = $query;
+      }
+      $data['title'] = "Search";
+      $data['heading'] = "Search Page";
+      $this->load->view('header/header', $data);
+      $this->load->view('pages/search', $data);
+      $this->load->view('footer/footer');
+
+    }
 
 }
 

@@ -98,7 +98,8 @@ select,
 textarea {
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  background: #e0e0e0; }
 
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
   -webkit-appearance: none;
@@ -306,19 +307,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #04e80f; }
+  background-color: #fb5ed9; }
 
 .color-2 {
-  background-color: #d49db5; }
+  background-color: #cb796d; }
 
 .color-3 {
-  background-color: #24e9aa; }
+  background-color: #c019a5; }
 
 .color-4 {
-  background-color: #eb1061; }
+  background-color: #4c8fb1; }
 
 .color-5 {
-  background-color: #ae0766; }
+  background-color: #23310b; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -724,6 +725,14 @@ input::-moz-placeholder {
 input:focus {
   background: yellow;
   font-style: italic; }
+  input:focus::-webkit-input-placeholder {
+    line-height: 13; }
+  input:focus:-ms-input-placeholder {
+    line-height: 13; }
+  input:focus::-ms-input-placeholder {
+    line-height: 13; }
+  input:focus::placeholder {
+    line-height: 13; }
 
 .tincture {
   width: 40%; }
@@ -744,6 +753,9 @@ input:focus {
 .moss {
   color: #F0DABD;
   text-shadow: 2px 1px 1px black; }
+
+.inliner {
+  display: inline; }
 
 dd {
   margin-left: 2em; }
@@ -1352,3 +1364,5 @@ fieldset {
   left: 20px;
   display: none;
   z-index: 3; }
+
+/*# sourceMappingURL=main.css.map */

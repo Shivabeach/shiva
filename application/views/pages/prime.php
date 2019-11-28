@@ -42,9 +42,9 @@
           <ul>
             <?php foreach($prior as $list):?>
             <li class="even">
-              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-exclamation', 'rel' => "external")),nbs(3);?><span
+              <?=anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-exclamation', 'rel' => "external")),nbs(3);?><span
                 class="count">
-                <?php echo $list->counter;?></span>
+                <?=$list->counter;?></span>
             </li>
             <?php endforeach;?>
           </ul>
@@ -62,11 +62,6 @@
               echo anchor('http://create/', 'Create', array("rel" => "external", "class" => "tri"));
               echo anchor('http://tea/', 'Tea', array("rel" => "external", "class" => "tri"));
 							?>
-            <div class="display-time bold-16">
-              <?php
-									$ts = now("America/Detroit");
-								echo unix_to_human($ts); ?> PHP
-            </div>
           </article>
           <article>
             <p>
@@ -158,6 +153,21 @@
             <p class="classes"></p>
             <p class="boxy"></p>
           </article>
+          <article>
+            <?php
+              echo form_open("forms/search");
+              $arg = [
+                "name"        => "search",
+                "style"       => "width: 50%",
+                "placeholder" => "Search",
+                "class"       => "inliner"
+              ];
+              echo form_input($arg);
+              echo form_submit('Submit', 'Send', array("class" => "inliner"));
+              echo form_close();
+            ?>
+          </article>
+
         </div>
       </div>
       <div class="m-boxes-box">
@@ -166,9 +176,9 @@
           <?php
 						foreach ($links as $list):?>
           <li class="even">
-            <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code-fork', 'rel' =>'external')), nbs(3);?><span
+            <?=anchor($list->url, $list->name .' - '. $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code-fork', 'rel' =>'external')), nbs(3);?><span
               class="count">
-              <?php echo $list->counter;?></span>
+              <?=$list->counter;?></span>
           </li>
           <?php endforeach;?>
         </div>

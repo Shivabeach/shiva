@@ -13,6 +13,7 @@ input::placeholder
   font-variant: small-caps
   font-weight: 700
 
+
 input::-moz-placeholder
   color: red
   opacity: 0.75
@@ -25,6 +26,15 @@ input::-moz-placeholder
 input:focus
   background: yellow
   font-style: italic
+  &::placeholder
+    line-height: 13
+
+fieldset
+  border: 1px solid $antique-ruby
+
+legend
+  padding: 1em
+  color: $soft-peach-dark
 
 .tincture
   width: 40%
@@ -48,3 +58,7 @@ input:focus
 .moss
   color: $chamois
   text-shadow: 2px 1px 1px black
+
+
+.inliner
+  display: inline

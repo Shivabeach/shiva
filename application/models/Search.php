@@ -10,16 +10,17 @@ class Search extends CI_Model {
 
 	}
 
-	public function find_genre($value)
+	public function find_genre()
 	{
-		$genre = $value;
-		$this->db->select('url,name, genre,')
-		$this->db->where("genre", $genre);
+		$this->load->model('search');
+		$value = $this->input->post("search");
+		$this->db->select('url,name, genre, type');
+		$this->db->like("genre", $value);
+		$this->db->or_like("name", $value);
+		$this->db->or_like("type", $value);
 		$query = $this->db->get("music");
-		if ( $query->num_rows() > 1)
-    	{
-      		return $query->result();
-    	}
+		return $query->result();
+
 	}
 
 }
