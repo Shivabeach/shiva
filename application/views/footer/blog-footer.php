@@ -2,8 +2,34 @@
 			<div class="l-footers-blog--shell">
 				<div class="m-boxes-row">
 					<div class="m-blog-boxes">
-						<div class="m-blog-boxes--shell">
-							<h1 id="title" class="red">Changing HTML Elements</h1>
+						<div class="m-blog-boxes--shell cul">
+							<div class="wrapper"></div>
+							<h1 id="title" class="red">Password</h1>
+								<div class="m-blog-boxes--shell">
+									<h3 id="passwordDisplay" class="password-display"></h3>
+									<form id="passwordGeneratorForm" class="form">
+										<label for="characterAmountNumber"> Number of Characters</label>
+										<input type="range" min="1" max="50" value="10" id="characterAmountRange">
+										<input type="number" min="1" max="50" value="10" id="characterAmountNumber">
+										<p>
+										<label for="includeUppercase" class="inl">Include Uppercase</label>
+										<input type="checkbox" id="includeUppercase">
+									</p>
+									<p>
+										<label for="includeNumbers" class="inl">Include Numbers</label>
+										<input type="checkbox" id="includeNumbers">
+									</p>
+									<p>
+										<label for="includeSymbols" class="inl">Include Symbols</label>
+										<input type="checkbox" id="includeSymbols">
+									</p>
+									<button class="gen" type="submit">Generate</button>
+									</form>
+
+
+
+
+								</div>
 							</div>
 						</div>
 					<div class="m-blog-boxes">
@@ -30,9 +56,9 @@
 		</div>
 	</main>
 
-
+	<script defer src="<?php echo base_url('assets/js/detail.js');?>"></script>
 	<script defer src="<?php echo base_url('assets/js/trial.min.js');?>"></script>
-
+	<script defer src="<?php echo base_url('assets/js/password.min.js');?>"></script>
 
 
 </body>

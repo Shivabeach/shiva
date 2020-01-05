@@ -23,23 +23,23 @@ label {
 input,
 select,
 textarea {
-  display: block;
+  //display: block;
   font-family: $base-font-family;
   font-size: 16px;
   background: $md-grey-300;
 }
 
 #{$all-text-inputs} {
-  appearance: none;
-  background-color: $base-background-color;
-  border: $base-border;
-  border-radius: $base-border-radius;
-  box-shadow: $_form-box-shadow;
-  box-sizing: border-box;
-  margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
-  transition: border-color $base-duration $base-timing;
-  width: 100%;
+  //appearance: none;
+  //background-color: $base-background-color;
+  //border: $base-border;
+  //border-radius: $base-border-radius;
+  //box-shadow: $_form-box-shadow;
+  //box-sizing: border-box;
+  //margin-bottom: $small-spacing;
+  //adding: $base-spacing / 3;
+  //transition: border-color $base-duration $base-timing;
+  //width: 100%;
 
   &:hover {
     border-color: shade($base-border-color, 20%);
@@ -94,3 +94,5 @@ select {
     outline-offset: $focus-outline-offset;
   }
 }
+
+

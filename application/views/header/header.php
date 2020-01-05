@@ -28,6 +28,10 @@
         array(
                 'name'    => 'generator',
                 'content' => 'Sublime-Text'
+        ),
+        array(
+                'name' => "hreflang",
+                'content' => "en-us"
         )
     );
     echo meta($meta);

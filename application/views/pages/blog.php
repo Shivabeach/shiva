@@ -272,10 +272,31 @@
               <div class="m-blog-boxes--post-number"></div>
             </div>
             <div class="m-blog-boxes">
-              <h2 class="m-blog-boxes--title">Conversions</h2>
+              <!-- <h2 class="m-blog-boxes--title">Conversions</h2> -->
               <div class="m-blog-boxes--shell">
-                <div class="box">Reserved
-                  <p>open for weight</p>
+                <div class="box">
+                  <h3 id="detailer"></h3>
+                  <form>
+                    <div class="input-row">
+                      <label for="ounces">Number of Ounces To Fill</label>
+                      <input type="number" id="ounces"/>
+                    </div>
+                    <div class="input-row">
+                      <label for="ratio">Ratio Required 1:</label>
+                      <input type="number" id="ratio">
+                    </div>
+                    <input type="submit" id="cripes" value="Submit">
+                    <input type="reset" value="do Over" >
+                  </form>
+                    <div class="input-row">
+                      <label for="materialAmount">Dilutable Material Amount</label>
+                      <p id="materialAmount"></p>
+                    </div>
+                    <div class="input-row">
+                      <label for="dilutionAmount">Dilution Matrix Material(water etc)</label>
+                      <p id="dilutionAmount"></p>
+                    </div>
+
                 </div>
               </div>
               <div class="m-blog-boxes--post-number"></div>

@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lora");
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in HSLA */
 /* Grids */
 body {
   margin: 0;
@@ -160,19 +163,19 @@ footer {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #ec955b; }
+  background-color: #485d2f; }
 
 .color-2 {
-  background-color: #749364; }
+  background-color: #312bb7; }
 
 .color-3 {
-  background-color: #5018a2; }
+  background-color: #e3f36b; }
 
 .color-4 {
-  background-color: #d96a83; }
+  background-color: #a2969d; }
 
 .color-5 {
-  background-color: #bdcc56; }
+  background-color: #9d829d; }
 
 .fs-1 {
   font-size: 0.5vw; }

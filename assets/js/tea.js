@@ -1,7 +1,6 @@
 let blog = document.getElementById("blog");
 let prime = document.getElementById("prime");
 let grid = document.getElementById("grid");
-
 // learn javascript timing section
 var myVar = setInterval(myTimer, 1000);
 
