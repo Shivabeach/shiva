@@ -22,7 +22,7 @@
 
                 <fieldset>
                   <legend>Enter Budget</legend>
-                    <?php  
+                    <?php
                     $args = [
                       "id" => "budgetForm"
                     ];
@@ -39,15 +39,15 @@
                     "id" => "submit"
                     ];
 
-                    echo "<button type='submit' id='submit' value='Submit'>submit</button";
-                    
+                    echo form_submit($budsub);
+                    echo form_close();
                     ?>
                 </fieldset>
-  
+
                 <fieldset>
                   <legend>Expense Input</legend>
-                
-                <?php  
+
+                <?php
                   $forms = [
                     "id" => "expenseForm"
                   ];
@@ -102,34 +102,24 @@
               <!-- not done -->
               <h3>Amount Left</h3>
               <h3 class="finalExpenses"></h3>
-
-
-
-
-
-
-
-
-
-             
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>
           <div class="m-blog-boxes">
             <h2 class="m-blog-boxes--title">Expense Items</h2>
             <div class="m-blog-boxes--shell">
-            
+
             <table>
               <thead>
-                <tr>              
+                <tr>
                   <th>Expense</th>
                   <th>Reason</th>
                   <th>Date</th>
                   <th>Delete</th>
-                </tr>  
+                </tr>
               </thead>
               <tbody class="disp">
-                
+
               </tbody>
             </table>
 
@@ -139,7 +129,7 @@
 
 
 
-             
+
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>

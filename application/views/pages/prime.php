@@ -55,15 +55,18 @@
         <div class="m-boxes-box--shell">
           <article>
             <?php
-							echo anchor("pages/expense", "Expenses", array("rel" => "external", "class" => "tri"));
+							echo anchor("http://car", "Car", array("rel" => "external", "class" => "tri"));
 							echo anchor("blogs/money", "Money", array("rel" => "external", "class" => "tri"));
               echo anchor("blogs/expense", "Expense", array("rel" => "external", "class" => "tri"));
               echo anchor("blogs/teabag", "TeaBag", array("rel" => "external", "class" => "tri"));
               echo anchor('http://create/', 'Create', array("rel" => "external", "class" => "tri"));
               echo anchor('http://tea/', 'Tea', array("rel" => "external", "class" => "tri"));
+              echo anchor('https://mail.protonmail.com/login', 'ProtonMail', array("rel" => "external", "class" => "tri"));
+
 							?>
           </article>
           <article>
+
             <p>
               <?php echo validation_errors(); ?>
             </p>
@@ -77,7 +80,9 @@
 									"placeholder" => "Add Link",
 									"name"        => "url",
 									"style"       => "width: 70%",
-									"class" 			=> "bold-2"
+                  "class" 			=> "bold-2",
+                  "type" => "url",
+                  "min-length" => 1
 								];
 								echo form_input($arg);
 								$args1 = [
@@ -99,7 +104,8 @@
 									"name"        => "counter",
 									"placeholder" => "Counter",
 									"style"       => "width: 70%",
-									"class" 			=> "bold-2"
+                  "class" 			=> "bold-2",
+                  "type" => "number"
 								];
 								echo form_input($args4);
 								$args3 = [
@@ -120,8 +126,8 @@
 								];
 								ksort($args3);
 								echo form_dropdown("type", $args3);
-								echo form_submit("Submit", "Submits");
-								echo form_reset("reset", "Reset");
+								echo form_submit("Submit", "Submits", array("class" => "none"));
+								echo form_reset("reset", "Reset", array("class" => "none"));
 								echo form_close();
 								//TODO: Add family
 							?>
@@ -150,6 +156,7 @@
             </article>
             <div id="display"></div>
             <p id="show"></p>
+            <p id="demo"></p>
             <p class="classes"></p>
             <p class="boxy"></p>
           </article>
@@ -163,7 +170,7 @@
                 "class"       => "inliner"
               ];
               echo form_input($arg);
-              echo form_submit('Submit', 'Send', array("class" => "inliner"));
+              echo form_submit('Submit', 'Send', array("class" => "inliner none"));
               echo form_close();
             ?>
           </article>

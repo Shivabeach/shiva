@@ -14,7 +14,7 @@ $(function() {
     });
     return false;
   });
-}); 
+});
 //api for weather 8fcc4d70707f287fc3826dc758fef64d http://api.openweathermap.org/data/2.5/forecast?id=4614214&APPID={APIKEY}
 //https://api.openweathermap.org/data/2.5/forecast?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d
 //openweathermap.org/img/w/
@@ -130,7 +130,7 @@ $(function() {
       type: type,
       data: data,
       success: function(response) {
-        $('#display').html(response).delay(6000).fadeOut(1000);
+        $('#display').html(response).fadeOut(7000);
         location.reload();
       }
     });

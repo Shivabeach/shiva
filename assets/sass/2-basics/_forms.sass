@@ -14,6 +14,7 @@ input::placeholder
   font-weight: 700
 
 
+
 input::-moz-placeholder
   color: red
   opacity: 0.75
@@ -23,11 +24,26 @@ input::-moz-placeholder
   font-variant: small-caps
   font-weight: 700
 
-input:focus
-  background: yellow
+input:not(.none)
+  background: $beryl-green
   font-style: italic
-  &::placeholder
-    line-height: 13
+  font-weight: 700
+  font-variant: small-caps
+  font-size: 1.1em
+
+input:not(.none):focus,
+select:focus,
+textarea:focus
+  background: $md-deep-orange-200
+  font-style: italic
+  font-weight: 700
+  font-variant: small-caps
+  font-size: 1.1em
+
+input:invalid
+  background: $md-red-900
+
+
 
 fieldset
   border: 1px solid $antique-ruby

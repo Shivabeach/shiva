@@ -7,6 +7,7 @@
         <?=$title;?>
         </h1>
       </div>
+
     </div>
     <!-- Menu -->
     <?php $this->load->view("menus/top-menu.php");?>
@@ -40,6 +41,7 @@
           <div class="m-blog-boxes">
             <h2 class="m-blog-boxes--title">Blog title</h2>
             <div class="m-blog-boxes--shell">
+            <p id="demo"></p>
               <p><code>h2::before</code>
                 <code>counter-increment: section </code>
                 <code>content: "No. " counter(section) ": "</code>
@@ -88,6 +90,7 @@
                   <li>[1,2,3,4,5,6].reduce(function(accumulator, currentValue, currentIndex, array) { return accumulator + currentValue; },0);</li>
                 </ol>
               </div>
+              <div id="triangle-up">r</div>
               <div class="m-blog-boxes--post-number"></div>
             </div>
             <div class="m-blog-boxes">
@@ -97,8 +100,8 @@
                 <form>
                   <input type="number" class="input-med" id="herb1" placeholder="Ounces of Herb">
                   <input type="number" class="input-med" id="ratio1" placeholder="Desired Ratio 1 to ?">
-                  <input type="submit" id="submit2">
-                  <input type="reset" id="reset">
+                  <input type="submit" class="none" id="submit2">
+                  <input type="reset" class="none" id="reset">
                 </form>
                 <div id="tinctures"> </div>
               </div>
@@ -276,6 +279,7 @@
               <div class="m-blog-boxes--shell">
                 <div class="box">
                   <h3 id="detailer"></h3>
+                  <p>1000ml = 34 oz</p>
                   <form>
                     <div class="input-row">
                       <label for="ounces">Number of Ounces To Fill</label>
@@ -285,10 +289,11 @@
                       <label for="ratio">Ratio Required 1:</label>
                       <input type="number" id="ratio">
                     </div>
-                    <input type="submit" id="cripes" value="Submit">
-                    <input type="reset" value="do Over" >
+                    <input type="submit" class="none" id="cripes" value="Submit" onclick="myFunction()">
+                    <input type="reset" class="none" value="Do Over" id="reset1" onclick="destroy()">
                   </form>
                     <div class="input-row">
+                      <div id="validity"></div>
                       <label for="materialAmount">Dilutable Material Amount</label>
                       <p id="materialAmount"></p>
                     </div>

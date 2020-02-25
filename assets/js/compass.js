@@ -52,7 +52,7 @@ class UI {
 		document.getElementById("budgetDisplay").innerHTML = "$" + calced;
 	}
 
-} // End of UI class 
+} // End of UI class
 
 class Store {
 	// retrieve costs from local storage
@@ -93,13 +93,13 @@ class Store {
 		return calced;
 	}
 
-} // end of store 
+} // end of store
 
 document.addEventListener('DOMContentLoaded', UI.displayBudget());
-// Event display costs onload 
+// Event display costs onload
 document.addEventListener('DOMContentLoaded', UI.displayCosts());
 // add costs
-document.querySelector('#expenseForm').addEventListener('submit', (e) => {
+document.getElementById('expenseForm').addEventListener('submit', (e) => {
 	e.preventDefault();
 	const expense = document.querySelector('#expense').value;
 	const reason = document.querySelector('#reason').value;

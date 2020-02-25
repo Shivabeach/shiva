@@ -3,7 +3,7 @@ let prime = document.getElementById("prime");
 let grid = document.getElementById("grid");
 // learn javascript timing section
 var myVar = setInterval(myTimer, 1000);
- 
+
 function myTimer() {
 	"use strict";
 	var d = new Date();
@@ -68,7 +68,7 @@ var elements = document.getElementsByClassName("box");
 for (var i = 0; i < elements.length; i++) {
 	elements[i].className += " box2";
 }
-
+// temperature
 function temperatureConverter(valNum) {
 	"use strict";
 	valNum = parseFloat(valNum) || 0;

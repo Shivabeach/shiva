@@ -50,13 +50,16 @@
 					</div>
 					<div class="m-blog-boxes">
 						<h2 class="round">Dancer</h2>
+
+						<input type="checkbox" class="subscribe">
+						<div id="mess"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
 
-	<script defer src="<?php echo base_url('assets/js/detail.js');?>"></script>
+	<script defer src="<?php echo base_url('assets/js/detail.min.js');?>"></script>
 	<script defer src="<?php echo base_url('assets/js/trial.min.js');?>"></script>
 	<script defer src="<?php echo base_url('assets/js/password.min.js');?>"></script>
 
