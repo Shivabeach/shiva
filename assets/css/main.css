@@ -301,19 +301,19 @@ hr {
   padding: 15px 10px; }
 
 .color-1 {
-  background-color: #b8297b; }
+  background-color: #3701fb; }
 
 .color-2 {
-  background-color: #361f4a; }
+  background-color: #27134d; }
 
 .color-3 {
-  background-color: #260248; }
+  background-color: #5f2f01; }
 
 .color-4 {
-  background-color: #329171; }
+  background-color: #2f06d5; }
 
 .color-5 {
-  background-color: #497b6b; }
+  background-color: #0577db; }
 
 .fs-1 {
   font-size: 0.5vw; }
@@ -513,7 +513,7 @@ h1, h2, h3, h4, h5, h6 {
   border-right: 6px solid transparent;
   border-bottom: 6px solid rgba(0, 0, 0, 0.75);
   border-left: 6px solid transparent;
-  content: '';
+  content: "";
   height: 0;
   top: 20px;
   left: 20px;
@@ -533,9 +533,9 @@ h1, h2, h3, h4, h5, h6 {
 .tooltip.fade:before {
   -webkit-transform: translate3d(0, -10px, 0);
   transform: translate3d(0, -10px, 0);
-  -webkit-transition: all .15s ease-in-out;
-  -o-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out; }
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out; }
 
 .tooltip.fade:hover:after,
 .tooltip.fade:hover:before {
@@ -546,16 +546,16 @@ h1, h2, h3, h4, h5, h6 {
 .tooltip.expand:before {
   -webkit-transform: scale3d(0.2, 0.2, 1);
   transform: scale3d(0.2, 0.2, 1);
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; }
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 .tooltip.expand:after {
   -webkit-transform: translate3d(0, 6px, 0);
   transform: translate3d(0, 6px, 0);
-  -webkit-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out; }
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
 
 .tooltip.expand:hover:before,
 .tooltip.expand:hover:after {
@@ -564,9 +564,9 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale3d(1, 1, 1); }
 
 .tooltip.expand:hover:after {
-  -webkit-transition: all .2s .1s ease-in-out;
-  -o-transition: all .2s .1s ease-in-out;
-  transition: all .2s .1s ease-in-out; }
+  -webkit-transition: all 0.2s 0.1s ease-in-out;
+  -o-transition: all 0.2s 0.1s ease-in-out;
+  transition: all 0.2s 0.1s ease-in-out; }
 
 .tooltip.swing:before,
 .tooltip.swing:after {
@@ -575,20 +575,20 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
-  -webkit-transition: opacity .2s, -webkit-transform .15s ease-in-out;
-  transition: opacity .2s, -webkit-transform .15s ease-in-out;
-  -o-transition: transform .15s ease-in-out, opacity .2s;
-  transition: transform .15s ease-in-out, opacity .2s;
-  transition: transform .15s ease-in-out, opacity .2s, -webkit-transform .15s ease-in-out; }
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.15s ease-in-out;
+  transition: opacity 0.2s, -webkit-transform 0.15s ease-in-out;
+  -o-transition: transform 0.15s ease-in-out, opacity 0.2s;
+  transition: transform 0.15s ease-in-out, opacity 0.2s;
+  transition: transform 0.15s ease-in-out, opacity 0.2s, -webkit-transform 0.15s ease-in-out; }
 
 .tooltip.swing:after {
   -webkit-transform: translate3d(0, 60px, 0);
   transform: translate3d(0, 60px, 0);
-  -webkit-transition: opacity .2s, -webkit-transform .15s ease-in-out;
-  transition: opacity .2s, -webkit-transform .15s ease-in-out;
-  -o-transition: transform .15s ease-in-out, opacity .2s;
-  transition: transform .15s ease-in-out, opacity .2s;
-  transition: transform .15s ease-in-out, opacity .2s, -webkit-transform .15s ease-in-out; }
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.15s ease-in-out;
+  transition: opacity 0.2s, -webkit-transform 0.15s ease-in-out;
+  -o-transition: transform 0.15s ease-in-out, opacity 0.2s;
+  transition: transform 0.15s ease-in-out, opacity 0.2s;
+  transition: transform 0.15s ease-in-out, opacity 0.2s, -webkit-transform 0.15s ease-in-out; }
 
 .tooltip.swing:hover:before,
 .tooltip.swing:hover:after {
@@ -636,15 +636,15 @@ h1 {
 
 h2 {
   font-size: 2.6vw;
-  font-family: 'Lora', serif; }
+  font-family: Lora serif; }
 
 h3 {
   font-size: 2vw;
-  font-family: 'Lora', serif; }
+  font-family: Lora serif; }
 
 h4 {
   font-size: 1.6vw;
-  font-family: 'Lora', serif; }
+  font-family: Lora serif; }
 
 h5 {
   font-size: 1.3vw; }

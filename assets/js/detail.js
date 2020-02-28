@@ -33,6 +33,7 @@ var mess = document.getElementById("mess");
   document.getElementById("reset1").addEventListener("click", event => {
     document.getElementById("materialAmount").innerHTML = "";
     document.getElementById("dilutionAmount").innerHTML = "";
+    document.getElementById("validity").innerHTML = "";
   });
 })();
 // using the checkbox to give a message

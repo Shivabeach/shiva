@@ -4,5 +4,15 @@
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
     "bracketPairColorizer.forceUniqueOpeningColor": true,
-    "bracketPairColorizer.forceIterationColorCycle": true
-}
+    "bracketPairColorizer.forceIterationColorCycle": true,
+    "beautify.tabSize": 2,
+    "beautify.language": {
+        "js": {
+          "type": ["javascript", "json"],
+          "ext": ["js", "json"]
+          // ^^ to set extensions to be beautified using the javascript beautifier
+        },
+        "css": ["css", "scss", "sass"],
+        "html": ["htm", "html", "php"]
+        // ^^ providing just an array sets the VS Code file type
+      }
