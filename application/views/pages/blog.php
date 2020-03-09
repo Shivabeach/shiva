@@ -270,7 +270,36 @@
             <h2 class="m-blog-boxes--title">Meters to Feet</h2>
             <div class="m-blog-boxes--shell">
               <div class="box">
-                <p>open</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="center">Mix For</th>
+                      <th class="center">Full Ounces</th>
+                      <th class="center">Ratio</th>
+                      <th class="center">Material</th>
+                      <th class="center">Liquid</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="center">Hydro Foam</td>
+                      <td class="center">28</td>
+                      <td class="center">1:9</td>
+                      <td class="center">3</td>
+                      <td class="center">25</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             <div class="m-blog-boxes--post-number"></div>
@@ -281,6 +310,8 @@
               <div class="box">
                 <h3 id="detailer"></h3>
                 <p>1000ml = 34 oz</p>
+                <p>800ml = 28oz</p>
+                <p>1 gal  = 128 oz</p>
                 <form>
                   <div class="input-row">
                     <label for="ounces">Number of Ounces To Fill</label>

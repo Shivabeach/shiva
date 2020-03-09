@@ -32,25 +32,28 @@
 								</div>
 							</div>
 						</div>
-					<div class="m-blog-boxes">
-						<div class="m-blog-boxes--shell">
-							<ul>
-								<li>Valdictory Songs - Beavis Frond </li>
-								<li>Promise of a New Moon - Hypnos 69 Song:Burning Ambition</li>
-								<li>Epic Forest - Rare Bird - Song: Baby Listen</li>
-								<li>Sunshine Daydream - Grateful Dead</li>
-								<li>Look Into the future - Journey</li>
-								<li>The Doors - The Doors</li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-						</div>
-					</div>
+
 					<div class="m-blog-boxes">
 						<h2 class="round">Dancer</h2>
+						<div class="m-blog-boxes--shell">
+							<div class="box box2">
+						// Fetching HTML Elements in Variables by ID.<br>
+							<p>var x = document.getElementById("form_sample");<br>
+							var createform = document.createElement('form'); // Create New Element Form<br>
+							createform.setAttribute("action", ""); // Setting Action Attribute on Form<br>
+							createform.setAttribute("method", "post"); // Setting Method Attribute on Form<br>
+							x.appendChild(createform);</p>
 
+							<p>var heading = document.createElement('h2'); // Heading of Form<br>
+							heading.innerHTML = "Contact Form ";<br>
+							createform.appendChild(heading);</p>
+
+							<p>var inputelement = document.createElement('input'); // Create Input Field for Name<br>
+							inputelement.setAttribute("type", "text");<br>
+							inputelement.setAttribute("name", "dname");<br>
+							createform.appendChild(inputelement);</p>
+							</div>
+						</div>
 						<input type="checkbox" class="subscribe">
 						<div id="mess"></div>
 					</div>
@@ -60,7 +63,7 @@
 	</main>
 
 	<script defer src="<?php echo base_url('assets/js/detail.min.js');?>"></script>
-	<script defer src="<?php echo base_url('assets/js/trial.min.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/trial.min.js');?>"></script>
 	<script defer src="<?php echo base_url('assets/js/password.min.js');?>"></script>
 
 

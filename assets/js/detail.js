@@ -21,8 +21,8 @@ var mess = document.getElementById("mess");
         event.preventDefault();
         var dilute = ounces / ratio;
         var amount = ounces - dilute;
-        materialAmount.innerText = Math.floor(dilute) + " Ounces";
-        dilutionAmount.innerText = Math.floor(amount) + " Ounces";
+        materialAmount.innerText = Math.round(dilute) + " Ounces";
+        dilutionAmount.innerText = Math.round(amount) + " Ounces";
       }
     });
   }

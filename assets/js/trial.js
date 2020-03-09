@@ -215,3 +215,10 @@ function gramsConverter(valNum) {
   document.getElementById("ounceOutput").innerHTML = gram + " Ounces";
   document.getElementById("lbOutput").innerHTML = gram / 16 + " pounds";
 }
+
+$(function() {
+  "use strict";
+  $("#day").datepicker({
+    dateFormat: "yy-mm-dd"
+  });
+});
