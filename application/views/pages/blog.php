@@ -265,7 +265,7 @@
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>
-          <!-- boc 6 -->
+          <!-- box 6 -->
           <div class="m-blog-boxes">
             <h2 class="m-blog-boxes--title">Meters to Feet</h2>
             <div class="m-blog-boxes--shell">
@@ -289,9 +289,11 @@
                       <td class="center">25</td>
                     </tr>
                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <td class="center">Adams Tire Cleaner</td>
+                      <td class="center">35</td>
+                      <td class="center">1:9</td>
+                      <td class="center">4</td>
+                      <td class="center">31</td>
                     </tr>
                     <tr>
                       <td></td>

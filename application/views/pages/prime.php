@@ -6,6 +6,7 @@
         <h1 class="ptext">
           <?=$heading;?>
         </h1>
+
       </div>
     </div> -->
     <?php $this->load->view("menus/top-menu.php");?>
@@ -55,12 +56,12 @@
         <div class="m-boxes-box--shell">
           <article>
             <?php
-							echo anchor("http://car", "Car", array("rel" => "external", "class" => "tri"));
+							echo anchor("http://localhost/car/", "Car", array("rel" => "external", "class" => "tri"));
 							echo anchor("blogs/money", "Money", array("rel" => "external", "class" => "tri"));
               echo anchor("blogs/expense", "Expense", array("rel" => "external", "class" => "tri"));
               echo anchor("blogs/teabag", "TeaBag", array("rel" => "external", "class" => "tri"));
-              echo anchor('http://create/', 'Create', array("rel" => "external", "class" => "tri"));
-              echo anchor('http://tea/', 'Tea', array("rel" => "external", "class" => "tri"));
+              echo anchor('http://localhost/create/', 'Create', array("rel" => "external", "class" => "tri"));
+              echo anchor('http://localhost/tea/', 'Tea', array("rel" => "external", "class" => "tri"));
               echo anchor('https://mail.protonmail.com/login', 'ProtonMail', array("rel" => "external", "class" => "tri"));
 
 							?>
