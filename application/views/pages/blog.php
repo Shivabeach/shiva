@@ -34,6 +34,11 @@
                 <div class="round1">
                   Lorem ipsum
                 </div>
+                 <p>ages is an array of numbers</p> 
+                <p>const = canDrink = ages.filter(age => age >= 21);</p>
+               <p>companies is an array of objects
+               </p> <p>companies.forEach(function(company) { console.log(company.name)});
+                </p>
               </div>
             </div>
             <div class="m-blog-boxes--post-number"></div>
@@ -67,10 +72,19 @@
                 <li id="demo"></li>
                 <li id="boxer" class="removes"></li>
                 <li>for peace</li>
+                <li> //@prepros-append app.js</li>
               </ol>
               <!-- change text is a function in trial.js -->
               <h1 onclick="changeText(this)">Click on this text!</h1>
+              <h3>HSL</h3>
+              <ol>
+                <li><span class="bold-15">Hue</span> 0 = red, 60 = yellow, 120 = green, 180 = cyan, 300  = purple, 240 = Blue</li>
+                <li><span class="bold-15">Saturation</span> 0% - 100% Lower  % = more pale</li>
+                <li><span class="bold-15">Value</span> 0 - 100% lightness or darkness of a color</li>
+                <li></li>
+              </ol>
             </div>
+
             <div class="m-blog-boxes--post-number"></div>
           </div>
         </div>

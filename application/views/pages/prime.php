@@ -62,9 +62,13 @@
               echo anchor("blogs/teabag", "TeaBag", array("rel" => "external", "class" => "tri"));
               echo anchor('http://localhost/create/', 'Create', array("rel" => "external", "class" => "tri"));
               echo anchor('http://localhost/tea/', 'Tea', array("rel" => "external", "class" => "tri"));
-              echo anchor('https://mail.protonmail.com/login', 'ProtonMail', array("rel" => "external", "class" => "tri"));
-
+              echo anchor('http://localhost/jsproject/', 'JS Project', array("rel" => "external", "class" => "tri"));
+              echo anchor('https://beta.protonmail.com/', 'ProtonMail', array("rel" => "external", "class" => "tri"));
 							?>
+          </article>
+          <article>
+            <?php $today =   date('l, F d Y');;?>
+            <p class="center">Today is <?=$today;?></p>
           </article>
           <article>
 
