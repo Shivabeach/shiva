@@ -34,7 +34,7 @@
                 <div class="round1">
                   Lorem ipsum
                 </div>
-                 <p>ages is an array of numbers</p> 
+                 <p>ages is an array of numbers</p>
                 <p>const = canDrink = ages.filter(age => age >= 21);</p>
                <p>companies is an array of objects
                </p> <p>companies.forEach(function(company) { console.log(company.name)});
@@ -60,6 +60,22 @@
                   <input type="text" id="tags">
                 </form>
               </p>
+              <div class="grid">
+               <p>This is a sidebar and one main column</p>
+                <code>.ex3 .parent {
+                  display: grid;
+                  grid-template-columns: minmax(150px, 25%) 1fr;
+                }
+                </code>
+                <p>Header footer and 3 main contents</p>
+                <code>
+                  .ex5 .parent {
+                    display: grid;
+                    grid-template: auto 1fr auto / auto 1fr auto;
+                  }
+                </code>
+
+              </div>
             </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>
