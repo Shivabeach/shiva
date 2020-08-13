@@ -67,7 +67,8 @@
 							?>
 					</article>
 					<article>
-						<?php $today =   date('l, F d Y');;?>
+						<p id="elect" class="bold-14 center"></p>
+						<?php $today = date('l, F d Y');?>
 						<p class="center">Today is <?=$today;?></p>
 					</article>
 					<article>
