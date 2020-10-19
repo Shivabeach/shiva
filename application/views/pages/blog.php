@@ -113,13 +113,21 @@
                 <li>
                   <?php
                   $option = [
-                    "cost" => 5
+                    "cost" => 10
                   ];
                   echo 'BCrypt hash: ' . password_hash('DSkE5n1rLHbey9uJMadBNst8UkNMFj', PASSWORD_BCRYPT, $option);
                   ?>
                 </li>
                 <li>[1,2,3,4,5,6].reduce(function(accumulator, currentValue, currentIndex, array) { return accumulator + currentValue; },0);</li>
               </ol>
+              <code>
+                $output = $list->date;<br>
+                $final = date('m-d-Y', strtotime($output));<br>
+                 $final<br>
+                 And<br>
+                 $now = time();<br>
+								$date = date("m-Y", $now);
+              </code>
             </div>
             <div id="triangle-up">r</div>
             <div class="m-blog-boxes--post-number"></div>

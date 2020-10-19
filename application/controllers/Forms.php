@@ -125,6 +125,10 @@ class Forms extends CI_Controller {
 
     }
 
+    public function delete() {
+
+    }
+
 }
 
 /* End of file Forms.php */

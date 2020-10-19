@@ -62,3 +62,13 @@ $map1: (small: 10%, med: 30%, med-lg: 50%, large: 75%, full: 100%)
 @each $size, $wide in $map1
 	.input-#{$size}
 		width: $wide
+
+@for $i from 1 through 10
+	.padding-LR-#{$i}
+		padding-left: ($i) + 0rem
+		padding-right: ($i) + 0rem
+
+@for $i from 1 through 10
+	.padding-TB-#{$i}
+		padding-top: ($i) + 0rem
+		padding-bottom: ($i) + 0rem

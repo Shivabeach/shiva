@@ -155,6 +155,7 @@ if ( ! is_php('5.4'))
  * Note: Since the config file data is cached it doesn't
  * hurt to load it here.
  */
+
 	if ( ! empty($assign_to_config['subclass_prefix']))
 	{
 		get_config(array('subclass_prefix' => $assign_to_config['subclass_prefix']));
