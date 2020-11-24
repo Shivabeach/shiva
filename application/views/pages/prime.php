@@ -2,13 +2,13 @@
   <main class="l-containers-main">
     <a class="l-menu-totop">Back To top</a>
     <!-- <div class="l-headers-main">
-			<div class="l-headers-main--title">
-				<h1 class="ptext">
-					<?= $heading; ?>
-				</h1>
+      <div class="l-headers-main--title">
+        <h1 class="ptext">
+          <?= $heading; ?>
+        </h1>
 
-			</div>
-		</div> -->
+      </div>
+    </div> -->
     <?php $this->load->view("menus/top-menu.php"); ?>
     <div class="m-boxes-row">
       <div class="col-3 br-2 out">
@@ -62,6 +62,7 @@
             echo anchor('http://localhost/create/', 'Create', array("rel" => "external", "class" => "tri"));
             echo anchor('http://localhost/tea/', 'Tea', array("rel" => "external", "class" => "tri"));
             echo anchor('http://localhost/jsproject/', 'JS Project', array("rel" => "external", "class" => "tri"));
+            echo anchor('http://gridly/', 'Gridly', array("rel" => "external", "class" => "tri"));
             echo anchor('http://localhost/weight/', 'Weight', array("rel" => "external", "class" => "tri"));
             echo anchor('https://beta.protonmail.com/', 'ProtonMail', array("rel" => "external", "class" => "tri"));
             ?>
