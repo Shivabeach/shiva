@@ -71,7 +71,8 @@
                   $data = [
                     "id"          => "day",
                     "class"       => "input-full",
-                    "placeholder" => "date"
+                    "placeholder" => "date",
+                    "type" => "date"
                   ];
                   echo form_input($data);
 

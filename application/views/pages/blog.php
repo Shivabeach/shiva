@@ -74,7 +74,6 @@
                     grid-template: auto 1fr auto / auto 1fr auto;
                   }
                 </code>
-
               </div>
             </div>
             <div class="m-blog-boxes--post-number"></div>
@@ -85,13 +84,31 @@
               <ol>
                 <li class="numBoxes"></li>
                 <li id="numOfLi"></li>
-                <li id="demo"></li>
-                <li id="boxer" class="removes"></li>
-                <li>for peace</li>
                 <li> //@prepros-append app.js</li>
               </ol>
               <!-- change text is a function in trial.js -->
-              <h1 onclick="changeText(this)">Click on this text!</h1>
+              Events
+              <ul>
+              <li>mousedown </li>
+              <li>MouseEvent</li>
+              <li>mouseenter</li>
+              <li>MouseEvent</li>
+              <li>mouseleave</li>
+              <li>mousemove </li>
+              <li>MouseEvent</li>
+              <li>mouseover </li>
+              <li>MouseEvent</li>
+              <li>mouseout </li>             <li>MouseEvent</li>
+              <li>mouseup </li>
+              <li>Click</li>
+              <li>keyup</li>
+              <li>keypress</li>
+              <li>keydown</li>
+              <li>invalid</li>
+              <li>focus</li>
+              <li>change</li>
+              <li>focusout</li>
+              </ul>
               <h3>HSL</h3>
               <ol>
                 <li><span class="bold-15">Hue</span> 0 = red, 60 = yellow, 120 = green, 180 = cyan, 300  = purple, 240 = Blue</li>
@@ -126,7 +143,7 @@
                  $final<br>
                  And<br>
                  $now = time();<br>
-								$date = date("m-Y", $now);
+                $date = date("m-Y", $now);
               </code>
             </div>
             <div id="triangle-up">r</div>

@@ -1,16 +1,16 @@
 "use strict";
-$(function() {
-  $("a.update").on("click", function() {
+$(function () {
+  $("a.update").on("click", function () {
     var id = $(this).attr("id");
     $.ajax({
       url: "http://localhost/shiva/forms/increment",
       type: "POST",
       data: {
-        id: id
+        id: id,
       },
-      success: function(msg) {
+      success: function (msg) {
         //location.reload();
-      }
+      },
     });
     return false;
   });
@@ -20,7 +20,7 @@ $(function() {
 //openweathermap.org/img/w/
 $.getJSON(
   "https://api.openweathermap.org/data/2.5/weather?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d",
-  function(data) {
+  function (data) {
     var icon =
       "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
     var temp = Math.floor(data.main.temp);
@@ -91,7 +91,7 @@ $.getJSON(
 
 var btnTop = $(".l-menu-totop");
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(window).scrollTop() > 250) {
     btnTop.fadeIn(500);
   } else {
@@ -99,30 +99,30 @@ $(window).scroll(function() {
   }
 });
 
-$(function() {
-  btnTop.on("click", function() {
+$(function () {
+  btnTop.on("click", function () {
     $("html,body").animate({
-      scrollTop: 0
+      scrollTop: 0,
     });
   });
 });
 
-$(function() {
-  $('A[rel="external"]').click(function() {
+$(function () {
+  $('A[rel="external"]').click(function () {
     window.open($(this).attr("href"));
     return false;
   });
 });
 
-$(function() {
+$(function () {
   "use strict";
-  $("form#ajax").on("submit", function(e) {
+  $("form#ajax").on("submit", function (e) {
     e.preventDefault();
     var that = $(this),
       url = that.attr("action"),
       type = that.attr("method"),
       data = {};
-    that.find("[name]").each(function(index, value) {
+    that.find("[name]").each(function (index, value) {
       var that = $(this),
         name = that.attr("name"),
         value = that.val();
@@ -132,12 +132,10 @@ $(function() {
       url: url,
       type: type,
       data: data,
-      success: function(response) {
-        $("#display")
-          .html(response)
-          .fadeOut(7000);
+      success: function (response) {
+        $("#display").html(response).fadeOut(7000);
         location.reload();
-      }
+      },
     });
     return false;
   });
@@ -145,29 +143,29 @@ $(function() {
 
 //countdown timer to election day
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 21, 2021 00:00:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24) +1);
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Output the result in an element with id="demo"
-  document.getElementById("elect").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-  // If the count down is over, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+// var countDownDate = new Date('Jan 20, 2021 15:00:00').getTime();
+//
+// // Update the count down every 1 second
+// var x = setInterval(function() {
+//   // Get today's date and time
+//   var now = new Date().getTime();
+//
+//   // Find the distance between now and the count down date
+//   var distance = countDownDate - now;
+//
+//   // Time calculations for days, hours, minutes and seconds
+//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//
+//   // Output the result in an element with id="demo"
+//   document.getElementById('elect').innerHTML =
+//     days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+//
+//   // If the count down is over, write some text
+//   if (distance < 0) {
+//     clearInterval(x);
+//     document.getElementById('demo').innerHTML = 'EXPIRED';
+//   }
+// }, 1000);

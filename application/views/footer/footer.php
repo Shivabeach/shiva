@@ -6,7 +6,7 @@
     </div>
 </div>
 </main>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 <script src="<?php echo base_url('assets/js/script.js');?>" defer></script>
 <script src="<?php echo base_url('assets/js/trial.js');?>" defer></script>
 

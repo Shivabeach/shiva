@@ -13,15 +13,15 @@
 										<input type="number" min="1" max="50" value="10" id="characterAmountNumber">
 										<p>
 										<label for="includeUppercase" class="inl">Include Uppercase</label>
-										<input type="checkbox" id="includeUppercase">
+										<input type="checkbox" id="includeUppercase" checked>
 									</p>
 									<p>
 										<label for="includeNumbers" class="inl">Include Numbers</label>
-										<input type="checkbox" id="includeNumbers">
+										<input type="checkbox" id="includeNumbers" checked>
 									</p>
 									<p>
 										<label for="includeSymbols" class="inl">Include Symbols</label>
-										<input type="checkbox" id="includeSymbols">
+										<input type="checkbox" id="includeSymbols" checked>
 									</p>
 									<button class="gen" type="submit">Generate</button>
 									</form>
@@ -62,9 +62,9 @@
 		</div>
 	</main>
 
-	<script defer src="<?php echo base_url('assets/js/detail.min.js');?>"></script>
-	<script src="<?php echo base_url('assets/js/trial.min.js');?>"></script>
-	<script defer src="<?php echo base_url('assets/js/password.min.js');?>"></script>
+	<script src="<?php echo base_url('assets/js/detail.min.js');?>" defer></script>
+	<script src="<?php echo base_url('assets/js/trial.min.js');?>" defer></script>
+	<script src="<?php echo base_url('assets/js/password.min.js');?>" defer></script>
 
 
 </body>

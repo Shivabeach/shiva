@@ -65,6 +65,8 @@
             echo anchor('http://gridly/', 'Gridly', array("rel" => "external", "class" => "tri"));
             echo anchor('http://localhost/weight/', 'Weight', array("rel" => "external", "class" => "tri"));
             echo anchor('https://beta.protonmail.com/', 'ProtonMail', array("rel" => "external", "class" => "tri"));
+            echo anchor('https://calendar.protonmail.com/u/0//', 'ProtonCalendar', array("rel" => "external", "class" => "tri"));
+            echo anchor('https://profile.zoom.us/j/5591163297', 'Lindsey Zoom', array("rel" => "external", "class" => "tri"));
             ?>
           </article>
           <article>
