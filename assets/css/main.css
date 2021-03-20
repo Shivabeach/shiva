@@ -356,23 +356,23 @@ hr {
 }
 
 .color-1 {
-  background-color: #2a8075;
+  background-color: #c8c0cd;
 }
 
 .color-2 {
-  background-color: #103cc9;
+  background-color: #7adeab;
 }
 
 .color-3 {
-  background-color: #d6bb45;
+  background-color: #98f92b;
 }
 
 .color-4 {
-  background-color: #3f6b62;
+  background-color: #66462a;
 }
 
 .color-5 {
-  background-color: #a91802;
+  background-color: #8d558a;
 }
 
 .fs-1 {
@@ -823,7 +823,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: teal;
+  color: #6724e1;
   text-decoration: none;
   -webkit-transition: color 150ms ease;
   -o-transition: color 150ms ease;
@@ -832,7 +832,7 @@ a {
 }
 a:visited {
   background-color: #e67e22;
-  color: #62144c;
+  color: #080b4a;
   text-decoration: overline;
   font-family: "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
@@ -1395,7 +1395,9 @@ li:not(.hova) {
 
 .line {
   display: inline;
-  margin-right: 10px;
+}
+.line a {
+  padding: 0.5rem;
 }
 .line a:hover {
   background-color: rgba(126, 66, 66, 0.4980392157);
@@ -1777,12 +1779,12 @@ li:not(.hova) {
 }
 
 .tri {
-  padding: 0.5em 1em 0.5em 0;
+  padding: 0.5em;
 }
 
 .l-menu-totop {
   height: 3em;
-  width: 6em;
+  width: 8em;
   padding: 5px 20px;
   text-align: center;
   color: white;

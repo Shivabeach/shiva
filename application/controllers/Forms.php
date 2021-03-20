@@ -112,7 +112,6 @@ class Forms extends CI_Controller {
 
     public function search()
     {
-
       if($query = $this->search->find_genre())
       {
         $data['searched'] = $query;

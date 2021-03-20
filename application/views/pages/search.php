@@ -6,11 +6,15 @@
         <div class="m-boxes-box--shell">
           <ul>
             <li><?php echo anchor("http://shiva/", "Home");?></li>
+            <?php
+            if(isset($searched)):?>
             <?php foreach($searched as $list):?>
             <li class="even">
-              <?php echo anchor($list->url, $list->name .' - '. $list->genre, array('rel' => "external"));?>
+              <?php echo anchor($list->url, $list->name .' - '. $list->type, array('rel' => "external"));?>
             </li>
-            <?php endforeach;?>
+            <?php endforeach;
+            endif;?>
+
           </ul>
         </div>
       </div>

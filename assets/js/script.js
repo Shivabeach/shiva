@@ -30,52 +30,52 @@ $.getJSON(
     var deg = Math.floor(data.wind.deg);
     switch (true) {
       case deg >= 360 && deg <= 21:
-        deg = "N";
+        deg = "N "  + deg + " Deg";
         break;
       case deg >= 22 && deg <= 44:
-        deg = "NNE";
+        deg = "NNE " + deg + " Deg";
         break;
       case deg >= 45 && deg <= 66:
-        deg = "NE";
+        deg = "NE "  + deg + " Deg";
         break;
       case deg >= 67 && deg <= 89:
-        deg = "ENE";
+        deg = "ENE " + deg + " Deg";
         break;
       case deg >= 90 && deg <= 111:
-        deg = "E";
+        deg = "E " + deg + " Deg";
         break;
       case deg >= 112 && deg <= 134:
-        deg = "ESE";
+        deg = "ESE "  + deg + " Deg";
         break;
       case deg >= 135 && deg <= 156:
-        deg = "SE";
+        deg = "SE "  + deg + " Deg";
         break;
       case deg >= 157 && deg <= 179:
-        deg = "SSE";
+        deg = "SSE " + deg + " Deg";
         break;
       case deg >= 180 && deg <= 201:
-        deg = "S";
+        deg = "S " + deg + " Deg";
         break;
       case deg >= 202 && deg <= 224:
-        deg = "SSW";
+        deg = "SSW " + deg + " Deg";
         break;
       case deg >= 225 && deg <= 246:
-        deg = "SW";
+        deg = "SW " + deg + " Deg";
         break;
       case deg >= 247 && deg <= 269:
-        deg = "WSW";
+        deg = "WSW " + deg + " Deg";
         break;
       case deg >= 270 && deg <= 291:
-        deg = "W";
+        deg = "W " + deg + " Deg";
         break;
       case deg >= 292 && deg <= 314:
-        deg = "WNW";
+        deg = "WNW " + deg + " Deg";
         break;
       case deg >= 315 && deg <= 336:
-        deg = "NW";
+        deg = "NW "  + deg + " Deg";
         break;
       case deg >= 337 && deg <= 359:
-        deg = "NNW";
+        deg = "NNW "  + deg + " Deg";
         break;
       default:
         deg = "no data";
