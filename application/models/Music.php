@@ -127,6 +127,14 @@ class Music extends CI_Model
         $query = $this->db->get('music');
         return $query->result();
     }
+    public function get_food()
+    {
+        $this->db->where('type', 'food');
+        $this->db->select('id, url, name, genre, counter');
+        $this->db->order_by('name', 'asc');
+        $query = $this->db->get('music');
+        return $query->result();
+    }
 
     public function addup()
     {

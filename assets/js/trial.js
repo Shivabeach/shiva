@@ -1,98 +1,100 @@
-let blog = document.getElementById("blog");
-let prime = document.getElementById("prime");
-let grid = document.getElementById("grid");
+/** @format */
+
+let blog = document.getElementById('blog');
+let prime = document.getElementById('prime');
+let grid = document.getElementById('grid');
 // learn javascript timing section
 var myVar = setInterval(myTimer, 1000);
 
 function myTimer() {
-  "use strict";
+  'use strict';
   var d = new Date();
-  document.getElementById("demo12").innerHTML = d.toLocaleTimeString();
+  document.getElementById('demo12').innerHTML = d.toLocaleTimeString();
 }
 //* get number of li
-(function() {
-  "use strict";
-  var element1 = document.getElementById("show");
-  var numberOfLinks = document.getElementsByTagName("li");
+(function () {
+  'use strict';
+  var element1 = document.getElementById('show');
+  var numberOfLinks = document.getElementsByTagName('li');
   if (element1 !== null) {
-    element1.innerHTML = "Number of Links " + numberOfLinks.length;
+    element1.innerHTML = 'Number of Links ' + numberOfLinks.length;
   }
 })();
 
-(function() {
-  "use strict";
-  var element = document.querySelector("p.classes");
-  var numberOfClasses = document.querySelectorAll("li.line");
+(function () {
+  'use strict';
+  var element = document.querySelector('p.classes');
+  var numberOfClasses = document.querySelectorAll('li.line');
   if (element != null) {
-    element.innerHTML = "Number of support Links " + numberOfClasses.length;
+    element.innerHTML = 'Number of support Links ' + numberOfClasses.length;
   }
 })();
 
-var box = document.querySelector("p.boxy");
-var numberOfBoxes = document.querySelectorAll(".m-boxes-box");
+var box = document.querySelector('p.boxy');
+var numberOfBoxes = document.querySelectorAll('.m-boxes-box');
 if (box != null) {
-  box.innerHTML = "Number of Boxes " + numberOfBoxes.length;
+  box.innerHTML = 'Number of Boxes ' + numberOfBoxes.length;
 }
 
 function ital(x) {
-  x.style.background = "green";
+  x.style.background = 'green';
 }
 
 //! for blog pages
-(function() {
-  "use strict";
-  var box2 = document.querySelector("li.numBoxes"); //gets class added
-  var numberOfBoxes = document.querySelectorAll(".m-blog-boxes");
+(function () {
+  'use strict';
+  var box2 = document.querySelector('li.numBoxes'); //gets class added
+  var numberOfBoxes = document.querySelectorAll('.m-blog-boxes');
   if (box2 != null) {
-    box2.innerHTML = "Number of Boxes " + "<b>" + numberOfBoxes.length + "</b>";
-    box2.classList.add("bo3");
+    box2.innerHTML = 'Number of Boxes ' + '<b>' + numberOfBoxes.length + '</b>';
+    box2.classList.add('bo3');
   }
 })();
 //* blog page
-(function() {
-  "use strict";
-  var element2 = document.getElementById("numOfLi");
-  var numberOfLis = document.getElementsByTagName("li");
+(function () {
+  'use strict';
+  var element2 = document.getElementById('numOfLi');
+  var numberOfLis = document.getElementsByTagName('li');
   if (element2 != null) {
     element2.innerHTML =
-      "Number of list items " + "<u>" + numberOfLis.length + "</u>";
+      'Number of list items ' + '<u>' + numberOfLis.length + '</u>';
   }
 })();
 //* blog page
-var pos = document.getElementById("demo");
+var pos = document.getElementById('demo');
 if (pos != null) {
-  pos.innerHTML = "Page location is " + window.location.href;
+  pos.innerHTML = 'Page location is ' + window.location.href;
 }
 //* blog page
-var elements = document.getElementsByClassName("box");
+var elements = document.getElementsByClassName('box');
 for (var i = 0; i < elements.length; i++) {
-  elements[i].className += " box2";
+  elements[i].className += ' box2';
 }
 // temperature
 function temperatureConverter(valNum) {
-  "use strict";
+  'use strict';
   valNum = parseFloat(valNum) || 0;
-  document.getElementById("outputFahrenheit").innerHTML =
-    valNum * 1.8 + 32 + " Degrees";
+  document.getElementById('outputFahrenheit').innerHTML =
+    valNum * 1.8 + 32 + ' Degrees';
 }
 
 var cnt = 0;
-var count1 = document.getElementById("counted");
+var count1 = document.getElementById('counted');
 
 function countMe() {
-  "use strict";
+  'use strict';
   cnt = parseInt(cnt) + parseInt(1);
-  let divData = document.getElementById("showCount");
-  divData.innerHTML = "Clicks: (" + cnt + ")";
+  let divData = document.getElementById('showCount');
+  divData.innerHTML = 'Clicks: (' + cnt + ')';
   if (cnt > 3) {
-    count1.innerHTML = "Fail";
+    count1.innerHTML = 'Fail';
     count1.disabled = true;
   }
 }
 //! comes from the call on the blog page. Should delete
 function changeText(id) {
-  "use strict";
-  id.innerHTML = "Ooops!";
+  'use strict';
+  id.innerHTML = 'Ooops!';
 }
 
 //function showCoords(event) {
@@ -103,47 +105,47 @@ function changeText(id) {
 //}
 
 function clearCoor() {
-  "use strict";
-  document.getElementById("mousey").innerHTML = "";
+  'use strict';
+  document.getElementById('mousey').innerHTML = '';
 }
 // this is an attempt to check the last link clicked. Works
 // var checkList = document.getElementById("checkList");
-var items = document.querySelectorAll("a.update");
+var items = document.querySelectorAll('a.update');
 if (items != null) {
-  var lastLink = document.getElementById("lastLink");
+  var lastLink = document.getElementById('lastLink');
   for (var i = 0; i < items.length; i++) {
-    items[i].addEventListener("click", activate);
+    items[i].addEventListener('click', activate);
   }
 }
 //! writes the last link into lastlink ID and sets localstorage
 function activate() {
-  "use strict";
+  'use strict';
   let list = this.innerHTML;
   lastLink.innerHTML = list;
-  localStorage.removeItem("storage");
-  localStorage.setItem("storage", list);
+  localStorage.removeItem('storage');
+  localStorage.setItem('storage', list);
 }
 // this gets local storage if the lastlink ID is empty
-(function() {
-  "use strict";
-  var lastLink = document.getElementById("lastLink");
+(function () {
+  'use strict';
+  var lastLink = document.getElementById('lastLink');
   if (lastLink != null) {
     if (lastLink.value == null) {
       //var remind = localStorage.getItem("storage");
-      document.getElementById("lastLink").innerHTML = localStorage.getItem(
-        "storage"
+      document.getElementById('lastLink').innerHTML = localStorage.getItem(
+        'storage'
       );
     }
   }
 })();
 
 function loadDoc() {
-  "use strict";
+  'use strict';
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "ajax_info.txt", true);
-  xhttp.onload = function() {
+  xhttp.open('GET', 'ajax_info.txt', true);
+  xhttp.onload = function () {
     if (this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
+      document.getElementById('demo').innerHTML = this.responseText;
     }
   };
   xhttp.send();
@@ -167,52 +169,52 @@ function loadDoc() {
 // 	}
 // }
 
-(function() {
-  "use strict";
-  var type = document.getElementById("ratioType");
+(function () {
+  'use strict';
+  var type = document.getElementById('ratioType');
   if (type != null) {
-    type.innerText = "Calculate Ratio";
-    document.getElementById("submit2").addEventListener("click", event => {
-      var ratios = document.getElementById("ratio1").value;
-      var herbs = document.getElementById("herb1").value;
-      if (ratios == "" || ratios <= 0 || herbs == "" || herbs <= 0) {
+    type.innerText = 'Calculate Ratio';
+    document.getElementById('submit2').addEventListener('click', (event) => {
+      var ratios = document.getElementById('ratio1').value;
+      var herbs = document.getElementById('herb1').value;
+      if (ratios == '' || ratios <= 0 || herbs == '' || herbs <= 0) {
         event.preventDefault();
-        alert("Herb amount or ratio must be greater than nothing");
+        alert('Herb amount or ratio must be greater than nothing');
         return false;
       } else {
         event.preventDefault();
         var quickResult = herbs * ratios;
-        type.classList.add("addOutput");
-        document.getElementById("ratioType").innerText =
-          "Liquid mix for a 1:" +
+        type.classList.add('addOutput');
+        document.getElementById('ratioType').innerText =
+          'Liquid mix for a 1:' +
           ratios +
-          " ratio is " +
+          ' ratio is ' +
           quickResult +
-          " ounces of liquid";
+          ' ounces of liquid';
       }
     });
   }
-  const renam = document.getElementById("reset");
+  const renam = document.getElementById('reset');
   if (renam != null) {
-    renam.addEventListener("click", event => {
-      type.classList.remove("addOutput");
-      document.getElementById("ratioType").innerText = "Calculate Ratio";
+    renam.addEventListener('click', (event) => {
+      type.classList.remove('addOutput');
+      document.getElementById('ratioType').innerText = 'Calculate Ratio';
     });
   }
 })();
 //! conversion for meters to feet on blog page
 function meterConverter(valNum) {
-  "use strict";
+  'use strict';
   valNum = parseFloat(valNum) || 0;
-  document.getElementById("formOutput").innerHTML = valNum * 3.2808 + " Feet";
+  let feets = Math.floor(valNum * 3.2808) + ' Feet';
+  document.getElementById('formOutput').innerHTML = feets;
 }
 
 //! conversion for Grams to ounces on blog page
 function gramsConverter(valNum) {
-  "use strict";
+  'use strict';
   valNum = parseFloat(valNum) || 0;
   const gram = valNum * 0.035274;
-  document.getElementById("ounceOutput").innerHTML = gram + " Ounces";
-  document.getElementById("lbOutput").innerHTML = gram / 16 + " pounds";
+  document.getElementById('ounceOutput').innerHTML = gram + ' Ounces';
+  document.getElementById('lbOutput').innerHTML = gram / 16 + ' pounds';
 }
-

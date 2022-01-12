@@ -31,7 +31,7 @@
                       "id" => "budget",
                       "placeholder" => "Enter Budget",
                       "class" => "input-full",
-                      "type" => number,
+                      "type" => "number",
                       "min" => 500,
                       "max" => 10000
                     ];

@@ -51,6 +51,9 @@ class Pages extends CI_Controller
         if ($query = $this->music->get_health()) {
             $data['health'] = $query;
         }
+        if($query = $this->music->get_food()) {
+            $data['food'] = $query;
+        }
         $data['title']   = "New ShivaBeach";
         $data['heading'] = "Links Alive";
         $n = 60;

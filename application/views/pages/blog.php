@@ -34,10 +34,11 @@
                 <div class="round1">
                   Lorem ipsum
                 </div>
-                 <p>ages is an array of numbers</p>
+                <p>ages is an array of numbers</p>
                 <p>const = canDrink = ages.filter(age => age >= 21);</p>
-               <p>companies is an array of objects
-               </p> <p>companies.forEach(function(company) { console.log(company.name)});
+                <p>companies is an array of objects
+                </p>
+                <p>companies.forEach(function(company) { console.log(company.name)});
                 </p>
               </div>
             </div>
@@ -56,12 +57,12 @@
               </p>
               <div id="mousey"></div>
               <p>
-                <form action="myform">
-                  <input type="text" id="tags">
-                </form>
+              <form action="myform">
+                <input type="text" id="tags">
+              </form>
               </p>
               <div class="grid">
-               <p>This is a sidebar and one main column</p>
+                <p>This is a sidebar and one main column</p>
                 <code>.ex3 .parent {
                   display: grid;
                   grid-template-columns: minmax(150px, 25%) 1fr;
@@ -89,30 +90,32 @@
               <!-- change text is a function in trial.js -->
               Events
               <ul>
-              <li>mousedown </li>
-              <li>MouseEvent</li>
-              <li>mouseenter</li>
-              <li>MouseEvent</li>
-              <li>mouseleave</li>
-              <li>mousemove </li>
-              <li>MouseEvent</li>
-              <li>mouseover </li>
-              <li>MouseEvent</li>
-              <li>mouseout </li>             <li>MouseEvent</li>
-              <li>mouseup </li>
-              <li>Click</li>
-              <li>keyup</li>
-              <li>keypress</li>
-              <li>keydown</li>
-              <li>invalid</li>
-              <li>focus</li>
-              <li>change</li>
-              <li>focusout</li>
+                <li>mousedown </li>
+                <li>MouseEvent</li>
+                <li>mouseenter</li>
+                <li>MouseEvent</li>
+                <li>mouseleave</li>
+                <li>mousemove </li>
+                <li>MouseEvent</li>
+                <li>mouseover </li>
+                <li>MouseEvent</li>
+                <li>mouseout </li>
+                <li>MouseEvent</li>
+                <li>mouseup </li>
+                <li>Click</li>
+                <li>keyup</li>
+                <li>keypress</li>
+                <li>keydown</li>
+                <li>invalid</li>
+                <li>focus</li>
+                <li>change</li>
+                <li>focusout</li>
               </ul>
               <h3>HSL</h3>
               <ol>
-                <li><span class="bold-15">Hue</span> 0 = red, 60 = yellow, 120 = green, 180 = cyan, 300  = purple, 240 = Blue</li>
-                <li><span class="bold-15">Saturation</span> 0% - 100% Lower  % = more pale</li>
+                <li><span class="bold-15">Hue</span> 0 = red, 60 = yellow, 120 = green, 180 = cyan, 300 = purple, 240 =
+                  Blue</li>
+                <li><span class="bold-15">Saturation</span> 0% - 100% Lower % = more pale</li>
                 <li><span class="bold-15">Value</span> 0 - 100% lightness or darkness of a color</li>
                 <li></li>
               </ol>
@@ -135,7 +138,8 @@
                   echo 'BCrypt hash: ' . password_hash('DSkE5n1rLHbey9uJMadBNst8UkNMFj', PASSWORD_BCRYPT, $option);
                   ?>
                 </li>
-                <li>[1,2,3,4,5,6].reduce(function(accumulator, currentValue, currentIndex, array) { return accumulator + currentValue; },0);</li>
+                <li>[1,2,3,4,5,6].reduce(function(accumulator, currentValue, currentIndex, array) { return accumulator +
+                  currentValue; },0);</li>
               </ol>
               <code>
                 $output = $list->date;<br>
@@ -234,10 +238,10 @@
                   <li>When selecting something it gets the = sign </li>
                   <li>document.getElementbyId("title").innerHTML = "get item by ID";</li>
                   <li>This example finds the element with id="main", and then finds all <p> elements inside "main":
-                      <ol>
-                        <li>var x = document.getElementById("main");<br>
-                          var y = x.getElementsByTagName("p");</li>
-                      </ol>
+                    <ol>
+                      <li>var x = document.getElementById("main");<br>
+                        var y = x.getElementsByTagName("p");</li>
+                    </ol>
                   </li>
                 </ol>
               </div>
@@ -274,21 +278,25 @@
               <div class="box">
                 <p>
                   <label>Celsius</label>
-                  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+                  <input id="inputCelsius" type="number" placeholder="Celsius"
+                    oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
                 </p>
                 <p>Fahrenheit: <span class="form-Output" id="outputFahrenheit"></span></p>
               </div>
               <div class="box">
                 <p>
                   <label>Meters 2 Feet</label>
-                  <input class="input-med trans" id="inputMeters" type="number" placeholder="Meters" oninput="meterConverter(this.value)" onchange="meterConverter(this.value)">
+                  <input class="input-med trans" id="inputMeters" type="number" placeholder="Meters"
+                    oninput="meterConverter(this.value)" onchange="meterConverter(this.value)">
                 </p>
                 <p>Response: <span class="form-Output" id="formOutput"></span></p>
+                <p>Miles <span class="miles1"></span></p>
               </div>
               <div class="box">
                 <p>
                   <label>Grams 2 Ounces</label>
-                  <input class="input-med trans" id="inputgrams" type="number" placeholder="Grams" oninput="gramsConverter(this.value)" onchange="gramsConverter(this.value)">
+                  <input class="input-med trans" id="inputgrams" type="number" placeholder="Grams"
+                    oninput="gramsConverter(this.value)" onchange="gramsConverter(this.value)">
                 </p>
                 <p>Response: <span class="form-Output" id="ounceOutput"></span></p>
                 <p>Response: <span class="form-Output" id="lbOutput"></span></p>
@@ -322,43 +330,25 @@
           </div>
           <!-- box 6 -->
           <div class="m-blog-boxes">
-            <h2 class="m-blog-boxes--title">Meters to Feet</h2>
+            <h2 class="m-blog-boxes--title">Mililiters to Ounces</h2>
             <div class="m-blog-boxes--shell">
               <div class="box">
-                <table>
-                  <thead>
-                    <tr>
-                      <th class="center">Mix For</th>
-                      <th class="center">Full Ounces</th>
-                      <th class="center">Ratio</th>
-                      <th class="center">Material</th>
-                      <th class="center">Liquid</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="center">Hydro Foam</td>
-                      <td class="center">28</td>
-                      <td class="center">1:9</td>
-                      <td class="center">3</td>
-                      <td class="center">25</td>
-                    </tr>
-                    <tr>
-                      <td class="center">Adams Tire Cleaner</td>
-                      <td class="center">35</td>
-                      <td class="center">1:9</td>
-                      <td class="center">4</td>
-                      <td class="center">31</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="input-row">
+                  <label for="ml">Mililiters To Convert to Ounces</label>
+                  Mililiters: <input type="number" id="ml" oninput="mlToOz(this.value)" onchange="mlToOz(this.value)" />
+                  <p class="showOz"> </p>
+                </div>
               </div>
-            </div>
+
+              <div class="box">
+                <div class="input-row">
+                  <label for="ml">Liters To Ounces</label>
+                  Liters: <input type="number" id="liter" oninput="lToOz(this.value)" onchange="lToOz(this.value)" />
+                  <p id="showLit"> </p>
+                </div>
+              </div>
+              </div>
+
             <div class="m-blog-boxes--post-number"></div>
           </div>
           <div class="m-blog-boxes">
@@ -368,7 +358,7 @@
                 <h3 id="detailer"></h3>
                 <p>1000ml = 34 oz</p>
                 <p>800ml = 28oz</p>
-                <p>1 gal  = 128 oz</p>
+                <p>1 gal = 128 oz</p>
                 <form>
                   <div class="input-row">
                     <label for="ounces">Number of Ounces To Fill</label>
@@ -387,7 +377,8 @@
 
                 </div>
                 <div class="input-row">
-                  <p>Dilution Matrix Material(water etc) <span class="bold-14 underline" id="dilutionAmount"> </span> </p>
+                  <p>Dilution Matrix Material(water etc) <span class="bold-14 underline" id="dilutionAmount"> </span>
+                  </p>
 
                 </div>
 

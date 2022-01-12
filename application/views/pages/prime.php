@@ -59,14 +59,15 @@
 
               <li class="inliner">
                 <?=anchor("http://localhost/car/", "Car", array("rel" => "external", "class" => "tri"));?></li>
-              <li class="inliner"> <?=anchor("blogs/money", "Money", array("rel" => "external", "class" => "tri"));?>
+              <li class="inliner">
+                <?=anchor("http://designs/", "Designs", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
                 <?=anchor("blogs/expense", "Expense", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner"> <?=anchor("blogs/teabag", "TeaBag", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
-                <?=anchor("http://localhost/create/", "Create", array("rel" => "external", "class" => "tri"));?></li>
+                <?=anchor("http://forward/", "Forward", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
                 <?=anchor("http://localhost/tea/", "Tea", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
@@ -86,7 +87,10 @@
                 <?=anchor("https://democracy.town/web/timelines/public/local", "Democracy", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
-                <?=anchor("https://profile.zoom.us/j/5591163297", "Lindsey Zoom", array("rel" => "external", "class" => "tri"));?>
+                <?=anchor("https://profile.zoom.us/j/2352512476", "Elyse Zoom", array("rel" => "external", "class" => "tri"));?>
+              </li>
+              <li class="inliner">
+                <?=anchor("https://www.fitbit.com/global/us/home", "Fitbit", array("rel" => "external", "class" => "tri"));?>
               </li>
 
             </ul>
@@ -152,8 +156,9 @@
               "utility" => "Utility",
               "herbs"   => "Herbs",
               "css"     => "CSS",
-              "help"     => "Help",
-              "health"  => "Health"
+              "help"    => "Help",
+              "health"  => "Health",
+              "food"    => "Food"
             ];
             ksort($args3);
             echo form_dropdown("type", $args3);
@@ -174,7 +179,7 @@
                   "CSS"       => "#css",
                   "Code"      => "#code",
                   "Health"    => "#health",
-                  "Weight"    => "#weight"
+                  "Food"      => "#food"
                 ];
                 ksort($menu);
                 foreach ($menu as $key => $value) {
@@ -376,48 +381,17 @@
           </div>
         </div>
         <div class="m-boxes-box">
-          <h2 id="health" class="m-boxes-box--title color-1">Search</h2>
+          <h2 id="food" class="m-boxes-box--title color-1">Food</h2>
           <div class="m-boxes-box--shell">
-            <h2 id="weight">Weight</h2>
-            <!-- weight form here	 -->
             <?php
-            $array = [
-              "id" => "ajax"
-            ];
-            echo form_open("forms/daily", $array);
-            $data = [
-              "name"        => "time",
-              "id"          => "time",
-              "placeholder" => "Time",
-              "class"       => "input-lg",
-              "type"        => "time"
-            ];
-            echo form_input($data);
-            $data1 = [
-              "name"        => "date",
-              "id"          => "date",
-              "placeholder" => "Date",
-              "class"       => "input-lg",
-              "type"        => "date"
-            ];
-            echo form_input($data1);
-            $data2 = [
-              "name"        => "weight",
-              "id"          => "weight",
-              "placeholder" => "Weight",
-              "class"       => "input-lg",
-              "type"        => "number"
-            ];
-            echo form_input($data2);
-            $data3 = [
-              "type"  => "submit",
-              "id"    => "submit",
-              "value" => "Heavy"
-            ];
-            echo form_submit($data3);
-            echo form_close();
-            ?>
-            <div id="display"></div>
+            foreach ($food as $list) : ?>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, array('id' => $list->id, 'class' => 'update icon fa-code-fork', 'rel' => 'external')), nbs(3); ?><span
+                class="count">
+                <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox'
+                  id="<?php echo $list->id;?>" name='item[]' class='del'></span>
+            </li>
+            <?php endforeach; ?>
           </div>
         </div>
         <div class="m-boxes-box">
