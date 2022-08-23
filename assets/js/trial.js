@@ -207,7 +207,9 @@ function meterConverter(valNum) {
   'use strict';
   valNum = parseFloat(valNum) || 0;
   let feets = Math.floor(valNum * 3.2808) + ' Feet';
+  let miles = (valNum * 0.0006213712).toFixed(2) + ' Miles';
   document.getElementById('formOutput').innerHTML = feets;
+  document.getElementById('miles2').innerText = miles;
 }
 
 //! conversion for Grams to ounces on blog page

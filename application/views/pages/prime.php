@@ -69,7 +69,7 @@
               <li class="inliner">
                 <?=anchor("http://forward/", "Forward", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
-                <?=anchor("http://localhost/tea/", "Tea", array("rel" => "external", "class" => "tri"));?></li>
+                <?=anchor("http://localhost/code3/", "Family", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
                 <?=anchor("http://localhost/jsproject/", "JS Project", array("rel" => "external", "class" => "tri"));?>
               </li>

@@ -290,7 +290,7 @@
                     oninput="meterConverter(this.value)" onchange="meterConverter(this.value)">
                 </p>
                 <p>Response: <span class="form-Output" id="formOutput"></span></p>
-                <p>Miles <span class="miles1"></span></p>
+                <p>Miles <span class="miles1" id="miles2"></span></p>
               </div>
               <div class="box">
                 <p>
