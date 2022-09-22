@@ -27,8 +27,6 @@
 									</form>
 
 
-
-
 								</div>
 							</div>
 						</div>
@@ -37,6 +35,13 @@
 						<h2 class="round">Dancer</h2>
 						<div class="m-blog-boxes--shell">
 							<div class="box box2">
+								<div>
+									<input type="text" id="pass">
+									<div id="passstrength"></div>
+								</div>
+									<div>
+										<h3>Password checker<h3>
+									</div>
 						// Fetching HTML Elements in Variables by ID.<br>
 							<p>var x = document.getElementById("form_sample");<br>
 							var createform = document.createElement('form'); // Create New Element Form<br>
@@ -62,9 +67,9 @@
 		</div>
 	</main>
 
-	<script src="<?php echo base_url('assets/js/detail.min.js');?>" defer></script>
-	<script src="<?php echo base_url('assets/js/trial.min.js');?>" defer></script>
-	<script src="<?php echo base_url('assets/js/password.min.js');?>" defer></script>
+	<script src="<?php echo base_url('assets/js/detail-dist.js');?>" ></script>
+	<script src="<?php echo base_url('assets/js/trial-dist.js');?>" ></script>
+	<script src="<?php echo base_url('assets/js/password.js');?>" ></script>
 
 
 </body>

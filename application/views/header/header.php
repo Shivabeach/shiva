@@ -37,7 +37,7 @@
     echo meta($meta);
     ?>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/main.min.css');?>" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/main-dist.css');?>" media="screen">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/redmond/jquery-ui.min.css">
 

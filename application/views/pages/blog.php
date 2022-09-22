@@ -52,6 +52,7 @@
                 <code>counter-increment: section </code>
                 <code>content: "No. " counter(section) ": "</code>
               </p>
+              <p> element.classList.toggle("mystyle");</p>
               <p><code>Body</code><br>
                 <code>counter-reset: section</code>
               </p>
@@ -278,16 +279,14 @@
               <div class="box">
                 <p>
                   <label>Celsius</label>
-                  <input id="inputCelsius" type="number" placeholder="Celsius"
-                    oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+                  <input id="inputCelsius" type="number" placeholder="Celsius">
                 </p>
                 <p>Fahrenheit: <span class="form-Output" id="outputFahrenheit"></span></p>
               </div>
               <div class="box">
                 <p>
                   <label>Meters 2 Feet</label>
-                  <input class="input-med trans" id="inputMeters" type="number" placeholder="Meters"
-                    oninput="meterConverter(this.value)" onchange="meterConverter(this.value)">
+                  <input class="input-med trans" id="inputMeters" type="number" placeholder="Meters">
                 </p>
                 <p>Response: <span class="form-Output" id="formOutput"></span></p>
                 <p>Miles <span class="miles1" id="miles2"></span></p>
@@ -295,8 +294,7 @@
               <div class="box">
                 <p>
                   <label>Grams 2 Ounces</label>
-                  <input class="input-med trans" id="inputgrams" type="number" placeholder="Grams"
-                    oninput="gramsConverter(this.value)" onchange="gramsConverter(this.value)">
+                  <input class="input-med trans" id="inputgrams" type="number" placeholder="Grams">
                 </p>
                 <p>Response: <span class="form-Output" id="ounceOutput"></span></p>
                 <p>Response: <span class="form-Output" id="lbOutput"></span></p>
@@ -335,7 +333,7 @@
               <div class="box">
                 <div class="input-row">
                   <label for="ml">Mililiters To Convert to Ounces</label>
-                  Mililiters: <input type="number" id="ml" oninput="mlToOz(this.value)" onchange="mlToOz(this.value)" />
+                  Mililiters: <input type="number" id="ml"/>
                   <p class="showOz"> </p>
                 </div>
               </div>
@@ -343,7 +341,7 @@
               <div class="box">
                 <div class="input-row">
                   <label for="ml">Liters To Ounces</label>
-                  Liters: <input type="number" id="liter" oninput="lToOz(this.value)" onchange="lToOz(this.value)" />
+                  Liters: <input type="text" id="liter"/>
                   <p id="showLit"> </p>
                 </div>
               </div>

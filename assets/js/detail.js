@@ -6,12 +6,11 @@ let dilutionAmount = document.getElementById('dilutionAmount');
 let reset = document.getElementById('reset1');
 var mess = document.getElementById('mess');
 const showLit = document.getElementById('showLit');
-const liter = document.getElementById('liter').value;
+const liter = document.getElementById('liter');
 
 const showOz = document.querySelector('.showOz');
-const ml = document.getElementById('ml').value;
-
-(function () {
+const ml = document.getElementById('ml');
+(function() {
   'use strict';
   var detailer = document.getElementById('detailer');
   if (detailer != null) {
@@ -58,20 +57,13 @@ function myFunction() {
   document.getElementById('validity').innerHTML = text;
 }
 
-function mlToOz(mills) {
-  mills = parseFloat(mills) || 0;
-  showOz.innerHTML = mills * 0.03381 + ' Ounces';
+function mlToOz() {
+  showOz.innerHTML = (ml.value * 0.03381).toFixed(2) + ' Ounces';
 }
 
 function lToOz(lite) {
-  lite = parseFloat(lite) || 0;
-  lite = Math.round(lite);
-  showLit.innerHTML = Math.round(lite * 33.81402) + ' Ounces';
+  showLit.innerHTML = (liter.value * 33.814).toFixed(2) + ' Ounces';
 }
 
-// function temperatureConverter(valNum) {
-//   "use strict";
-//   valNum = parseFloat(valNum) || 0;
-//   document.getElementById("outputFahrenheit").innerHTML =
-//     valNum * 1.8 + 32 + " Degrees";
-// }
+ml.addEventListener('keyup', mlToOz);
+liter.addEventListener('keyup', lToOz);

@@ -3,6 +3,9 @@
 let blog = document.getElementById('blog');
 let prime = document.getElementById('prime');
 let grid = document.getElementById('grid');
+const inputCelsius = document.getElementById('inputCelsius');
+const inputgrams = document.getElementById('inputgrams');
+const inputMeters = document.getElementById('inputMeters');
 // learn javascript timing section
 var myVar = setInterval(myTimer, 1000);
 
@@ -12,7 +15,7 @@ function myTimer() {
   document.getElementById('demo12').innerHTML = d.toLocaleTimeString();
 }
 //* get number of li
-(function () {
+(function() {
   'use strict';
   var element1 = document.getElementById('show');
   var numberOfLinks = document.getElementsByTagName('li');
@@ -21,7 +24,7 @@ function myTimer() {
   }
 })();
 
-(function () {
+(function() {
   'use strict';
   var element = document.querySelector('p.classes');
   var numberOfClasses = document.querySelectorAll('li.line');
@@ -41,7 +44,7 @@ function ital(x) {
 }
 
 //! for blog pages
-(function () {
+(function() {
   'use strict';
   var box2 = document.querySelector('li.numBoxes'); //gets class added
   var numberOfBoxes = document.querySelectorAll('.m-blog-boxes');
@@ -51,7 +54,7 @@ function ital(x) {
   }
 })();
 //* blog page
-(function () {
+(function() {
   'use strict';
   var element2 = document.getElementById('numOfLi');
   var numberOfLis = document.getElementsByTagName('li');
@@ -71,13 +74,14 @@ for (var i = 0; i < elements.length; i++) {
   elements[i].className += ' box2';
 }
 // temperature
-function temperatureConverter(valNum) {
-  'use strict';
-  valNum = parseFloat(valNum) || 0;
-  document.getElementById('outputFahrenheit').innerHTML =
-    valNum * 1.8 + 32 + ' Degrees';
+function temperatureConverter() {
+  let convert = inputCelsius.value * 1.8 + 32;
+  document.getElementById('outputFahrenheit').innerHTML = `${convert} Degrees`;
 }
 
+if (inputCelsius) {
+  inputCelsius.addEventListener('keyup', temperatureConverter);
+}
 var cnt = 0;
 var count1 = document.getElementById('counted');
 
@@ -126,7 +130,7 @@ function activate() {
   localStorage.setItem('storage', list);
 }
 // this gets local storage if the lastlink ID is empty
-(function () {
+(function() {
   'use strict';
   var lastLink = document.getElementById('lastLink');
   if (lastLink != null) {
@@ -143,7 +147,7 @@ function loadDoc() {
   'use strict';
   var xhttp = new XMLHttpRequest();
   xhttp.open('GET', 'ajax_info.txt', true);
-  xhttp.onload = function () {
+  xhttp.onload = function() {
     if (this.status == 200) {
       document.getElementById('demo').innerHTML = this.responseText;
     }
@@ -153,23 +157,23 @@ function loadDoc() {
 //* showing hints with ajax
 //! php file is lookup.php in the assets/ajax directory
 // function showHint(str) {
-// 	"use strict";
-// 	if (str.length == 0) {
-// 		document.getElementById("txtHint").innerHTML = "";
-// 		return;
-// 	} else {
-// 		var xmlhttp = new XMLHttpRequest();
-// 		xmlhttp.open("GET", "http://shiva/assets/ajax/lookup.php?q=" + str, true);
-// 		xmlhttp.onload = function() {
-// 			if (this.status == 200) {
-// 				document.getElementById("txtHint").innerHTML = this.responseText;
-// 			}
-// 		};
-// 		xmlhttp.send();
-// 	}
+//  "use strict";
+//  if (str.length == 0) {
+//    document.getElementById("txtHint").innerHTML = "";
+//    return;
+//  } else {
+//    var xmlhttp = new XMLHttpRequest();
+//    xmlhttp.open("GET", "http://shiva/assets/ajax/lookup.php?q=" + str, true);
+//    xmlhttp.onload = function() {
+//      if (this.status == 200) {
+//        document.getElementById("txtHint").innerHTML = this.responseText;
+//      }
+//    };
+//    xmlhttp.send();
+//  }
 // }
 
-(function () {
+(function() {
   'use strict';
   var type = document.getElementById('ratioType');
   if (type != null) {
@@ -203,20 +207,22 @@ function loadDoc() {
   }
 })();
 //! conversion for meters to feet on blog page
-function meterConverter(valNum) {
-  'use strict';
-  valNum = parseFloat(valNum) || 0;
-  let feets = Math.floor(valNum * 3.2808) + ' Feet';
-  let miles = (valNum * 0.0006213712).toFixed(2) + ' Miles';
+function meterConverter() {
+  let feets = Math.floor(inputMeters.value * 3.2808) + ' Feet';
+  let miles = (inputMeters.value * 0.0006213712).toFixed(2) + ' Miles';
   document.getElementById('formOutput').innerHTML = feets;
   document.getElementById('miles2').innerText = miles;
 }
 
 //! conversion for Grams to ounces on blog page
-function gramsConverter(valNum) {
-  'use strict';
-  valNum = parseFloat(valNum) || 0;
-  const gram = valNum * 0.035274;
+function gramsConverter() {
+  const gram = inputgrams.value * 0.035274;
   document.getElementById('ounceOutput').innerHTML = gram + ' Ounces';
   document.getElementById('lbOutput').innerHTML = gram / 16 + ' pounds';
+}
+if (inputgrams) {
+  inputgrams.addEventListener('keyup', gramsConverter);
+}
+if (inputMeters) {
+  inputMeters.addEventListener('keyup', meterConverter);
 }

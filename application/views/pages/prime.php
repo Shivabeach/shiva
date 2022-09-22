@@ -98,7 +98,7 @@
           <article>
             <p id="elect" class="bold-14 center"></p>
             <?php $today = date('l, F d Y'); ?>
-            <p class="center">Today is <?= $today; ?></p>
+            <p class="center orange">Today is <?= $today; ?></p>
           </article>
           <article>
 
