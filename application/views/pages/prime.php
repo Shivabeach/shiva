@@ -64,7 +64,7 @@
               </li>
               <li class="inliner">
                 <?=anchor("blogs/expense", "Expense", array("rel" => "external", "class" => "tri"));?></li>
-              <li class="inliner"> <?=anchor("blogs/teabag", "TeaBag", array("rel" => "external", "class" => "tri"));?>
+              <li class="inliner"> <?=anchor("http://elements/", "Elements", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
                 <?=anchor("http://forward/", "Forward", array("rel" => "external", "class" => "tri"));?></li>

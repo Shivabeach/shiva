@@ -49,7 +49,7 @@
 //  background: $notification-confirm
 //  color: set-notification-text-color($notification-confirm)
 
-=grid($cols, $mgn)
+@mixin grid($cols, $mgn)
 	float: left
 	margin-bottom: $mgn
 	margin-right: $mgn
@@ -59,14 +59,18 @@
 		margin-right: 0
 
 
-=circle($radius, $width, $height, $bc)
-	background: $bc
+@mixin conic($color1, $color2, $color3)
+	background: conic-gradient($color1, $color2, $color3)
+
+=circle($radius, $width, $height)
 	border-radius: $radius
 	height: $height
 	width: $width
 	display: grid
 	place-items: center
 
+@mixin circles($radius)
+	border-radius: $radius
 
 =timeline
 	@media screen and (max-width: $timeline)

@@ -82,14 +82,14 @@ function temperatureConverter() {
 if (inputCelsius) {
   inputCelsius.addEventListener('keyup', temperatureConverter);
 }
-var cnt = 0;
-var count1 = document.getElementById('counted');
+let cnt = 0;
+let count1 = document.getElementById('counted');
 
 function countMe() {
   'use strict';
   cnt = parseInt(cnt) + parseInt(1);
   let divData = document.getElementById('showCount');
-  divData.innerHTML = 'Clicks: (' + cnt + ')';
+  divData.innerHTML = `Clicks: ${cnt}`;
   if (cnt > 3) {
     count1.innerHTML = 'Fail';
     count1.disabled = true;

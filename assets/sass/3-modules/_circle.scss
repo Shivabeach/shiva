@@ -1,0 +1,23 @@
+/** @format */
+
+.icon1 {
+	float: left;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	shape-outside: circle(200px at 50% 50%);
+	shape-margin: 15px;
+	@include retina;
+}
+
+.round {
+	@include circle(50%, 250px, 250px);
+	@include conic($md-red-300, $md-red-600, $md-red-900);
+}
+
+.round1 {
+	@include circle(50%, 250px, 250px);
+	@include conic($indigo9 0.25turn, $orange9 0.25turn 0.5turn, $green9 0.5turn);
+	padding: 5px;
+	color: $ignore;
+}
