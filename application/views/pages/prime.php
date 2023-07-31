@@ -74,7 +74,7 @@
                 <?=anchor("http://localhost/jsproject/", "JS Project", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
-                <?=anchor("http://gridly/", "Gridly", array("rel" => "external", "class" => "tri"));?></li>
+                <?=anchor("http://localhost/grid/", "Gridly", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
                 <?=anchor("http://localhost/weight/", "Weight", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
