@@ -84,7 +84,7 @@
                 <?=anchor("https://calendar.protonmail.com/u/0//", "ProtonCalendar", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
-                <?=anchor("https://democracy.town/web/timelines/public/local", "Democracy", array("rel" => "external", "class" => "tri"));?>
+                <?=anchor("https://simplelogin.io/", "Simple Login", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
                 <?=anchor("https://profile.zoom.us/j/2352512476", "Elyse Zoom", array("rel" => "external", "class" => "tri"));?>
