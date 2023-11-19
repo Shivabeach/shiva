@@ -87,7 +87,7 @@
                 <?=anchor("https://simplelogin.io/", "Simple Login", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
-                <?=anchor("https://profile.zoom.us/j/2352512476", "Elyse Zoom", array("rel" => "external", "class" => "tri"));?>
+                <?=anchor("http://oblivion/", "Oblivion", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
                 <?=anchor("https://www.fitbit.com/global/us/home", "Fitbit", array("rel" => "external", "class" => "tri"));?>
