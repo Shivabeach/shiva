@@ -3,7 +3,6 @@ class Items {
     this.reason;
     this.expense;
   }
-
 }
 
 class UI {
@@ -28,7 +27,7 @@ class UI {
     localStorage.setItem("budget1", budget);
     document.querySelector("#budgetDisplay").innerHTML = "$" + budget;
   }
-
+ 
   static submitExpenseForm() {
     let itemlist = [];
     let expenses = document.getElementById("expense").value;
