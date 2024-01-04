@@ -69,9 +69,9 @@
               <li class="inliner">
                 <?=anchor("http://forward/", "Forward", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
-                <?=anchor("http://localhost/code3/", "Family", array("rel" => "external", "class" => "tri"));?></li>
+                <?=anchor("http://localhost/family/", "Family", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
-                <?=anchor("http://localhost/jsproject/", "JS Project", array("rel" => "external", "class" => "tri"));?>
+                <?=anchor("http://localhost/noteapp/", "Notes App", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
                 <?=anchor("http://localhost/grid/", "Gridly", array("rel" => "external", "class" => "tri"));?></li>
