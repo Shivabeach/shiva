@@ -162,7 +162,7 @@
             ];
             ksort($args3);
             echo form_dropdown("type", $args3);
-            echo form_submit("Submit", "Submits", array("class" => "none"));
+            echo form_submit("Submit", "Submit", array("class" => "none"));
             echo form_reset("reset", "Reset", array("class" => "none"));
             echo form_close();
             //TODO: Add family
