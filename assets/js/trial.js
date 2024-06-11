@@ -6,8 +6,18 @@ let grid = document.getElementById('grid');
 const inputCelsius = document.getElementById('inputCelsius');
 const inputgrams = document.getElementById('inputgrams');
 const inputMeters = document.getElementById('inputMeters');
+const loadCount = document.getElementById("load_count");
 // learn javascript timing section
-var myVar = setInterval(myTimer, 1000);
+let myVar = setInterval(myTimer, 1000);
+
+function loaded() {
+  let value = +1;
+
+}
+
+addEventListener("DOMContentLoaded", () => {
+  loaded();
+})
 
 function myTimer() {
   'use strict';
