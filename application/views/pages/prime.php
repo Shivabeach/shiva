@@ -60,14 +60,14 @@
               <li class="inliner">
                 <?=anchor("http://localhost/car/", "Car", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
-                <?=anchor("http://designs/", "Designs", array("rel" => "external", "class" => "tri"));?>
+                <?=anchor("http://localhost/designs/", "Designs", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
                 <?=anchor("blogs/expense", "Expense", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner"> <?=anchor("http://elements/", "Elements", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
-                <?=anchor("http://forward/", "Forward", array("rel" => "external", "class" => "tri"));?></li>
+                <?=anchor("http://localhost/forward/", "Forward", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
                 <?=anchor("http://localhost/family/", "Family", array("rel" => "external", "class" => "tri"));?></li>
               <li class="inliner">
@@ -87,7 +87,7 @@
                 <?=anchor("https://simplelogin.io/", "Simple Login", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
-                <?=anchor("http://oblivion/", "Oblivion", array("rel" => "external", "class" => "tri"));?>
+                <?=anchor("http://localhost/oblivion/", "Oblivion", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
                 <?=anchor("https://www.fitbit.com/global/us/home", "Fitbit", array("rel" => "external", "class" => "tri"));?>

@@ -5,8 +5,8 @@
                 <li class="hova home"><?php echo anchor('pages', 'Home', array('class' => 'icon fa-home'));?></li>
                 <li class="hova"><?php echo anchor('blogs', 'Blog', array("rel" => "external"));?></li>
                 <li class="hova"><?php echo anchor('http://car/', 'Car', array("rel" => "external"));?></li>
+                <li class="hova"><?php echo anchor('http://localhost/project/', 'Project', array("rel" => "external"));?></li>
 
-                <li class="hova" id="load_count"></li>
 
                 <li class="hova"><a href="http://tea/" rel="external" onClick="countMe">Tea</a></li>
                 <li class="hova"><?php echo anchor("https://mail.protonmail.com/login", "ProtonMail", array("rel" => "external"));?></li>

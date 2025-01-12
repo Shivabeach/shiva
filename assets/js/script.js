@@ -1,10 +1,12 @@
-"use strict";
+/** @format */
+
+'use strict';
 $(function () {
-  $("a.update").on("click", function () {
-    var id = $(this).attr("id");
+  $('a.update').on('click', function () {
+    var id = $(this).attr('id');
     $.ajax({
-      url: "http://localhost/shiva/forms/increment",
-      type: "POST",
+      url: 'http://localhost/shiva/forms/increment',
+      type: 'POST',
       data: {
         id: id,
       },
@@ -19,77 +21,77 @@ $(function () {
 //https://api.openweathermap.org/data/2.5/forecast?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d
 //openweathermap.org/img/w/
 $.getJSON(
-  "https://api.openweathermap.org/data/2.5/weather?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d",
+  'https://api.openweathermap.org/data/2.5/weather?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d',
   function (data) {
     var icon =
-      "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+      'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
     var temp = Math.floor(data.main.temp);
     var weather = data.weather[0].description;
     var humid = data.main.humidity;
-    var windspeed = data.wind.speed + " mph";
+    var windspeed = data.wind.speed + ' mph';
     var deg = Math.floor(data.wind.deg);
     switch (true) {
       case deg >= 360 && deg <= 21:
-        deg = "N "  + deg + " Deg";
+        deg = 'N ' + deg + ' Deg';
         break;
       case deg >= 22 && deg <= 44:
-        deg = "NNE " + deg + " Deg";
+        deg = 'NNE ' + deg + ' Deg';
         break;
       case deg >= 45 && deg <= 66:
-        deg = "NE "  + deg + " Deg";
+        deg = 'NE ' + deg + ' Deg';
         break;
       case deg >= 67 && deg <= 89:
-        deg = "ENE " + deg + " Deg";
+        deg = 'ENE ' + deg + ' Deg';
         break;
       case deg >= 90 && deg <= 111:
-        deg = "E " + deg + " Deg";
+        deg = 'E ' + deg + ' Deg';
         break;
       case deg >= 112 && deg <= 134:
-        deg = "ESE "  + deg + " Deg";
+        deg = 'ESE ' + deg + ' Deg';
         break;
       case deg >= 135 && deg <= 156:
-        deg = "SE "  + deg + " Deg";
+        deg = 'SE ' + deg + ' Deg';
         break;
       case deg >= 157 && deg <= 179:
-        deg = "SSE " + deg + " Deg";
+        deg = 'SSE ' + deg + ' Deg';
         break;
       case deg >= 180 && deg <= 201:
-        deg = "S " + deg + " Deg";
+        deg = 'S ' + deg + ' Deg';
         break;
       case deg >= 202 && deg <= 224:
-        deg = "SSW " + deg + " Deg";
+        deg = 'SSW ' + deg + ' Deg';
         break;
       case deg >= 225 && deg <= 246:
-        deg = "SW " + deg + " Deg";
+        deg = 'SW ' + deg + ' Deg';
         break;
       case deg >= 247 && deg <= 269:
-        deg = "WSW " + deg + " Deg";
+        deg = 'WSW ' + deg + ' Deg';
         break;
       case deg >= 270 && deg <= 291:
-        deg = "W " + deg + " Deg";
+        deg = 'W ' + deg + ' Deg';
         break;
       case deg >= 292 && deg <= 314:
-        deg = "WNW " + deg + " Deg";
+        deg = 'WNW ' + deg + ' Deg';
         break;
       case deg >= 315 && deg <= 336:
-        deg = "NW "  + deg + " Deg";
+        deg = 'NW ' + deg + ' Deg';
         break;
       case deg >= 337 && deg <= 359:
-        deg = "NNW "  + deg + " Deg";
+        deg = 'NNW ' + deg + ' Deg';
         break;
       default:
-        deg = "no data";
+        deg = 'no data';
     }
-    $(".icon1").attr("src", icon);
-    $(".temp").append(temp);
-    $(".humid").append(humid);
-    $(".weather").append(weather);
-    $(".windspeed").append(windspeed);
-    $(".deg").append(deg);
+    $('.icon1').attr('src', icon);
+    $('.temp').append(temp);
+    $('.humid').append(humid);
+    $('.weather').append(weather);
+    $('.windspeed').append(windspeed);
+    $('.deg').append(deg);
   }
 );
 
-var btnTop = $(".l-menu-totop");
+var btnTop = $('.l-menu-totop');
 
 $(window).scroll(function () {
   if ($(window).scrollTop() > 250) {
@@ -100,8 +102,8 @@ $(window).scroll(function () {
 });
 
 $(function () {
-  btnTop.on("click", function () {
-    $("html,body").animate({
+  btnTop.on('click', function () {
+    $('html,body').animate({
       scrollTop: 0,
     });
   });
@@ -109,22 +111,22 @@ $(function () {
 
 $(function () {
   $('A[rel="external"]').click(function () {
-    window.open($(this).attr("href"));
+    window.open($(this).attr('href'));
     return false;
   });
 });
 
 $(function () {
-  "use strict";
-  $("form#ajax").on("submit", function (e) {
+  'use strict';
+  $('form#ajax').on('submit', function (e) {
     e.preventDefault();
     var that = $(this),
-      url = that.attr("action"),
-      type = that.attr("method"),
+      url = that.attr('action'),
+      type = that.attr('method'),
       data = {};
-    that.find("[name]").each(function (index, value) {
+    that.find('[name]').each(function (index, value) {
       var that = $(this),
-        name = that.attr("name"),
+        name = that.attr('name'),
         value = that.val();
       data[name] = value;
     });
@@ -133,7 +135,7 @@ $(function () {
       type: type,
       data: data,
       success: function (response) {
-        $("#display").html(response).fadeOut(7000);
+        $('#display').html(response).fadeOut(7000);
         location.reload();
       },
     });
