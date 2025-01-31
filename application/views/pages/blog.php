@@ -166,6 +166,12 @@
               </form>
               <div id="tinctures"> </div>
             </div>
+             <!-- EMOJIS -->
+            <div class="emoji">
+              <p>Emojis = Press <kbd>Win</kbd> + <kbd>.</kbd> </p>
+              <p>Voice Dictation = <kbd>Win</kbd> + <kbd>H</kbd></p>
+              <p>Clipboard = <kbd>Win</kbd> + <kbd>V</kbd></p>
+            </div>
             <div class="m-blog-boxes--post-number"></div>
           </div>
         </div>
