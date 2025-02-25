@@ -1,6 +1,6 @@
 <body id="search">
   <main class="l-containers-main">
-	<div class="m-boxes-row coloring1">
+    <div class="m-boxes-row coloring1">
       <div class="m-boxes-box">
         <h2 class="m-boxes-box--title tooltip swing">Searched Links</h2>
         <div class="m-boxes-box--shell">
