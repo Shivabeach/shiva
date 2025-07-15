@@ -27,6 +27,7 @@
         <div class="skeleton fs-3 bold-9">
           <p class="windspeed">Wind Speed - </p>
           <p class="deg">Wind direction - </p>
+          <p class="sun">Sunset - </p>
         </div>
       </div>
       <div class="col-3 br-2 out">

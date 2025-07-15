@@ -20,6 +20,33 @@ $(function () {
 //api for weather 8fcc4d70707f287fc3826dc758fef64d http://api.openweathermap.org/data/2.5/forecast?id=4614214&APPID={APIKEY}
 //https://api.openweathermap.org/data/2.5/forecast?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d
 //openweathermap.org/img/w/
+
+function formatEpochToEasternTime(epoch) {
+  const date = new Date(epoch); // epoch in milliseconds
+  return date.toLocaleString('en-US', {
+    timeZone: 'America/New_York',
+    hour: 'numeric',
+    minute: '2-digit',
+    seconds: '2-digit',
+    hour12: true,
+  });
+}
+// function formatEpochTo12Hour(epoch) {
+//   const date = new Date(epoch); // epoch in milliseconds
+//   let hours = date.getHours();
+//   const minutes = date.getMinutes();
+//   const ampm = hours >= 12 ? 'PM' : 'AM';
+
+//   hours = hours % 12;
+//   hours = hours ? hours : 12; // the hour '0' should be '12'
+//   const minutesStr = minutes < 10 ? '0' + minutes : minutes;
+
+//   return `${hours}:${minutesStr} ${ampm}`;
+// }
+
+// Example usage:
+//const epochTime = 1720211220000; // Replace with your epoch time in ms
+//console.log(formatEpochTo12Hour(epochTime)); // Output: e.g., "8:47 PM"
 $.getJSON(
   'https://api.openweathermap.org/data/2.5/weather?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d',
   function (data) {
@@ -30,6 +57,7 @@ $.getJSON(
     var humid = data.main.humidity;
     var windspeed = data.wind.speed + ' mph';
     var deg = Math.floor(data.wind.deg);
+    var sunset = data.sys.sunset;
     switch (true) {
       case deg >= 360 && deg <= 21:
         deg = 'N ' + deg + ' Deg';
@@ -88,6 +116,12 @@ $.getJSON(
     $('.weather').append(weather);
     $('.windspeed').append(windspeed);
     $('.deg').append(deg);
+
+    //const epochTime = sunset; // Replace with your epoch time in ms
+    //console.log(epochTime);
+    let sunny = formatEpochToEasternTime(sunset);
+    //console.log(sunny);
+    $('.sun').append(sunny);
   }
 );
 
@@ -142,6 +176,35 @@ $(function () {
     return false;
   });
 });
+
+// To convert an epoch timestamp to a 12-hour format with hours, minutes, and AM/PM in JavaScript, you can use the `Date` object along with some formatting logic. Here's a simple and readable way to do it:
+
+// ```javascript
+// function formatEpochToEasternTime(epoch) {
+//   const date = new Date(epoch); // epoch in milliseconds
+//   return date.toLocaleString('en-US', {
+//     timeZone: 'America/New_York',
+//     hour: 'numeric',
+//     minute: '2-digit',
+//     hour12: true,
+//   });
+// }
+
+// // Example usage:
+// const epochTime = sunset; // Replace with your epoch time in ms
+// console.log(formatEpochToEasternTime(epochTime)); // Output: e.g., "8:47 PM"
+
+// Example usage:
+
+// ```
+//
+// *- Epoch time is usually in **milliseconds**. If you have it in **seconds**, multiply by 1000.
+// *- This function uses local time. If you want UTC, use `getUTCHours()` and `getUTCMinutes()` instead.
+//
+// //Want to format it for a specific locale or include seconds too? I can show you how to do that as well.
+
+// var myDate = new Date( your epoch date *1000);
+// document.write(myDate.toGMTString()+"<br>"+myDate.toLocaleString());
 
 //countdown timer to election day
 // Set the date we're counting down to
