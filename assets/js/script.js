@@ -25,28 +25,16 @@ function formatEpochToEasternTime(epoch) {
   const date = new Date(epoch); // epoch in milliseconds
   return date.toLocaleString('en-US', {
     timeZone: 'America/New_York',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
     hour: 'numeric',
     minute: '2-digit',
     seconds: '2-digit',
     hour12: true,
   });
 }
-// function formatEpochTo12Hour(epoch) {
-//   const date = new Date(epoch); // epoch in milliseconds
-//   let hours = date.getHours();
-//   const minutes = date.getMinutes();
-//   const ampm = hours >= 12 ? 'PM' : 'AM';
 
-//   hours = hours % 12;
-//   hours = hours ? hours : 12; // the hour '0' should be '12'
-//   const minutesStr = minutes < 10 ? '0' + minutes : minutes;
-
-//   return `${hours}:${minutesStr} ${ampm}`;
-// }
-
-// Example usage:
-//const epochTime = 1720211220000; // Replace with your epoch time in ms
-//console.log(formatEpochTo12Hour(epochTime)); // Output: e.g., "8:47 PM"
 $.getJSON(
   'https://api.openweathermap.org/data/2.5/weather?id=4614214&units=imperial&APPID=8fcc4d70707f287fc3826dc758fef64d',
   function (data) {
@@ -116,12 +104,10 @@ $.getJSON(
     $('.weather').append(weather);
     $('.windspeed').append(windspeed);
     $('.deg').append(deg);
-
     //const epochTime = sunset; // Replace with your epoch time in ms
-    //console.log(epochTime);
-    let sunny = formatEpochToEasternTime(sunset);
-    //console.log(sunny);
-    $('.sun').append(sunny);
+    let sunny = sunset * 1000;
+    let sunny1 = formatEpochToEasternTime(sunny);
+    $('.sun').append(sunny1);
   }
 );
 

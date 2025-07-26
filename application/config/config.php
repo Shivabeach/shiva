@@ -143,9 +143,9 @@ $config['sess_regenerate_destroy'] = TRUE;
 |
 */
 $config['cookie_prefix']	= 'dawn';
-$config['cookie_domain']	= 'http://localhost/shiva';
+$config['cookie_domain']	= '.shiva.com';
 $config['cookie_path']		= '/';
-$config['cookie_secure']	= true;
+$config['cookie_secure']	= false;
 $config['cookie_httponly'] 	= true;
 
 $config['standardize_newlines'] = FALSE;
