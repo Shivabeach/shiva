@@ -34,6 +34,7 @@
         <div class="skeleton fs-3 bold-10">
           <p id="demo12"></p>
           <p id="lastLink"></p>
+          <p class="visits"></p>
         </div>
       </div>
     </div>

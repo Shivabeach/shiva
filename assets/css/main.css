@@ -349,23 +349,23 @@ hr {
 }
 
 .color-1 {
-  background-color: rgb(35, 51, 237);
+  background-color: rgb(19, 174, 118);
 }
 
 .color-2 {
-  background-color: rgb(81, 168, 150);
+  background-color: rgb(43, 239, 137);
 }
 
 .color-3 {
-  background-color: rgb(233, 248, 102);
+  background-color: rgb(174, 41, 90);
 }
 
 .color-4 {
-  background-color: rgb(229, 142, 241);
+  background-color: rgb(131, 237, 196);
 }
 
 .color-5 {
-  background-color: rgb(237, 192, 146);
+  background-color: rgb(156, 46, 225);
 }
 
 .fs-1 {
@@ -1265,6 +1265,10 @@ li:not(.hova) {
 
 .invisible {
   visibility: hidden;
+}
+
+.yellow {
+  color: yellow;
 }
 
 .flexible {
