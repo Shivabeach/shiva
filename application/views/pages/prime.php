@@ -83,7 +83,7 @@
                 <?=anchor("https://beta.protonmail.com/", "ProtonMail", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
-                <?=anchor("https://calendar.protonmail.com/u/0//", "ProtonCalendar", array("rel" => "external", "class" => "tri"));?>
+                <?=anchor("http://medicine/", "Medicine", array("rel" => "external", "class" => "tri"));?>
               </li>
               <li class="inliner">
                 <?=anchor("https://simplelogin.io/", "Simple Login", array("rel" => "external", "class" => "tri"));?>
