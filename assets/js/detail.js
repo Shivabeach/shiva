@@ -16,11 +16,15 @@ const ml = document.getElementById('ml');
   if (detailer != null) {
     detailer.innerHTML = 'Calculate Ratio';
     document.getElementById('cripes').addEventListener('click', (event) => {
-      var ratio = document.getElementById('ratio').value;
-      var ounces = document.getElementById('ounces').value;
-      if (ratio === '' || ratio <= 0 || ounces === '' || ounces <= 0) {
+      const ratioEl = document.getElementById('ratio');
+      const ouncesEl = document.getElementById('ounces');
+      const ratioStr = ratioEl ? ratioEl.value.trim() : '';
+      const ouncesStr = ouncesEl ? ouncesEl.value.trim() : '';
+      const ratio = parseFloat(ratioStr);
+      const ounces = parseFloat(ouncesStr);
+      if (!ratioEl || !ouncesEl || ratioStr === '' || ouncesStr === '' || !Number.isFinite(ratio) || !Number.isFinite(ounces) || ratio <= 0 || ounces <= 0) {
         event.preventDefault();
-        alert('Lets imput some numbers');
+        alert('Please enter positive numeric values for ratio and ounces.');
         return false;
       } else {
         event.preventDefault();
@@ -35,7 +39,7 @@ const ml = document.getElementById('ml');
 //this empties the responses to the above function's innertext
 (function destroy() {
   'use strict';
-  document.getElementById('reset1').addEventListener('click', (event) => {
+  document.getElementById('reset1').addEventListener('click', () => {
     document.getElementById('materialAmount').innerHTML = '';
     document.getElementById('dilutionAmount').innerHTML = '';
     document.getElementById('validity').innerHTML = '';
@@ -58,7 +62,7 @@ function myFunction() {
 }
 
 function mlToOz() {
-  showOz.innerHTML = (ml.value * 0.03381).toFixed(2) + ' Ounces';
+  showOz.innerHTML = (ml.value * 0.03381).toFixed(2) + ' Fl Ounces';
 }
 
 function lToOz(lite) {
