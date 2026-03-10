@@ -162,7 +162,7 @@ $(function () {
     return false;
   });
 });
-
+// page visits for Shiva
 document.addEventListener('DOMContentLoaded', () => {
   // Get the current count from localStorage, or start at 0
   let visitCount = localStorage.getItem('visitCount');
@@ -180,6 +180,21 @@ document.addEventListener('DOMContentLoaded', () => {
     visits.innerHTML = `Page visits: <span class="yellow fs-3 bold-8">${visitCount}</span>`;
   }
 });
+//date for bottom of Shiva
+const dates = new Date();
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+const dateString = dates.toLocaleDateString(undefined, options);
+if(document.querySelector('.dated')){
+document.querySelector('.dated').textContent = dateString;
+}
+const startDate = new Date('2017-08-24');
+const today = new Date();
+const diffTime = Math.abs(today - startDate);
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+if(document.querySelector('.days')){
+document.querySelector('.days').textContent = `Days since launch: ${diffDays}`;
+}
+
 // To convert an epoch timestamp to a 12-hour format with hours, minutes, and AM/PM in JavaScript, you can use the `Date` object along with some formatting logic. Here's a simple and readable way to do it:
 
 // ```javascript

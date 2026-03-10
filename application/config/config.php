@@ -1,32 +1,32 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 $config['base_url'] = 'http://localhost/shiva/';
 
 $config['index_page'] = '';
 
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol'] = 'REQUEST_URI';
 
 $config['url_suffix'] = '';
 
-$config['language']	= 'english';
+$config['language'] = 'english';
 
 $config['charset'] = 'UTF-8';
 
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = false;
 
 $config['subclass_prefix'] = 'MY_';
 
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = false;
 
 $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 
-$config['enable_query_strings'] = FALSE;
+$config['enable_query_strings'] = false;
 $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
 $config['directory_trigger'] = 'd';
 
-$config['allow_get_array'] = TRUE;
+$config['allow_get_array'] = true;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ $config['error_views_path'] = '';
 
 $config['cache_path'] = '';
 
-$config['cache_query_string'] = FALSE;
+$config['cache_query_string'] = false;
 
 $config['encryption_key'] = hex2bin('8d39c326e987d6bd02196750a90415b6');
 
@@ -122,10 +122,10 @@ $config['encryption_key'] = hex2bin('8d39c326e987d6bd02196750a90415b6');
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_sessions';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = NULL;
-$config['sess_match_ip'] = FALSE;
+$config['sess_save_path'] = null;
+$config['sess_match_ip'] = false;
 $config['sess_time_to_update'] = 300;
-$config['sess_regenerate_destroy'] = TRUE;
+$config['sess_regenerate_destroy'] = true;
 
 /*
 |--------------------------------------------------------------------------
@@ -142,15 +142,15 @@ $config['sess_regenerate_destroy'] = TRUE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= 'dawn';
-$config['cookie_domain']	= '.shiva.com';
-$config['cookie_path']		= '/';
-$config['cookie_secure']	= false;
-$config['cookie_httponly'] 	= true;
+$config['cookie_prefix'] = 'dawn';
+$config['cookie_domain'] = '.shiva.com';
+$config['cookie_path'] = '/';
+$config['cookie_secure'] = false;
+$config['cookie_httponly'] = true;
 
-$config['standardize_newlines'] = FALSE;
+$config['standardize_newlines'] = false;
 
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = false;
 
 /*
 |--------------------------------------------------------------------------
@@ -170,8 +170,8 @@ $config['csrf_protection'] = false;
 $config['csrf_token_name'] = 'test';
 $config['csrf_cookie_name'] = 'name';
 $config['csrf_expire'] = 7200;
-$config['csrf_regenerate'] = TRUE;
-$config['csrf_exclude_uris'] = array();
+$config['csrf_regenerate'] = true;
+$config['csrf_exclude_uris'] = [];
 
 /*
 |--------------------------------------------------------------------------
@@ -193,11 +193,10 @@ $config['csrf_exclude_uris'] = array();
 | by the output class.  Do not 'echo' any values with compression enabled.
 |
 */
-$config['compress_output'] = FALSE;
-
+$config['compress_output'] = false;
 
 $config['time_reference'] = 'local';
 
-$config['rewrite_short_tags'] = FALSE;
+$config['rewrite_short_tags'] = false;
 
 $config['proxy_ips'] = '';

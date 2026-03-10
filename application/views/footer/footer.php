@@ -3,7 +3,11 @@
         <p class="footer">Page load <strong>{elapsed_time}</strong> seconds.</p>
         <p><?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?>
         </p>
+        <p class="dated"></p>
+        <p class="days"></p>
     </div>
+    <!-- <div>Aug 24, 2017</div> -->
+
 </div>
 </main>
 
