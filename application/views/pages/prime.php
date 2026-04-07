@@ -44,16 +44,15 @@
         <div class="m-boxes-box--shell">
           <ul>
             <?php foreach ($prior as $list): ?>
-            <li class="even">
-              <?= anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-exclamation',
-  'rel' => 'external',
-]),
-                nbs(3) ?><span
-                class="count">
-                <?= $list->counter ?></span>
-            </li>
+              <li class="even">
+                <?= anchor($list->url, $list->name . ' - ' . $list->genre, [
+                  'id' => $list->id,
+                  'class' => 'update icon fa-exclamation',
+                  'rel' => 'external',
+                ]),
+                  nbs(3) ?><span class="count">
+                  <?= $list->counter ?></span>
+              </li>
             <?php endforeach; ?>
           </ul>
         </div>
@@ -65,33 +64,39 @@
             <ul>
 
               <li class="inliner">
-                <?= anchor('http://localhost/car/', 'Car', ['rel' => 'external', 'class' => 'tri']) ?></li>
+                <?= anchor('http://localhost/car/', 'Car', ['rel' => 'external', 'class' => 'tri']) ?>
+              </li>
               <li class="inliner">
                 <?= anchor('http://localhost/designs/', 'Designs', ['rel' => 'external', 'class' => 'tri']) ?>
               </li>
               <li class="inliner">
-                <?= anchor('blogs/expense', 'Expense', ['rel' => 'external', 'class' => 'tri']) ?></li>
-              <li class="inliner"> <?= anchor('http://elements/', 'Elements', [
+                <?= anchor('blogs/expense', 'Expense', ['rel' => 'external', 'class' => 'tri']) ?>
+              </li>
+              <li class="inliner"> <?= anchor('http://localhost/elements/', 'Elements', [
                 'rel' => 'external',
                 'class' => 'tri',
               ]) ?>
               </li>
               <li class="inliner">
-                <?= anchor('http://localhost/forward/', 'Forward', ['rel' => 'external', 'class' => 'tri']) ?></li>
+                <?= anchor('http://localhost/forward/', 'Forward', ['rel' => 'external', 'class' => 'tri']) ?>
+              </li>
               <li class="inliner">
-                <?= anchor('http://localhost/family/', 'Family', ['rel' => 'external', 'class' => 'tri']) ?></li>
+                <?= anchor('http://localhost/family/', 'Family', ['rel' => 'external', 'class' => 'tri']) ?>
+              </li>
               <li class="inliner">
                 <?= anchor('http://localhost/noteapp/', 'Notes App', ['rel' => 'external', 'class' => 'tri']) ?>
               </li>
               <li class="inliner">
-                <?= anchor('http://localhost/grid/', 'Gridly', ['rel' => 'external', 'class' => 'tri']) ?></li>
+                <?= anchor('http://localhost/grid/', 'Gridly', ['rel' => 'external', 'class' => 'tri']) ?>
+              </li>
               <li class="inliner">
-                <?= anchor('http://localhost/weight/', 'Weight', ['rel' => 'external', 'class' => 'tri']) ?></li>
+                <?= anchor('http://localhost/weight/', 'Weight', ['rel' => 'external', 'class' => 'tri']) ?>
+              </li>
               <li class="inliner">
                 <?= anchor('https://beta.protonmail.com/', 'ProtonMail', ['rel' => 'external', 'class' => 'tri']) ?>
               </li>
               <li class="inliner">
-                <?= anchor('http://medicine/', 'Medicine', ['rel' => 'external', 'class' => 'tri']) ?>
+                <?= anchor('http://localhost/medicine/', 'Medicine', ['rel' => 'external', 'class' => 'tri']) ?>
               </li>
               <li class="inliner">
                 <?= anchor('https://simplelogin.io/', 'Simple Login', ['rel' => 'external', 'class' => 'tri']) ?>
@@ -100,7 +105,7 @@
                 <?= anchor('http://localhost/oblivion/', 'Oblivion', ['rel' => 'external', 'class' => 'tri']) ?>
               </li>
               <li class="inliner">
-                <?= anchor('http://budget/', 'Budget', ['rel' => 'external', 'class' => 'tri']) ?>
+                <?= anchor('http://localhost/budget/', 'Budget', ['rel' => 'external', 'class' => 'tri']) ?>
               </li>
 
             </ul>
@@ -176,8 +181,8 @@
             echo form_reset('reset', 'Reset', ['class' => 'none']);
             echo form_close();
 
-//TODO: Add family
-?>
+            //TODO: Add family
+            ?>
             <article>
               <ul class="flexible">
                 <?php
@@ -235,16 +240,16 @@
           Editors(Links)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($links as $list): ?>
-          <li class="even">
-            <?= anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-code-fork',
-  'rel' => 'external',
-]),
-              nbs(3) ?>
-            <span class="count"><?= $list->counter ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="even">
+              <?= anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-code-fork',
+                'rel' => 'external',
+              ]),
+                nbs(3) ?>
+              <span class="count"><?= $list->counter ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -254,16 +259,15 @@
         <h2 class="m-boxes-box--title tooltip fade" data-title="Music stations">Music(Music)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($music as $list): ?>
-          <li class="even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-volume-up ',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count"><?php echo $list->counter; ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-volume-up ',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count"><?php echo $list->counter; ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -271,17 +275,16 @@
         <h2 class="m-boxes-box--title tooltip fade" data-title="Tutorials">Tutorials(Flex)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($flex as $list): ?>
-          <li class="m-lists-musical even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-code ',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count">
-              <?php echo $list->counter; ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-code ',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count">
+                <?php echo $list->counter; ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -289,17 +292,16 @@
         <h2 class="m-boxes-box--title">Design(code)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($code as $list): ?>
-          <li class="m-lists-musical even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-info-circle ',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count">
-              <?php echo $list->counter; ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-info-circle ',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count">
+                <?php echo $list->counter; ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -309,17 +311,16 @@
         <h2 id="car" class="m-boxes-box--title">Mustang(Car)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($car as $list): ?>
-          <li class="m-lists-musical even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-car',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count">
-              <?php echo $list->counter; ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-car',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count">
+                <?php echo $list->counter; ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -327,17 +328,16 @@
         <h2 id="interests" class="m-boxes-box--title">Interests(inter)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($inter as $list): ?>
-          <li class="m-lists-musical even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-heart',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count">
-              <?php echo $list->counter; ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-heart',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count">
+                <?php echo $list->counter; ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -345,17 +345,16 @@
         <h2 id="news" class="m-boxes-box--title">News(news)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($news as $list): ?>
-          <li class="m-lists-musical even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-newspaper-o ',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count">
-              <?php echo $list->counter; ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-newspaper-o ',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count">
+                <?php echo $list->counter; ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -365,17 +364,16 @@
         <h2 id="utility" class="m-boxes-box--title">Utilities(utility)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($utility as $list): ?>
-          <li class="m-lists-musical even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-info',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count">
-              <?php echo $list->counter; ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-info',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count">
+                <?php echo $list->counter; ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -383,17 +381,16 @@
         <h2 id="herbs" class="m-boxes-box--title">Herbs(herbs)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($herbs as $list): ?>
-          <li class="m-lists-musical even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-leaf',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count">
-              <?php echo $list->counter; ?></span>
-            <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-leaf',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count">
+                <?php echo $list->counter; ?></span>
+              <span class='rightie'><input type='checkbox' id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -401,17 +398,16 @@
         <h2 id="css" class="m-boxes-box--title">CSS(css)</h2>
         <div class="m-boxes-box--shell">
           <?php foreach ($color as $list): ?>
-          <li class="m-lists-musical even">
-            <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-css3',
-  'rel' => 'external',
-]),
-              nbs(3); ?><span
-              class="count">
-              <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox'
-                id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-          </li>
+            <li class="m-lists-musical even">
+              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                'id' => $list->id,
+                'class' => 'update icon fa-css3',
+                'rel' => 'external',
+              ]),
+                nbs(3); ?><span class="count">
+                <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox'
+                  id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+            </li>
           <?php endforeach; ?>
         </div>
       </div>
@@ -420,17 +416,16 @@
           <h2 id="code" class="m-boxes-box--title color-1 tooltip swing" data-title="Useful editors">Code help</h2>
           <div class="m-boxes-box--shell">
             <?php foreach ($help as $list): ?>
-            <li class="m-lists-musical even">
-              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-code-fork',
-  'rel' => 'external',
-]),
-                nbs(3); ?><span
-                class="count">
-                <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox'
-                  id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-            </li>
+              <li class="m-lists-musical even">
+                <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                  'id' => $list->id,
+                  'class' => 'update icon fa-code-fork',
+                  'rel' => 'external',
+                ]),
+                  nbs(3); ?><span class="count">
+                  <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox'
+                    id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+              </li>
             <?php endforeach; ?>
           </div>
         </div>
@@ -438,17 +433,16 @@
           <h2 id="food" class="m-boxes-box--title color-1">Food</h2>
           <div class="m-boxes-box--shell">
             <?php foreach ($food as $list): ?>
-            <li class="m-lists-musical even">
-              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-code-fork',
-  'rel' => 'external',
-]),
-                nbs(3); ?><span
-                class="count">
-                <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox'
-                  id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
-            </li>
+              <li class="m-lists-musical even">
+                <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                  'id' => $list->id,
+                  'class' => 'update icon fa-code-fork',
+                  'rel' => 'external',
+                ]),
+                  nbs(3); ?><span class="count">
+                  <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox'
+                    id="<?php echo $list->id; ?>" name='item[]' class='del'></span>
+              </li>
             <?php endforeach; ?>
           </div>
         </div>
@@ -456,17 +450,16 @@
           <h2 id="health" class="m-boxes-box--title color-1">Health</h2>
           <div class="m-boxes-box--shell">
             <?php foreach ($health as $list): ?>
-            <li class="m-lists-musical even">
-              <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
-  'id' => $list->id,
-  'class' => 'update icon fa-code-fork',
-  'rel' => 'external',
-]),
-                nbs(3); ?><span
-                class="count">
-                <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox' name='item[]'
-                  id="<?php echo $list->id; ?>" class='del'></span>
-            </li>
+              <li class="m-lists-musical even">
+                <?php echo anchor($list->url, $list->name . ' - ' . $list->genre, [
+                  'id' => $list->id,
+                  'class' => 'update icon fa-code-fork',
+                  'rel' => 'external',
+                ]),
+                  nbs(3); ?><span class="count">
+                  <?php echo $list->counter; ?></span><span class='rightie'><input type='checkbox' name='item[]'
+                    id="<?php echo $list->id; ?>" class='del'></span>
+              </li>
             <?php endforeach; ?>
           </div>
         </div>
